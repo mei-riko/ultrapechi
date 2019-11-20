@@ -1,0 +1,41 @@
+.footer{
+    margin-top: 40px;
+    
+    padding: 60px 0;
+
+    background: $brown;
+    color: $white;
+    .footer__logo{
+        width: 100%;
+        height: 90px;
+        margin-bottom: 20px;
+
+        background: url("../img/logo-inverse-png.png") no-repeat left center / contain;
+    }
+    .footer__info{
+        @extend .text-small;
+        &_copyright{
+            color: $light-brown;
+        }
+    }
+    .footer__label{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .navbar{
+        .navbar__item{
+            margin-bottom: 12px;
+            &--last{
+                margin-bottom: 0px;
+            }
+        }
+        .navbar__link{
+            @extend .text-small;
+            color: $light-brown;
+            &:hover{
+                color: $link-hover-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.btn{
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    padding: 12px 20px;
+
+    &:hover{
+        text-decoration: none;
+    }
+
+    &_fullwidth{
+        width: 100%;
+    }
+
+    &_cta{
+        background: $orange;
+        color: $white;
+    }
+}

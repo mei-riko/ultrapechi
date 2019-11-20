@@ -1,21 +1,50 @@
+.form{
+    .form__input{
+        font-size: 14px;
+
+        outline: none;
+        border: none;
+        border-radius: 12px;
+
+        padding: 12px 20px;
+
+        &_fullwidth{
+            width: 100%;
+        }
+
+    }
+
+    * + .btn{
+        margin-top: 12px;
+    }
+    
+    * + .checkbox{
+        margin-top: 12px;
+    }
+}
+
 .checkbox{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+
+    @extend .text-small;
+
     &__input{
         display: none;
 
         &:checked + .checkbox__label:after {
             content: '';
             display: block;
-            background-color: $red;
+            background-color: $orange;
 
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
+            border-radius: 2px;
 
             position: absolute;
-            left: 4px;
-            top: 3px;
+            left: 0px;
+            top: 0px;
         }
     }
     &__label{
@@ -30,10 +59,12 @@
             content:'';
             display: block;
 
-            border: 1px solid $light-grey;
+            border: 1px solid $light-brown;
+            background: $white;
 
-            width: 13px;
-            height: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
 
             position: absolute;
             left: 0;
@@ -42,25 +73,6 @@
     }
     &__link{
         text-decoration: underline;
-    }
-
-    &_large{
-        .checkbox__label{
-            line-height: 22px;
-            &:before{
-                width: 18px;
-                height: 18px;
-            }
-        }
-        .checkbox__input{
-            &:checked + .checkbox__label:after {
-                width: 9px;
-                height: 9px;
-
-                left: 5px;
-                top: 4px;
-            }
-        }
     }
 }
 
@@ -80,11 +92,11 @@
     .jGrowl-notification {
         width: 320px;
         padding: 40px 20px;
-        border: 1px solid $light-grey;
+        border: 1px solid $light-brown;
         border-radius: 0;
 
         font-size: 14px;
-        color: $dark-grey;
+        color: $brown;
 
         .jGrowl-close {
             position: absolute;
