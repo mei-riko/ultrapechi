@@ -1,4 +1,7 @@
 .form{
+    margin: 0;
+    padding: 0;
+
     .form__input{
         font-size: 14px;
 
@@ -11,7 +14,9 @@
         &_fullwidth{
             width: 100%;
         }
-
+        &_search{
+            border: 6px solid #dcd8d3;
+        }
     }
 
     * + .btn{
@@ -38,13 +43,13 @@
             display: block;
             background-color: $orange;
 
-            width: 6px;
-            height: 6px;
-            border-radius: 2px;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
 
             position: absolute;
-            left: 0px;
-            top: 0px;
+            left: 6px;
+            top: calc(50% - 4px);
         }
     }
     &__label{
@@ -68,7 +73,7 @@
 
             position: absolute;
             left: 0;
-            top: 0;
+            top: calc(50% - 10px);
         }
     }
     &__link{

@@ -38,4 +38,17 @@
             }
         }
     }
+
+    .checkbox{
+        &__label{
+            color: $light-brown;
+        }
+        &__link{
+            display: inline;
+            color: $light-brown;
+            &:hover{
+                color: $link-hover-color;
+            }
+        }
+    }
 }

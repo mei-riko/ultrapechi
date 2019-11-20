@@ -126,6 +126,30 @@ a{
     }
 }
 
+.breadcrumbs{
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .breadcrumbs__item{
+        margin-bottom: 1px;
+        padding: 14px 30px;
+        background: $white;
+
+        border-right: 1px solid $body-bg;
+
+        color: $grey;
+    }
+    .breadcrumbs__link{
+        padding-right: 24px;
+        background: url(../img/chevron-right.svg) no-repeat right center/20px;
+    }
+}
+
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){}
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .d-lg-none{display: none;}
