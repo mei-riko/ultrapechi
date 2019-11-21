@@ -112,6 +112,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			return false;
 		}
 	});
+
+	//Slider
+	if ((0, _jquery2.default)('.slider').length > 0) {
+		var $slickPartners = (0, _jquery2.default)('.slider#slider-partners');
+		$slickPartners.slick({
+			slidesToShow: 6,
+			arrows: false,
+			dots: false,
+			autoplay: true
+		});
+	}
+
+	// Slider Index
+	if ((0, _jquery2.default)('.catalog-nav-show .slider#slider-index').length > 0) {
+		var $slickIndex = (0, _jquery2.default)('.slider#slider-index');
+		var $navHeight = (0, _jquery2.default)('.catalog-nav-show .navbar_catalog').height();
+		var $advantage = (0, _jquery2.default)('.catalog-nav-show .content-slider__col .advantage').outerHeight();
+
+		$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80);
+
+		$slickIndex.slick({
+			slidesToShow: 1,
+			arrows: true,
+			dots: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>'
+		});
+	}
 });
 
 /***/ }),

@@ -32,6 +32,14 @@
             background: darken($color: $orange, $amount: 3);
         }
     }
+    &_buy{
+        background: $yellow url(../img/cart.svg) no-repeat 11px 6px/24px;
+        width: 44px;
+        height: 36px;
+        &:hover{
+            background-color: darken($color: $yellow, $amount: 10);
+        }
+    }
 
     &_search{
         background: url("../img/search-orange.svg") no-repeat center / 18px;

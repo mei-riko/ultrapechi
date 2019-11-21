@@ -18,7 +18,7 @@ html(lang="ru")
                     .container
                         .row.justify-content-end
                             .col.content-slider__col
-                                .slider.slider_with-content
+                                .slider.slider_with-content#slider-index
                                     .slider__item
                                         .slider__content(style="width:360px;")
                                             .slider__title Печи с&nbsp;гарантией до&nbsp;15&nbsp;лет
@@ -27,26 +27,151 @@ html(lang="ru")
                                                 a.btn.btn_cta(href="#") ПЕРЕЙТИ В КАТАЛОГ
                                         .slider__bg(style="background-image: url('../img/slider.jpg');")
                                     .slider__item
-                                        .slider__content
+                                        .slider__content(style="width:440px;")
                                             .slider__title Двери и&nbsp;комплектующие
                                             p.slider__offer с&nbsp;доставкой до двери квартиры 
                                             p.mb-0
                                                 a.btn.btn_cta(href="#") ПЕРЕЙТИ В КАТАЛОГ
                                         .slider__bg(style="background-image: url('../img/slider.jpg');")
+                                .advantage.mt-40
+                                    .advantage__item
+                                        .advantage__title Экономия до&nbsp;15%
+                                        .advantage__content собственное производство, без&nbsp;посредников
+                                    .advantage__item
+                                        .advantage__title Товар в&nbsp;живую
+                                        .advantage__content шоурум с&nbsp;примерами продукции в&nbsp;СПб
+                                    .advantage__item
+                                        .advantage__title Бесплатный замер
+                                        .advantage__content выезд технолога для&nbsp;осмотра места и&nbsp;замера
+                                    .advantage__item
+                                        .advantage__title Доставка и&nbsp;монтаж
+                                        .advantage__content доставка от&nbsp;1&nbsp;дня, профессиональный монтаж 
                 section.catalog.mt-40
                     .container
-                        p.h4.catalog__title Товары
+                        p.h4.catalog__title Товары 
                             span.text-bold со скидкой
                             |  до 25%
                         .row.no-gutters.catalog__row
-                            .col-4
+                            .col-3.d-flex
                                 .catalog__item.catalog__item_column
-                            .col-4
+                                    img.img-fluid(src="../img/pic-1.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+
+                                    .catalog__item__price
+                                        span.old-price 65 899 руб.
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                            .col-3.d-flex
                                 .catalog__item.catalog__item_column
-                            .col-4
+                                    img.img-fluid(src="../img/pic-2.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                    .catalog__item__price
+                                        span.old-price 65 899 руб.
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                            .col-3.d-flex
                                 .catalog__item.catalog__item_column
-                            .col-4
+                                    img.img-fluid(src="../img/pic-3.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                    .catalog__item__price
+                                        span.old-price 65 899 руб.
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                            .col-3.d-flex
                                 .catalog__item.catalog__item_column
+                                    img.img-fluid(src="../img/pic-4.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                    .catalog__item__price
+                                        span.old-price 65 899 руб.
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                section.catalog.catalog_hits.mt-40
+                    .container
+                        p.h4.catalog__title Хиты продаж
+                        .row.no-gutters.catalog__row
+                            .col-3.d-flex
+                                .catalog__item.catalog__item_column
+                                    img.img-fluid(src="../img/pic-1.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                    .catalog__item__price
+                                        span.old-price 65 899 руб.
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                            .col-3.d-flex
+                                .catalog__item.catalog__item_column
+                                    img.img-fluid(src="../img/pic-2.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Печь для бани Варвара Мини с баком вынос 130 объем 320 
+                                    .catalog__item__price
+                                        span.old-price 
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                            .col-3.d-flex
+                                .catalog__item.catalog__item_column
+                                    img.img-fluid(src="../img/pic-3.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                    .catalog__item__price
+                                        span.old-price 
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                            .col-3.d-flex
+                                .catalog__item.catalog__item_column
+                                    img.img-fluid(src="../img/pic-4.png")
+                                    .catalog__item__category Каминные топки
+                                    a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                    .catalog__item__price
+                                        span.old-price 
+                                        span.new-price 43 451 руб.
+                                    a.btn.btn_buy(href="#")
+                section.mt-40
+                    .container
+                        .content.content_header-block
+                            p.content__title.h5.text-bold.text-uppercase Наши партнеры
+                            .slider.slider_partners#slider-partners
+                                img(src="../img/logo-example.jpg")
+                                img(src="../img/logo-example.jpg")
+                                img(src="../img/logo-example.jpg")
+                                img(src="../img/logo-example.jpg")
+                                img(src="../img/logo-example.jpg")
+                                img(src="../img/logo-example.jpg")
+                                img(src="../img/logo-example.jpg")
+                                img(src="../img/logo-example.jpg")
+                aside.mt-40
+                    .container
+                        .row
+                            .col-5.d-flex
+                                .blog-item.blog-item_type-1.blog-item_image
+                                    .blog-item__bg(style="background-image:url('../img/pic-01.png');")
+                                    span.blog-item__label.blog-item__label_blog Блог
+                                    p.blog-item__title.blog-item__title_large Как правильно  выбрать дымоход?
+                                    p.blog-item__offer Interest in skin care supplements, or beauty foods, has been strong in Asia, and that trend is ...
+                                    a.link-inverse.text-bold.text-small(href="text.html") Читать дальше >
+                            .col-3.d-flex
+                                .blog-item.blog-item_type-2
+                                    span.blog-item__label.blog-item__label_blog Блог
+                                    p.blog-item__title Идеальная печь для дачи
+                                    p.blog-item__offer Interest in skin care supplements, or beauty foods, has been strong in Asia, and that trend is ...
+                                    a.link-inverse.text-bold.text-small(href="text.html") Читать дальше >
+                            .col-4.d-flex
+                                .blog-item.blog-item_type-3
+                                    span.blog-item__label.blog-item__label_news Новости
+                                    p.blog-item__data 29.10.2019
+                                    a.blog-item__title(href="text.html") Гарантийный экспресс-ремонт печей для бани при покупке комплектующих
+                                    .sep
+                                    p.blog-item__data 29.10.2019
+                                    a.blog-item__title(href="text.html") Гарантийный экспресс-ремонт печей для бани при покупке комплектующих
+                                    .sep
+                                    p.blog-item__data 29.10.2019
+                                    a.blog-item__title(href="text.html") Гарантийный экспресс-ремонт печей для бани при покупке комплектующих
+                                    .sep
+                                    p.blog-item__data 29.10.2019
+                                    a.blog-item__title(href="text.html") Гарантийный экспресс-ремонт печей для бани при покупке комплектующих
             include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/slick.min.js")

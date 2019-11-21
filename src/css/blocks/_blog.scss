@@ -81,4 +81,17 @@
             }
         }
     }
+    &_type-3{
+        padding: 0;
+        .blog-item__label{
+            position: unset;
+            margin-bottom: 30px;
+        }
+        .blog-item__title{
+            font-size: 1rem;
+        }
+        .sep{
+            margin: 30px 0;
+        }
+    }
 }

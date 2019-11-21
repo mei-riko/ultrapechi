@@ -35,4 +35,32 @@ $(document).ready(() =>{
 		  return false;
 	  }
 	});
+
+	//Slider
+	if( $('.slider').length > 0 ) {
+		let $slickPartners = $('.slider#slider-partners');
+        $slickPartners.slick({
+            slidesToShow: 6,
+            arrows: false,
+			dots: false,
+			autoplay: true,
+        });
+	}
+
+	// Slider Index
+	if( $('.catalog-nav-show .slider#slider-index').length > 0 ) {
+		let $slickIndex = $('.slider#slider-index');
+		let $navHeight = $('.catalog-nav-show .navbar_catalog').height();
+		let $advantage = $('.catalog-nav-show .content-slider__col .advantage').outerHeight();
+
+		$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80 );
+
+		$slickIndex.slick({
+            slidesToShow: 1,
+            arrows: true,
+			dots: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
+        });
+	}
 });
