@@ -1,5 +1,5 @@
 .header{
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     .header__logo{
         width: 100%;
         height: 110px;
@@ -8,7 +8,7 @@
         background: url("../img/logo-png.png") no-repeat left center / contain;
     }
     .header__nav{
-        padding: 16px 0;
+        padding: 12px 0;
         background: $brown;
     }
     .header__line{
@@ -16,6 +16,7 @@
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
     .header__phone{
         font-size: 20px;
@@ -31,35 +32,25 @@
             text-decoration: none;
         }
     }
+    .header__info{
+        .text-small{
+            line-height: 18px;
+        }
+    }
     .header__cart{
         @extend .text-small;
+        line-height: 18px;
+        padding-left: 54px;
+        background: url("../img/cart-orange.svg") no-repeat left center / 30px;
+
+        width: 132px;
+        max-width: 100%;
     }
     .form{
         .form__input_search{
             width: 560px;
             max-width: 100%;
+            height: 46px;
         }
     }
-    .navbar{
-        display: flex;
-        flex-wrap: wrap;
-        
-        font-size: 14px;
-
-        .navbar__link{
-            padding: 4px 24px;
-            color: $white;
-            &:hover{
-                color: $link-hover-color;
-                text-decoration: none;
-            }
-        }
-        .sep{
-            height: 100%;
-            width: 1px;
-            background: $white;
-            opacity: .2;
-        }
-    }
-    
 }

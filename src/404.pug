@@ -1,0 +1,27 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        .content-area
+            include chunks/header
+            main.inside
+                section
+                    .container
+                        .content.content_error
+                            .row
+                                .col-8
+                                    h1.content__title ошибка 404
+                                    p.lead Извините, страница удалена или не существует 
+                                    p.mt-40.mb-40
+                                        a.btn.btn_cta(href="#") Вернуться на главную
+                                    p.text-small.text-grey Lorem ipsum dolor sit amet. Porro quisquam est, qui dolorem ipsum quia. Inventore veritatis et accusamus et expedita distinctio aperiam eaque. Quaerat voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae. Alias consequatur aut perferendis doloribus asperiores repellat. adipisci. Consectetur, adipisci velit, sed ut et iusto odio dignissimos.
+            include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/app.min.js")

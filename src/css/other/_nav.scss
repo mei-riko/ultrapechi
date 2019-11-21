@@ -1,0 +1,77 @@
+.navbar{
+    .navbar__link{
+        &_catalog{
+            background: url("../img/menu-white.svg") no-repeat left center / 24px;
+        }
+    }
+    &_header{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        font-size: 13px;
+
+        .navbar__link{
+            padding: 4px 32px;
+            color: $white;
+            &:hover{
+                color: $link-hover-color;
+                text-decoration: none;
+            }
+        }
+        .sep{
+            height: 26px;
+            width: 1px;
+            background: $white;
+            opacity: .2;
+        }
+    }
+    &_catalog{
+        flex-direction: column;
+        max-width: 240px;
+
+        background: $white;
+
+        position: absolute;
+        top: 40px;
+        left: 0;
+        z-index: 11;
+
+        font-size: 13px;
+
+        display: none;
+
+        .navbar__item{
+            padding: 14px 20px;
+            border-bottom: 1px solid $body-bg;
+        }
+        .navbar__link{
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
+.catalog-nav-show{
+    .navbar_catalog{
+        display: block;
+    }
+}
+.footer{
+    .navbar{
+        .navbar__item{
+            margin-bottom: 12px;
+            &--last{
+                margin-bottom: 0px;
+            }
+        }
+        .navbar__link{
+            @extend .text-small;
+            line-height: 16px;
+            color: $light-brown;
+            &:hover{
+                color: $link-hover-color;
+            }
+        }
+    }
+}

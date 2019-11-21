@@ -1,0 +1,26 @@
+.service-item{
+    position: relative;
+    width: 100%;
+    background: $white;
+
+    &:hover{
+        text-decoration: none;
+    }
+
+    .service-item__bg{
+        width: 100%;
+        height: 210px;
+    }
+    .service-item__title{
+        font-size: 1.25rem;
+        line-height: 1.2;
+        padding: 30px 40px;
+    }
+}
+
+.service-col{
+    padding-left: 40px;
+
+    flex: 0 0 calc(100% - 260px);
+    width: calc(100% - 260px);
+}

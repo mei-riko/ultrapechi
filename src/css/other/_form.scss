@@ -11,11 +11,16 @@
 
         padding: 12px 20px;
 
+        &:focus::placeholder{
+            opacity: 0;
+        }
+
         &_fullwidth{
             width: 100%;
         }
         &_search{
-            border: 6px solid #dcd8d3;
+            border: 1px solid #dcd8d3;
+            border-radius: 20px;
         }
     }
 
@@ -26,14 +31,19 @@
     * + .checkbox{
         margin-top: 12px;
     }
+
+    &_search{
+        position: relative;
+    }
 }
 
+/* Checkbox */
 .checkbox{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
 
-    @extend .text-small;
+    font-size: 12px;
 
     &__input{
         display: none;
@@ -56,7 +66,7 @@
         position: relative;
         margin: 0;
         padding-left: 28px;
-        line-height: 12px;
+        line-height: 14px;
 
         cursor: pointer;
 
@@ -80,11 +90,25 @@
         text-decoration: underline;
     }
 }
+.footer{
+    .checkbox{
+        &__label{
+            color: $light-brown;
+        }
+        &__link{
+            display: inline;
+            color: $light-brown;
+            &:hover{
+                color: $link-hover-color;
+            }
+        }
+    }
+}
 
+/* MODx Revo Alert*/
 .jGrowl {
     font-family: "Noto Sans"
 }
-
 .jGrowl#jGrowl {
     top: 50%;
     left: 50%;

@@ -5,8 +5,9 @@ header.header
                 a.header__logo(href="/" )
             .col-10
                 .header__line
-                    form.form(action="")
+                    form.form.form_search(action="")
                         input.form__input.form__input_search(type="text" placeholder="Поиск по сайту")
+                        button.btn.btn_search(type="submit")
                     .header__info
                         p.text-small.mb-0 Санкт-Петербург и ЛО
                         p.text-small.text-bold.mb-0 с 10.00 до 19.00 (ПН-ПТ)
@@ -16,7 +17,7 @@ header.header
     .header__nav
         .container
             .header__line
-                nav.navbar
+                nav.navbar.navbar_header
                     a.navbar__link.navbar__link_catalog(href="#") Каталог товаров
                     .sep
                     a.navbar__link(href="#") Услуги
@@ -29,4 +30,32 @@ header.header
                     .sep
                     a.navbar__link(href="#") Расчет дымохода
                 a.header__phone(href="tel:8 800 000 00 00") 8 800 000 00 00
-        
+                nav.navbar.navbar_catalog
+                    .navbar__item
+                        a.navbar__link(href="#") Печи-камины
+                    .navbar__item
+                        a.navbar__link(href="#") Печи для бани
+                    .navbar__item
+                        a.navbar__link(href="#") Отопительно-варочные печи 
+                    .navbar__item
+                        a.navbar__link(href="#") Каминные топки
+                    .navbar__item
+                        a.navbar__link(href="#") Каминные облицовки
+                    .navbar__item
+                        a.navbar__link(href="#") Электронагревательные приборы
+                    .navbar__item
+                        a.navbar__link(href="#") Котлы и оборудование
+                    .navbar__item
+                        a.navbar__link(href="#") Чугунное литье
+                    .navbar__item
+                        a.navbar__link(href="#") Изоляция и огнезащита
+                    .navbar__item
+                        a.navbar__link(href="#") Дымоходы и комплектующие
+                    .navbar__item
+                        a.navbar__link(href="#") Окна и комплектующие
+                    .navbar__item
+                        a.navbar__link(href="#") Двери и комплектующие
+                    .navbar__item
+                        a.navbar__link(href="#") Топливо
+                    .navbar__item.navbar__item--last
+                        a.navbar__link(href="#") Прочее

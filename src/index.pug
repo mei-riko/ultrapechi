@@ -5,40 +5,49 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Basic Page
 
+        link(href='./css/slick.css', rel='stylesheet')
+        link(href='./css/slick-theme.css', rel='stylesheet')
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .content-area
+        .content-area.catalog-nav-show
             include chunks/header
-            main.inside
-                section
+            main.inside.inside_index
+                section.content-slider
                     .container
-                        ul.breadcrumbs
-                            li.breadcrumbs__item
-                                a.breadcrumbs__link(href="#") Главная
-                            li.breadcrumbs__item
-                                a.breadcrumbs__link(href="#") Новости
-                            li.breadcrumbs__item Заголовок страницы
-                        .content.content_text-page
-                            h1 Заголовок H1
-                            p Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.
-                            p Все комплектующие дымохода, за исключением диаметров 115 и 150 миллиметров, имеют индивидуально-определенные свойства, и могут быть использованы исключительно приобретающим их потребителем. Данные позиции обмену и возврату не подлежат.
-                            h2 Заголовок H2
-                            h3 Заголовок H3
-                            h4 Заголовок H4
-                            h5 Заголовок H5
-                            h6.text-bold Заголовок H6
-                            p Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.
-                            blockquote Все комплектующие дымохода, за исключением диаметров 115 и 150 миллиметров, имеют индивидуально-определенные свойства, и могут быть использованы исключительно приобретающим их потребителем. Данные позиции обмену и возврату не подлежат.
-                            ul
-                                li Простой пункт списка
-                                li Простой пункт списка
-                                li Простой пункт списка
-                                li Простой пункт списка
-                            p Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.
-                            p
-                                img.img-fluid.img-border(src="../img/demo.png")
+                        .row.justify-content-end
+                            .col.content-slider__col
+                                .slider.slider_with-content
+                                    .slider__item
+                                        .slider__content(style="width:360px;")
+                                            .slider__title Печи с&nbsp;гарантией до&nbsp;15&nbsp;лет
+                                            p.slider__offer от отечественного производителя 
+                                            p.mb-0
+                                                a.btn.btn_cta(href="#") ПЕРЕЙТИ В КАТАЛОГ
+                                        .slider__bg(style="background-image: url('../img/slider.jpg');")
+                                    .slider__item
+                                        .slider__content
+                                            .slider__title Двери и&nbsp;комплектующие
+                                            p.slider__offer с&nbsp;доставкой до двери квартиры 
+                                            p.mb-0
+                                                a.btn.btn_cta(href="#") ПЕРЕЙТИ В КАТАЛОГ
+                                        .slider__bg(style="background-image: url('../img/slider.jpg');")
+                section.catalog.mt-40
+                    .container
+                        p.h4.catalog__title Товары
+                            span.text-bold со скидкой
+                            |  до 25%
+                        .row.no-gutters.catalog__row
+                            .col-4
+                                .catalog__item.catalog__item_column
+                            .col-4
+                                .catalog__item.catalog__item_column
+                            .col-4
+                                .catalog__item.catalog__item_column
+                            .col-4
+                                .catalog__item.catalog__item_column
             include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
+        script(src="./js/slick.min.js")
         script(src="./js/app.min.js")

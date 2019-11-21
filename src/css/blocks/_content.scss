@@ -1,4 +1,37 @@
 .content{
     background: $white;
-    padding: 70px;
+    padding: 60px 80px;
+
+    &_error{
+        background: $white url("../img/logo-fire.svg") no-repeat 100% -50px/600px;
+        .content__title{
+            font-size: 110px;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+    }
+    &_contact{
+        padding: 40px;
+    }
+    &_header-block{
+        padding: 0;
+        .content__title{
+            margin-bottom: 0;
+            padding: 30px 40px;
+            border-bottom: 1px solid $body-bg;
+        }
+        .content__offer{
+            padding: 30px 40px;
+        }
+    }
+}
+
+.content-slider{
+    .content-slider__col{
+        padding-left: 40px;
+
+        flex: 0 0 calc(100% - 260px);
+        width: calc(100% - 260px);
+    }
 }

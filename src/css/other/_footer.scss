@@ -13,7 +13,8 @@
         background: url("../img/logo-inverse-png.png") no-repeat left center / contain;
     }
     .footer__info{
-        @extend .text-small;
+        font-size: 12px;
+        line-height: 20px;
         &_copyright{
             color: $light-brown;
         }
@@ -21,34 +22,5 @@
     .footer__label{
         text-transform: uppercase;
         font-weight: bold;
-    }
-
-    .navbar{
-        .navbar__item{
-            margin-bottom: 12px;
-            &--last{
-                margin-bottom: 0px;
-            }
-        }
-        .navbar__link{
-            @extend .text-small;
-            color: $light-brown;
-            &:hover{
-                color: $link-hover-color;
-            }
-        }
-    }
-
-    .checkbox{
-        &__label{
-            color: $light-brown;
-        }
-        &__link{
-            display: inline;
-            color: $light-brown;
-            &:hover{
-                color: $link-hover-color;
-            }
-        }
     }
 }

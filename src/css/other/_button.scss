@@ -14,6 +14,10 @@
 
     &:hover{
         text-decoration: none;
+        outline: none;
+    }
+    &:focus{
+        outline: none;
     }
 
     &_fullwidth{
@@ -23,5 +27,24 @@
     &_cta{
         background: $orange;
         color: $white;
+        &:hover{
+            color: $white;
+            background: darken($color: $orange, $amount: 3);
+        }
+    }
+
+    &_search{
+        background: url("../img/search-orange.svg") no-repeat center / 18px;
+        border: none;
+        outline: none;
+        margin: 0!important;
+        padding: 0;
+        width: 46px;
+        height: 46px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
     }
 }

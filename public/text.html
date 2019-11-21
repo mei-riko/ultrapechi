@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Basic Page</title>
-    <link href="./css/slick.css" rel="stylesheet"/>
-    <link href="./css/slick-theme.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <div class="content-area catalog-nav-show">
+    <div class="content-area">
       <header class="header">
         <div class="container">
           <div class="row align-items-center">
@@ -61,49 +59,33 @@
           </div>
         </div>
       </header>
-      <main class="inside inside_index">
-        <section class="content-slider">
+      <main class="inside inside_text-page">
+        <section>
           <div class="container">
-            <div class="row justify-content-end">
-              <div class="col content-slider__col">
-                <div class="slider slider_with-content">
-                  <div class="slider__item">
-                    <div class="slider__content" style="width:360px;">
-                      <div class="slider__title">Печи с&nbsp;гарантией до&nbsp;15&nbsp;лет</div>
-                      <p class="slider__offer">от отечественного производителя </p>
-                      <p class="mb-0"><a class="btn btn_cta" href="#">ПЕРЕЙТИ В КАТАЛОГ</a></p>
-                    </div>
-                    <div class="slider__bg" style="background-image: url('../img/slider.jpg');"></div>
-                  </div>
-                  <div class="slider__item">
-                    <div class="slider__content">
-                      <div class="slider__title">Двери и&nbsp;комплектующие</div>
-                      <p class="slider__offer">с&nbsp;доставкой до двери квартиры </p>
-                      <p class="mb-0"><a class="btn btn_cta" href="#">ПЕРЕЙТИ В КАТАЛОГ</a></p>
-                    </div>
-                    <div class="slider__bg" style="background-image: url('../img/slider.jpg');"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="catalog mt-40">
-          <div class="container">
-            <p class="h4 catalog__title">Товары<span class="text-bold">со скидкой</span> до 25%</p>
-            <div class="row no-gutters catalog__row">
-              <div class="col-4">
-                <div class="catalog__item catalog__item_column"></div>
-              </div>
-              <div class="col-4">
-                <div class="catalog__item catalog__item_column"></div>
-              </div>
-              <div class="col-4">
-                <div class="catalog__item catalog__item_column"></div>
-              </div>
-              <div class="col-4">
-                <div class="catalog__item catalog__item_column"></div>
-              </div>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Новости</a></li>
+              <li class="breadcrumbs__item">Заголовок страницы</li>
+            </ul>
+            <div class="content">
+              <h1>Заголовок H1</h1>
+              <p>Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.</p>
+              <p>Все комплектующие дымохода, за исключением диаметров 115 и 150 миллиметров, имеют индивидуально-определенные свойства, и могут быть использованы исключительно приобретающим их потребителем. Данные позиции обмену и возврату не подлежат.</p>
+              <h2>Заголовок H2</h2>
+              <h3>Заголовок H3</h3>
+              <h4>Заголовок H4</h4>
+              <h5>Заголовок H5</h5>
+              <h6 class="text-bold">Заголовок H6</h6>
+              <p>Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.</p>
+              <blockquote>Все комплектующие дымохода, за исключением диаметров 115 и 150 миллиметров, имеют индивидуально-определенные свойства, и могут быть использованы исключительно приобретающим их потребителем. Данные позиции обмену и возврату не подлежат.</blockquote>
+              <ul>
+                <li>Простой пункт списка</li>
+                <li>Простой пункт списка</li>
+                <li>Простой пункт списка</li>
+                <li>Простой пункт списка</li>
+              </ul>
+              <p>Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.</p>
+              <p><img class="img-fluid img-border" src="../img/demo.png"/></p>
             </div>
           </div>
         </section>
@@ -161,7 +143,6 @@
       </footer>
     </div>
     <script src="./js/jquery.inputmask.js"></script>
-    <script src="./js/slick.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

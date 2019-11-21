@@ -1,0 +1,47 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 243.77 257.64">
+  <defs>
+    <linearGradient id="Безымянный_градиент_4" data-name="Безымянный градиент 4" x1="214.81" y1="322.46" x2="370.71" y2="322.46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff3600"/>
+      <stop offset="1" stop-color="#ff0012"/>
+    </linearGradient>
+    <clipPath id="clip-path" transform="translate(-141.34 -176.05)">
+      <path d="M296.09,433.69c-55.13.36-102.91-62.74-71-96.82-6.67,23,16.62,27.55,24.52,20.73-17.53-10.73-27.09-51,4.55-70.78-7,8.57-5.85,17-.76,23,0.89-3.55,4.63-8.49,7.33-12.64,7.84-12,7.1-21.92,5.56-35.9-2-18.63,5.08-37,14.92-50.05-2,20.29,8.36,45.67,28.31,60.67,19.24,14.47,31.32,42.69,27,67.75,0,0,15.2-6.63,10.36-30.08,34.26,30.36,24.33,74.7,14.41,89.24-11,16.09-26.79,34.63-65.22,34.89h0Z" style="fill: none;clip-rule: evenodd"/>
+    </clipPath>
+    <linearGradient id="Безымянный_градиент_14" data-name="Безымянный градиент 14" x1="385.11" y1="323.22" x2="201.5" y2="323.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fd7103"/>
+      <stop offset="1" stop-color="red"/>
+    </linearGradient>
+    <linearGradient id="Безымянный_градиент_18" data-name="Безымянный градиент 18" x1="167.12" y1="290.1" x2="350.73" y2="290.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff5000"/>
+      <stop offset="1" stop-color="#febf01"/>
+    </linearGradient>
+    <linearGradient id="Безымянный_градиент_18-2" x1="141.34" y1="267.86" x2="324.94" y2="267.86" xlink:href="#Безымянный_градиент_18"/>
+    <linearGradient id="Безымянный_градиент_18-3" x1="374.7" y1="246.88" x2="264.49" y2="246.88" xlink:href="#Безымянный_градиент_18"/>
+  </defs>
+  <title>logo-fire</title>
+  <g id="fire">
+    <g id="fire-2" data-name="fire">
+      <path d="M296.09,433.69c-55.13.36-102.91-62.74-71-96.82-6.67,23,16.62,27.55,24.52,20.73-17.53-10.73-27.09-51,4.55-70.78-7,8.57-5.85,17-.76,23,0.89-3.55,4.63-8.49,7.33-12.64,7.84-12,7.1-21.92,5.56-35.9-2-18.63,5.08-37,14.92-50.05-2,20.29,8.36,45.67,28.31,60.67,19.24,14.47,31.32,42.69,27,67.75,0,0,15.2-6.63,10.36-30.08,34.26,30.36,24.33,74.7,14.41,89.24-11,16.09-26.79,34.63-65.22,34.89h0Z" transform="translate(-141.34 -176.05)" style="fill-rule: evenodd;fill: url(#Безымянный_градиент_4)"/>
+      <g id="_01" data-name="01" style="opacity: 0.7000000000000001">
+        <g style="clip-path: url(#clip-path)">
+          <path d="M293.31,231.42a91.8,91.8,0,1,1-91.8,91.8,91.8,91.8,0,0,1,91.8-91.8h0Z" transform="translate(-141.34 -176.05)" style="fill-rule: evenodd;fill: url(#Безымянный_градиент_14)"/>
+        </g>
+      </g>
+      <g id="_02" data-name="02" style="opacity: 0.30000000000000004">
+        <g style="clip-path: url(#clip-path)">
+          <path d="M258.93,198.3a91.8,91.8,0,1,1-91.8,91.8,91.8,91.8,0,0,1,91.8-91.8h0Z" transform="translate(-141.34 -176.05)" style="fill-rule: evenodd;fill: url(#Безымянный_градиент_18)"/>
+        </g>
+      </g>
+      <g id="_03" data-name="03" style="opacity: 0.2">
+        <g style="clip-path: url(#clip-path)">
+          <path d="M233.14,176.05a91.8,91.8,0,1,1-91.8,91.8,91.8,91.8,0,0,1,91.8-91.8h0Z" transform="translate(-141.34 -176.05)" style="fill-rule: evenodd;fill: url(#Безымянный_градиент_18-2)"/>
+        </g>
+      </g>
+      <g id="_04" data-name="04" style="opacity: 0.4">
+        <g style="clip-path: url(#clip-path)">
+          <path d="M319.6,191.77a55.11,55.11,0,1,1-55.11,55.11,55.11,55.11,0,0,1,55.11-55.11h0Z" transform="translate(-141.34 -176.05)" style="fill-rule: evenodd;fill: url(#Безымянный_градиент_18-3)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
