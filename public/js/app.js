@@ -140,6 +140,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>'
 		});
 	}
+
+	// Price Slider
+	if ((0, _jquery2.default)('#slider-range').length > 0) {
+		(0, _jquery2.default)("#slider-range").slider({
+			range: true,
+			min: 0,
+			max: 500,
+			values: [75, 300],
+			slide: function slide(event, ui) {
+				// $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			}
+		});
+		// $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+	}
+
+	// Filter Open
+	(0, _jquery2.default)(".filters-item .filters-item__title").on("click", function () {
+		var filter = (0, _jquery2.default)(this).parent();
+		filter.toggleClass("filters-item--active");
+		filter.find(".filters-item__content").slideToggle();
+	});
 });
 
 /***/ }),

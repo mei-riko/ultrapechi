@@ -63,4 +63,25 @@ $(document).ready(() =>{
 			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
         });
 	}
+
+	// Price Slider
+	if( $('#slider-range').length > 0 ) {
+		$( "#slider-range" ).slider({
+		  range: true,
+		  min: 0,
+		  max: 500,
+		  values: [ 75, 300 ],
+		  slide: function( event, ui ) {
+			// $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+		  }
+		});
+		// $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+	}
+
+	// Filter Open
+	$(".filters-item .filters-item__title").on("click", function(){
+		let filter = $(this).parent();
+		filter.toggleClass("filters-item--active");
+		filter.find(".filters-item__content").slideToggle();
+	});
 });

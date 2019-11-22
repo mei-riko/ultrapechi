@@ -1,0 +1,200 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        .content-area
+            include chunks/header
+            main.inside.inside_text-page
+                section.catalog
+                    .container
+                        ul.breadcrumbs
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="#") Главная
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="#") Новости
+                            li.breadcrumbs__item Заголовок страницы
+                        p.h4.catalog__title Дымоходы от ведущих производителей в России
+                        .catalog__category
+                            .catalog__category-list
+                                a.catalog__category-tags.catalog__category-tags--active(href="#") Все товары
+                                a.catalog__category-tags(href="#") металлические
+                                a.catalog__category-tags(href="#") чугунные
+                                a.catalog__category-tags(href="#") эмалированные
+                                a.catalog__category-tags(href="#") керамические
+                                a.catalog__category-tags(href="#") металлические
+                                a.catalog__category-tags(href="#") чугунные
+                                a.catalog__category-tags(href="#") эмалированные
+                                a.catalog__category-modal(href="#") Показать все
+                        .row.no-gutters.justify-content-end
+                            .col-4
+                                form.filters.form.bg-white
+                                    .filters-item.filters-item--active
+                                        .filters-item__title Категории товаров
+                                        .filters-item__content(style="display:block;")
+                                            .checkbox-tags
+                                                input(type="checkbox" value="6" id="cat1" class="checkbox-tags__input")
+                                                label.checkbox-tags__name(for="cat1") Категория 1
+                                            .checkbox-tags
+                                                input(type="checkbox" value="6" id="cat2" class="checkbox-tags__input")
+                                                label.checkbox-tags__name(for="cat2") Категория 2
+                                            .checkbox-tags
+                                                input(type="checkbox" value="6" id="cat3" class="checkbox-tags__input")
+                                                label.checkbox-tags__name(for="cat3") Категория 3
+                                            .checkbox-tags
+                                                input(type="checkbox" value="6" id="cat4" class="checkbox-tags__input")
+                                                label.checkbox-tags__name(for="cat4") Категория 4
+                                    .filters-item
+                                        .filters-item__title.checkbox-filter
+                                            input.checkbox__input#f0(type="checkbox" name="agree" checked="checked")
+                                            label.checkbox__label(for="f0") Фильтр-чекбокс
+                                    .filters-item
+                                        .filters-item__title Категории товаров
+                                        .filters-item__content
+                                            .checkbox-filter
+                                                input.checkbox__input#f1(type="checkbox" name="agree")
+                                                label.checkbox__label(for="f1") Фильтр-чекбокс
+                                            .checkbox-filter
+                                                input.checkbox__input#f2(type="checkbox" name="agree")
+                                                label.checkbox__label(for="f2") Фильтр-чекбокс
+                                            .checkbox-filter
+                                                input.checkbox__input#f3(type="checkbox" name="agree")
+                                                label.checkbox__label(for="f3") Фильтр-чекбокс
+                                    .filters-item
+                                        .filters-item__title Диапазон
+                                        .filters-item__content 
+                                            .filters-item__slider#slider-range
+                                            .row.filters-item__input
+                                                .col-6
+                                                    label.d-flex.align-items-center(for="price1")
+                                                        | От
+                                                        input.form__input.form__input_fullwidth#price1(type="text" name="ms|price" value="113")
+                                                .col-6
+                                                    label.d-flex.align-items-center(for="price2")
+                                                        | До
+                                                        input.form__input.form__input_fullwidth#price2(type="text" name="ms|price" value="113")
+                                    a.filters-reset(href="#") Сбросить фильтр
+                            .col-8.bg-white
+                                .catalog__item.catalog__item_row
+                                    img.img-fluid(src="../img/pic-1.png")
+                                    .catalog__item__col.catalog__item__col_content
+                                        .catalog__item__category Каминные топки
+                                        a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                        <svg class="catalog__item__rating" viewBox="0 0 100 14" width="79px" height="11px" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#fe5202" d="M11.3,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L4.2,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L3.7,9L0.5,6.6C0.1,6.3-0.1,5.8,0.1,5.4c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C6.5,0.3,6.9,0,7.4,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L11.1,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C11.8,14.2,11.6,14.2,11.3,14.2L11.3,14.2z"/>
+                                            <path fill="#fe5202" d="M32.9,14.2c-0.2,0-0.5-0.1-0.7-0.2L29,11.6L25.8,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L25.3,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C28.1,0.3,28.5,0,29,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L32.7,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C33.4,14.2,33.1,14.2,32.9,14.2L32.9,14.2z"/>
+                                            <path fill="#fe5202" d="M53.6,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L46.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L46,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C48.7,0.3,49.2,0,49.7,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L53.4,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C54,14.2,53.8,14.2,53.6,14.2L53.6,14.2z"/>
+                                            <path fill="#e6e6e6" d="M99.6,6.6L96.3,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3c-0.2,0.1-0.4,0.2-0.7,0.2l0,0c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L89.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L88.9,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C91.7,0.3,92.1,0,92.6,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8"/>
+                                            <path fill="#e6e6e6" d="M75.1,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L68,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L67.6,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C70.3,0.3,70.8,0,71.2,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L74.9,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C75.6,14.2,75.4,14.2,75.1,14.2L75.1,14.2z"/>
+                                        </svg>
+                                        ul.list.text-small
+                                            li 
+                                                span.text-grey Габариты: 
+                                                | 400х300х2000
+                                            li 
+                                                span.text-grey Мощность отопления, м3: 
+                                                | до 400
+                                            li 
+                                                span.text-grey Вес: 
+                                                |40 кг
+                                            li 
+                                                span.text-grey Артикул: 
+                                                | 4000123342
+                                    .catalog__item__col.catalog__item__col_sidebar
+                                        .catalog__item__price
+                                            span.old-price 65 899 руб.
+                                            span.new-price 43 451 руб.
+                                        a.btn.btn_buy.pl-40(href="#") Купить
+                                        .availible в наличии
+                                        .no-availible нет в наличии
+                                .catalog__item.catalog__item_row
+                                    img.img-fluid(src="../img/pic-1.png")
+                                    .catalog__item__col.catalog__item__col_content
+                                        .catalog__item__category Каминные топки
+                                        a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                        <svg class="catalog__item__rating" viewBox="0 0 100 14" width="79px" height="11px" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#fe5202" d="M11.3,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L4.2,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L3.7,9L0.5,6.6C0.1,6.3-0.1,5.8,0.1,5.4c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C6.5,0.3,6.9,0,7.4,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L11.1,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C11.8,14.2,11.6,14.2,11.3,14.2L11.3,14.2z"/>
+                                            <path fill="#fe5202" d="M32.9,14.2c-0.2,0-0.5-0.1-0.7-0.2L29,11.6L25.8,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L25.3,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C28.1,0.3,28.5,0,29,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L32.7,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C33.4,14.2,33.1,14.2,32.9,14.2L32.9,14.2z"/>
+                                            <path fill="#fe5202" d="M53.6,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L46.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L46,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C48.7,0.3,49.2,0,49.7,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L53.4,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C54,14.2,53.8,14.2,53.6,14.2L53.6,14.2z"/>
+                                            <path fill="#e6e6e6" d="M99.6,6.6L96.3,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3c-0.2,0.1-0.4,0.2-0.7,0.2l0,0c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L89.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L88.9,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C91.7,0.3,92.1,0,92.6,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8"/>
+                                            <path fill="#e6e6e6" d="M75.1,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L68,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L67.6,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C70.3,0.3,70.8,0,71.2,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L74.9,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C75.6,14.2,75.4,14.2,75.1,14.2L75.1,14.2z"/>
+                                        </svg>
+                                        ul.list.text-small
+                                            li 
+                                                span.text-grey Габариты: 
+                                                | 400х300х2000
+                                            li 
+                                                span.text-grey Мощность отопления, м3: 
+                                                | до 400
+                                            li 
+                                                span.text-grey Вес: 
+                                                |40 кг
+                                            li 
+                                                span.text-grey Артикул: 
+                                                | 4000123342
+                                    .catalog__item__col.catalog__item__col_sidebar
+                                        .catalog__item__price
+                                            span.old-price 65 899 руб.
+                                            span.new-price 43 451 руб.
+                                        a.btn.btn_buy.btn_no-availible.pl-40(href="#") Купить
+                                        .availible в наличии
+                                        .no-availible нет в наличии
+                                .catalog__item.catalog__item_row
+                                    img.img-fluid(src="../img/pic-1.png")
+                                    .catalog__item__col.catalog__item__col_content
+                                        .catalog__item__category Каминные топки
+                                        a.catalog__item__title(href="/cart.html") Каминная топка Kratki ERYK/700
+                                        <svg class="catalog__item__rating" viewBox="0 0 100 14" width="79px" height="11px" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#fe5202" d="M11.3,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L4.2,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L3.7,9L0.5,6.6C0.1,6.3-0.1,5.8,0.1,5.4c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C6.5,0.3,6.9,0,7.4,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L11.1,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C11.8,14.2,11.6,14.2,11.3,14.2L11.3,14.2z"/>
+                                            <path fill="#fe5202" d="M32.9,14.2c-0.2,0-0.5-0.1-0.7-0.2L29,11.6L25.8,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L25.3,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C28.1,0.3,28.5,0,29,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L32.7,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C33.4,14.2,33.1,14.2,32.9,14.2L32.9,14.2z"/>
+                                            <path fill="#fe5202" d="M53.6,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L46.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L46,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C48.7,0.3,49.2,0,49.7,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L53.4,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C54,14.2,53.8,14.2,53.6,14.2L53.6,14.2z"/>
+                                            <path fill="#e6e6e6" d="M99.6,6.6L96.3,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3c-0.2,0.1-0.4,0.2-0.7,0.2l0,0c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L89.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L88.9,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C91.7,0.3,92.1,0,92.6,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8"/>
+                                            <path fill="#e6e6e6" d="M75.1,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L68,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L67.6,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C70.3,0.3,70.8,0,71.2,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L74.9,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C75.6,14.2,75.4,14.2,75.1,14.2L75.1,14.2z"/>
+                                        </svg>
+                                        ul.list.text-small
+                                            li 
+                                                span.text-grey Габариты: 
+                                                | 400х300х2000
+                                            li 
+                                                span.text-grey Мощность отопления, м3: 
+                                                | до 400
+                                            li 
+                                                span.text-grey Вес: 
+                                                |40 кг
+                                            li 
+                                                span.text-grey Артикул: 
+                                                | 4000123342
+                                    .catalog__item__col.catalog__item__col_sidebar
+                                        .catalog__item__price
+                                            span.old-price 65 899 руб.
+                                            span.new-price 43 451 руб.
+                                        a.btn.btn_buy.pl-40(href="#") Купить
+                                        .availible в наличии
+                                        .no-availible нет в наличии
+                            .col-8.mt-40
+                                ul.pagination
+                                    li.pagination__item
+                                        span.pagination__active 1
+                                    li.pagination__item
+                                        a.pagination__link(href="#") 2
+                                    li.pagination__item
+                                        a.pagination__link(href="#") 3
+                section.mt-40
+                    .container
+                        .content
+                            h1 Заголовок H1
+                            p Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.
+                            p Все комплектующие дымохода, за исключением диаметров 115 и 150 миллиметров, имеют индивидуально-определенные свойства, и могут быть использованы исключительно приобретающим их потребителем. Данные позиции обмену и возврату не подлежат.
+            include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+
+        //- link(href='./css/jquery-ui.css', rel='stylesheet')
+        script(src="./js/jquery-ui.min.js")
+
+        script(src="./js/app.min.js")

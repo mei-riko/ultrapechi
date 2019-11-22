@@ -1,0 +1,43 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Basic Page
+
+        link(href='./css/style.css', rel='stylesheet')
+
+    body
+        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        .content-area
+            include chunks/header
+            main.inside.inside_text-page
+                section.card
+                    .container
+                        ul.breadcrumbs
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="#") Главная
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="#") Каталог
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="#") Дымоходы
+                            li.breadcrumbs__item
+                                a.breadcrumbs__link(href="#") Металлические дымоходы
+                            li.breadcrumbs__item Заголовок страницы
+                        h1.h4.card__title Дымоходы для бани Варвара Мини с баком на вынос 130 л
+                        .card__content
+                            .row
+                                .col-4
+                                .col-4
+                                .col-4
+                            p Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.
+                            p Все комплектующие дымохода, за исключением диаметров 115 и 150 миллиметров, имеют индивидуально-определенные свойства, и могут быть использованы исключительно приобретающим их потребителем. Данные позиции обмену и возврату не подлежат.
+                            h2 Заголовок H2
+                            h3 Заголовок H3
+                            h4 Заголовок H4
+                            h5 Заголовок H5
+                            h6.text-bold Заголовок H6
+                            p Выбор типа дымохода, в первую очередь, зависит от топлива отопительного агрегата. Если вы хотите топить печь дровами или углем, то температура газа будет составлять порядка четырехсот градусов. Ее смогут выдержать только сэндвич-модули. Для газовых котлов, печей, работающих на жидком топливе или пеллетах подойдут и стальные трубы.
+            include chunks/footer.pug
+        script(src="./js/jquery.inputmask.js")
+        script(src="./js/app.min.js")

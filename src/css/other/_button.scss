@@ -33,12 +33,24 @@
         }
     }
     &_buy{
-        background: $yellow url(../img/cart.svg) no-repeat 11px 6px/24px;
-        width: 44px;
-        height: 36px;
+        background: $yellow url(../img/cart.svg) no-repeat 11px 8px/24px;
+        min-width: 44px;
+        height: 40px;
+        line-height: 18px;
+
         &:hover{
-            background-color: darken($color: $yellow, $amount: 10);
+            background-color: darken($color: $yellow, $amount: 8);
+            color: $black;
         }
+
+        &.pl-40{padding-left: 40px;}
+        &.btn_no-availible{
+            background-color: $border-color;
+            &:hover{
+                background-color: darken($color: $border-color, $amount: 8);
+            }
+        }
+
     }
 
     &_search{

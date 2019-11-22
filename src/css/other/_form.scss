@@ -6,10 +6,12 @@
         font-size: 14px;
 
         outline: none;
-        border: none;
+        border: 1px solid $border-color;
         border-radius: 12px;
 
         padding: 12px 20px;
+
+        max-width: 100%;
 
         &:focus::placeholder{
             opacity: 0;
@@ -90,6 +92,37 @@
         text-decoration: underline;
     }
 }
+.checkbox-filter{
+    .checkbox__label{
+        line-height: 28px;
+    }
+
+    & + .checkbox-filter{
+        margin-top: 12px;
+    }
+}
+.checkbox-tags{
+    display: inline-block;
+    .checkbox-tags__input{
+        display: none;
+        &:checked + .checkbox-tags__name{
+            background: $light-grey;
+            color: $white;
+        }
+    }
+    .checkbox-tags__name{
+        line-height: 1;
+
+        padding: 8px 12px;
+        text-align: center;
+
+        background: $border-color;
+        border-radius: 6px;
+
+        cursor: pointer;
+    }
+}
+
 .footer{
     .checkbox{
         &__label{
