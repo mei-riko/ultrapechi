@@ -2211,14 +2211,15 @@ a.link-phone:hover {
 }
 
 .btn_buy:hover {
-  background-color: #d6a800;
+  background-color: #ffd333;
   color: #000000;
 }
 
 .btn_buy.btn_with-text {
-  background-position: 14px 10px;
+  background-position: 18px 12px;
   background-size: 18px;
-  padding-left: 40px;
+  padding: 14px 24px 14px 46px;
+  height: auto;
 }
 
 .btn_buy.btn_no-availible {
@@ -2414,6 +2415,19 @@ a.link-phone:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.list_pay .list__item {
+  padding: 4px 0;
+  padding-left: 30px;
+}
+
+.list_pay .list__item_card {
+  background: url("../img/credit-card-orange.svg") no-repeat left center/22px;
+}
+
+.list_pay .list__item_cash {
+  background: url("../img/wallet-orange.svg") no-repeat 2px center/18px;
 }
 
 .slider {
@@ -2832,18 +2846,6 @@ html .ui-button.ui-state-disabled:active {
   display: block;
 }
 
-.catalog .catalog__item .catalog__item__price .old-price {
-  color: #ff4300;
-  font-size: 13px;
-  line-height: 18px;
-  text-decoration: line-through;
-}
-
-.catalog .catalog__item .catalog__item__price .new-price {
-  font-size: 1.5rem;
-  display: block;
-}
-
 .catalog .catalog__item .catalog__item__rating {
   margin-bottom: 20px;
 }
@@ -2901,6 +2903,36 @@ html .ui-button.ui-state-disabled:active {
 
 .catalog .catalog__item_row + .catalog__item_row {
   border-top: 1px solid #e0dcd6;
+}
+
+.catalog .catalog__item_preview-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 30px 40px;
+  border-right: 1px solid #f1efec;
+}
+
+.catalog .catalog__item_preview-row .catalog__item__col-image {
+  width: 90px;
+  max-width: 100%;
+}
+
+.catalog .catalog__item_preview-row .catalog__item__col {
+  padding-left: 40px;
+}
+
+.catalog .catalog__item_preview-row .catalog__item__price {
+  width: calc( 100% - 60px);
+}
+
+.catalog .catalog__item_preview-row .btn.btn_buy {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
 }
 
 .catalog .catalog__category {
@@ -3061,6 +3093,43 @@ html .ui-button.ui-state-disabled:active {
   padding: 30px 40px;
 }
 
+.card .card__info {
+  background: #ffffff;
+  padding: 20px 30px;
+  box-shadow: 0px 0px 30px 0px rgba(229, 229, 229, 0.7);
+}
+
+.card .card__info .buy-one-click {
+  font-size: 12px;
+  display: inline-block;
+  color: #726d72;
+  text-decoration: underline;
+}
+
+.card .card__info .buy-one-click:hover {
+  color: #ff4300;
+}
+
+.card .card__availible {
+  padding: 20px 30px;
+  background: #eef7e7;
+}
+
+.card .card__availible .availible,
+.card .card__availible .no-availible {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card .card__pay-info {
+  padding: 20px 30px;
+  background: #f7f0e7;
+}
+
+.card .card__info-title {
+  margin-bottom: 10px;
+}
+
 .card .card__rating {
   display: -ms-flexbox;
   display: flex;
@@ -3081,7 +3150,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .card .card__intro {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .card .card__link {
@@ -3094,6 +3163,41 @@ html .ui-button.ui-state-disabled:active {
   margin-top: 40px;
 }
 
-.card .list + .card__link {
+.card * + .card__link {
   margin-top: 10px;
+}
+
+.card .card__price {
+  margin-bottom: 10px;
+}
+
+.card .card__price .new-price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.old-price {
+  color: #ff4300;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: line-through;
+}
+
+.old-price + .adv-price {
+  margin-left: 10px;
+}
+
+.new-price {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.adv-price {
+  display: inline-block;
+  border: 1px solid #ff4300;
+  border-radius: 6px;
+  color: #ff4300;
+  padding: 4px 6px;
+  line-height: 1;
 }

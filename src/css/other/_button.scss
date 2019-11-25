@@ -39,14 +39,15 @@
         line-height: 16px;
 
         &:hover{
-            background-color: darken($color: $yellow, $amount: 8);
+            background-color: lighten($color: $yellow, $amount: 10);
             color: $black;
         }
 
         &.btn_with-text{
-            background-position: 14px 10px;
+            background-position: 18px 12px;
             background-size: 18px;
-            padding-left: 40px;
+            padding: 14px 24px 14px 46px;
+            height: auto;
         }
         &.btn_no-availible{
             background-color: $border-color;

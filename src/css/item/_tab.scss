@@ -1,0 +1,23 @@
+.tab-content{
+    &_product {
+        width: 700px;
+        max-width: 100%
+    }
+    .tab-pane {
+        display: none;
+        &.fade {
+            opacity: 1;
+            transition: opacity .15s linear;
+        }
+        &.fade:not(.show) {
+            opacity: 0;
+        }
+        &.show{
+            display: block;
+        }
+    }
+
+    & > .active{
+        display: block;
+    }
+}

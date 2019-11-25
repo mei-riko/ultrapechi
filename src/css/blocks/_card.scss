@@ -9,7 +9,40 @@
         background: $white;
         padding: 30px 40px;
     }
+    .card__info{
+        background: $white;
+        padding: 20px 30px;
+        box-shadow: 0px 0px 30px 0px rgba(229, 229, 229, 0.7);
+
+        .buy-one-click{
+            font-size: 12px;
+            display: inline-block;
+            color: $grey;
+            text-decoration: underline;
+
+            &:hover{
+                color: $orange;
+            }
+        }
+    }
+    .card__availible{
+        padding: 20px 30px;
+        background: #eef7e7;
+        .availible,
+        .no-availible{
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+    .card__pay-info{
+        padding: 20px 30px;
+        background: #f7f0e7;
+    }
     
+
+    .card__info-title{
+        margin-bottom: 10px;
+    }
     .card__rating{
         display: flex;
         flex-wrap: wrap;
@@ -27,7 +60,7 @@
         }
     }
     .card__intro{
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
     .card__link{
         @extend .text-small;
@@ -40,7 +73,43 @@
             margin-top: 40px;
         }
     }
-    .list + .card__link{
+    * + .card__link{
         margin-top: 10px;
     }
+
+    .card__price{
+        margin-bottom: 10px;
+
+        .new-price{
+            font-size: 2rem;
+            font-weight: bold;
+
+            margin-top: 10px;
+        }
+    }
+}
+
+.old-price{
+    color: $orange;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: line-through;
+
+    & + .adv-price{
+        margin-left: 10px;
+    }
+}
+.new-price{
+    font-size: 1.5rem;
+    display: block;
+}
+.adv-price{
+    display: inline-block;
+    border:1px solid $orange;
+    border-radius: 6px;
+    color: $orange;
+    padding: 4px 6px;
+
+    // font-size: 13px;
+    line-height: 1;
 }
