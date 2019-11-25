@@ -87,6 +87,39 @@
             margin-top: 10px;
         }
     }
+
+    /* Tab Info */
+    .nav{
+        font-size: 13px;
+        font-weight: bold;
+        list-style: none;
+        text-transform: uppercase;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .nav__item{
+            margin-bottom: 1px;
+            padding: 14px 30px;
+            background: $white;
+
+            border-right: 1px solid $body-bg;
+        }
+        .nav__link{
+            color: $grey;
+
+            &:hover{
+                color: $brown;
+            }
+
+            &.active{
+                color: $orange;
+            }
+        }
+    }
 }
 
 .old-price{

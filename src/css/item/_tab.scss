@@ -20,4 +20,10 @@
     & > .active{
         display: block;
     }
+
+    &_product{
+        width: 100%;
+        padding: 30px 40px;
+        background: $white;
+    }
 }

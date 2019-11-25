@@ -40,10 +40,10 @@
     .header__cart{
         @extend .text-small;
         line-height: 18px;
-        padding-left: 54px;
+        padding-left: 50px;
         background: url("../img/cart-orange.svg") no-repeat left center / 30px;
 
-        width: 132px;
+        width: 128px;
         max-width: 100%;
     }
     .form{
