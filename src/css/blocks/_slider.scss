@@ -47,7 +47,6 @@
             outline: none;
         }
     }
-
     &_with-content{
         .slider__item{
             position: relative;
@@ -114,6 +113,30 @@
     }
     &_partners{
         padding: 30px 20px;
+    }
+    &_product{
+        border: 1px solid $border-color;
+        margin-bottom: 20px;
+        &-nav{
+            padding: 0 40px;
+            .slider__item{
+                border: 1px solid $border-color;
+                padding: 0;
+                margin: 0 10px;
+                &.slick-current{
+                    border-color: $grey;
+                }
+            }
+            .slider-arrow{
+                &_prev{
+                    right: auto;
+                    left: 0;
+                }
+                &_next{
+                    right: 0;
+                }
+            }
+        }
     }
 }
 

@@ -122,6 +122,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			dots: false,
 			autoplay: true
 		});
+
+		var $slickCard = (0, _jquery2.default)('.slider.slider_product');
+		var $slickCardNav = (0, _jquery2.default)('.slider.slider_product-nav');
+
+		$slickCard.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			fade: true,
+			asNavFor: '.slider.slider_product-nav'
+		});
+		$slickCardNav.slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.slider.slider_product',
+			arrows: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
+			centerMode: true,
+			focusOnSelect: true
+		});
 	}
 
 	// Slider Index

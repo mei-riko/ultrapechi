@@ -36,14 +36,18 @@
         background: $yellow url(../img/cart.svg) no-repeat 11px 8px/24px;
         min-width: 44px;
         height: 40px;
-        line-height: 18px;
+        line-height: 16px;
 
         &:hover{
             background-color: darken($color: $yellow, $amount: 8);
             color: $black;
         }
 
-        &.pl-40{padding-left: 40px;}
+        &.btn_with-text{
+            background-position: 14px 10px;
+            background-size: 18px;
+            padding-left: 40px;
+        }
         &.btn_no-availible{
             background-color: $border-color;
             &:hover{
@@ -51,6 +55,14 @@
             }
         }
 
+    }
+    &_default{
+        background: $border-color;
+        color: $brown;
+        &:hover{
+            color: $brown;
+            background: darken($color: $border-color, $amount: 3);
+        }
     }
 
     &_search{
