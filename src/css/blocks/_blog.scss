@@ -1,6 +1,9 @@
 .blog-item{
     position: relative;
     padding: 94px 40px 40px;
+    
+    width: 100%;
+    max-width: 100%;
 
     .blog-item__label{
         position: absolute;
@@ -32,6 +35,8 @@
         margin-bottom: 10px;
     }
     .blog-item__title{
+        position: relative;
+
         font-size: 1.25rem;
         line-height: 1.2;
         &_large{
@@ -39,6 +44,8 @@
         }
     }
     .blog-item__offer{
+        position: relative;
+
         @extend .text-small;
         @extend .text-grey;
     }
@@ -92,6 +99,34 @@
         }
         .sep{
             margin: 30px 0;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .blog-item{
+        &_type-1{
+            &.blog-item_image {
+                padding-right: 120px;
+                .blog-item__bg{
+                    width: 140px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .blog-item{
+        &_type-1{
+            &.blog-item_image {
+                padding-bottom: 180px;
+                padding-right: 40px;
+                .blog-item__bg{
+                    width: 100%;
+                    height: 180px;
+                    z-index: 1;
+                }
+            }
         }
     }
 }

@@ -59,6 +59,18 @@
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .content{
         padding: 30px 40px;
+
+        &_header-block{
+            padding: 0;
+            margin-top: 40px;
+            .content__title{
+                padding: 20px 30px;
+            }
+            .content__offer {
+                padding: 20px 30px;
+            }
+        }
+
         &_error{
             background: $white;
             margin-top: 40px;
@@ -76,6 +88,16 @@
     }
     .content{
         padding: 30px 20px;
+        &_header-block{
+            padding: 0;
+            margin-top: 40px;
+            .content__title{
+                padding: 20px;
+            }
+            .content__offer {
+                padding: 20px;
+            }
+        }
         &_error{
             .content__title {
                 font-size: 30px;
