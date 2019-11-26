@@ -183,6 +183,66 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		filter.toggleClass("filters-item--active");
 		filter.find(".filters-item__content").slideToggle();
 	});
+
+	// Search Mobile
+	(0, _jquery2.default)("#searchMobile").on("click", function (e) {
+		e.preventDefault();
+		(0, _jquery2.default)(".header__mobile-search").toggleClass("header__mobile-search--active");
+		(0, _jquery2.default)(".header__mobile-search").slideToggle();
+	});
+
+	// Navbar 
+	(0, _jquery2.default)(".navbar .navbar__item.navbar__item_has-child .navbar__link").on("click", function (e) {
+		e.preventDefault();
+
+		var inside = (0, _jquery2.default)(this).parent().find(".navbar__inside");
+		inside.slideToggle();
+	});
+
+	(0, _jquery2.default)("#navMobile").on("click", function (e) {
+		e.preventDefault();
+		if (!(0, _jquery2.default)(this).hasClass("btn-mobile--active")) {
+			(0, _jquery2.default)(this).addClass("btn-mobile--active");
+			(0, _jquery2.default)(".header__mobile-nav").addClass("header__mobile-nav--active");
+			(0, _jquery2.default)("body").attr("style", "overflow: hidden; overscroll-behavior: none;");
+		} else {
+			(0, _jquery2.default)(this).removeClass("btn-mobile--active");
+			(0, _jquery2.default)(".header__mobile-nav").removeClass("header__mobile-nav--active");
+			(0, _jquery2.default)("body").attr("style", "");
+		}
+	});
+	// Hide Navigation on Desktop
+	(0, _jquery2.default)(window).resize(function () {
+		if ((0, _jquery2.default)(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches) {
+			(0, _jquery2.default)(".btn-mobile#navMobile").removeClass("btn-mobile--active");
+			(0, _jquery2.default)(".header__mobile-nav.header__mobile-nav--active").removeClass("header__mobile-nav--active");
+			(0, _jquery2.default)("body").attr("style", "");
+
+			(0, _jquery2.default)(".header__mobile-search.header__mobile-search--active").removeClass("header__mobile-search--active");
+			(0, _jquery2.default)(".header__mobile-search").hide();
+		}
+	});
+
+	(0, _jquery2.default)(document).mouseup(function (e) {
+		// событие клика по веб-документу
+		var dropdownActive = (0, _jquery2.default)(".header__mobile-nav.header__mobile-nav--active"); // элемент меню
+
+		if (!dropdownActive.is(e.target) // клик был не по блоку
+		&& dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
+		&& !(0, _jquery2.default)(".btn-mobile#navMobile").is(e.target)) {
+			(0, _jquery2.default)(".btn-mobile#navMobile").removeClass("btn-mobile--active");
+			dropdownActive.removeClass("header__mobile-nav--active");
+			(0, _jquery2.default)("body").attr("style", "");
+		}
+
+		var searchActive = (0, _jquery2.default)(".header__mobile-search.header__mobile-search--active"); // элемент поиск
+		if (!searchActive.is(e.target) // клик был не по блоку
+		&& searchActive.has(e.target).length === 0 // и не по его дочерним элементам
+		&& !(0, _jquery2.default)(".btn-mobile#searchMobile").is(e.target)) {
+			searchActive.slideUp();
+			searchActive.removeClass("header__mobile-search--active");
+		}
+	});
 });
 
 /***/ }),

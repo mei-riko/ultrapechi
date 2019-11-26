@@ -35,3 +35,14 @@
         width: calc(100% - 260px);
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .inside.inside_text-page{
+        .container{
+            padding: 0;
+        }
+    }
+    .content{
+        padding: 30px 20px;
+    }
+}

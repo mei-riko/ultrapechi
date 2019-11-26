@@ -51,6 +51,40 @@
             }
         }
     }
+    &_mobile{
+        .navbar__item{
+            padding: 10px 0;
+
+            .navbar__link{
+                width: 100%;
+            }
+
+            & + .navbar__item{
+                border-top: 1px solid $border-color;
+            }
+
+            & > .navbar__link{
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            &_has-child{
+                & > .navbar__link{
+                    padding-right: 30px;
+                    background: url(../img/chevron-right.svg) no-repeat right center/20px;
+                }
+            }
+        }
+    }
+    .navbar__inside{
+        display: none;
+
+        .navbar__link{
+            display: block;
+            padding: 10px 0 0 20px;
+            color: $grey;
+        }
+    }
 }
 .catalog-nav-show{
     .navbar_catalog{

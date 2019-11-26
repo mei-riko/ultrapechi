@@ -81,3 +81,5 @@
 
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){}
