@@ -213,7 +213,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	});
 	// Hide Navigation on Desktop
 	(0, _jquery2.default)(window).resize(function () {
-		if ((0, _jquery2.default)(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches) {
+		if ((0, _jquery2.default)(window).width() > 767 || !window.matchMedia('screen and (max-width: 768px)').matches) {
 			(0, _jquery2.default)(".btn-mobile#navMobile").removeClass("btn-mobile--active");
 			(0, _jquery2.default)(".header__mobile-nav.header__mobile-nav--active").removeClass("header__mobile-nav--active");
 			(0, _jquery2.default)("body").attr("style", "");

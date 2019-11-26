@@ -40,10 +40,10 @@
     .header__cart{
         @extend .text-small;
         line-height: 18px;
-        padding-left: 50px;
+        padding-left: 40px;
         background: url("../img/cart-orange.svg") no-repeat left center / 30px;
 
-        width: 128px;
+        width: 120px;
         max-width: 100%;
     }
     .form{
@@ -54,13 +54,47 @@
             height: 46px;
         }
     }
-}
 
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header__mobile-line,
+    .header__mobile-nav,
+    .header__mobile-search{
+        display: none;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .header{
+        .form{
+            .form__input_search{
+                width: 300px;
+            }
+        }
+        .header__phone{
+            display: inline-block;
+            font-size: 0;
+            
+            flex: 0 0 40px;
+            max-width: 40px;
+
+            height: 40px;
+            padding: 0;
+            background-position: center;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        .form{
+            .form__input_search{
+                width: unset;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     .header{
         max-width: 100%;
-        
         margin-bottom: 0;
+
         .header__logo {
             width: 110px;
             height: 70px;
@@ -115,6 +149,8 @@
             display: none;
         }
         .header__mobile-nav{
+            display: block;
+
             position: fixed;
             background: $white;
             box-shadow: 5px 0 20px -5px #222;
@@ -123,7 +159,7 @@
             left: 0;
             padding: 20px;
 
-            width: 280px;
+            width: 380px;
             max-width: calc(100% - 40px);
             height: 100vh;
 
@@ -154,6 +190,17 @@
             &_cart{
                 background: url("../img/cart-white.svg") no-repeat center / 20px;
             }
+        }
+        .container{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        .header__mobile-nav{
+            width: 280px;
         }
     }
 }

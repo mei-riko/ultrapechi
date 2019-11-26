@@ -109,3 +109,28 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .navbar{
+        &_header{
+            .navbar__link {
+                padding: 4px 22px;
+                &_catalog{
+                    padding-left: 32px;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .navbar{
+        &_header{
+            .navbar__link {
+                padding: 4px 12px;
+                &_catalog{
+                    padding-left: 0;
+                    background: none;
+                }
+            }
+        }
+    }
+}

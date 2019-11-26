@@ -137,7 +137,7 @@ $(document).ready(() =>{
 	});
 	// Hide Navigation on Desktop
 	$(window).resize(function(){
-		if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
+		if ( $(window).width() > 767 || !window.matchMedia('screen and (max-width: 768px)').matches ){
 			$(".btn-mobile#navMobile").removeClass("btn-mobile--active");
 			$(".header__mobile-nav.header__mobile-nav--active").removeClass("header__mobile-nav--active");
 			$("body").attr("style", "");

@@ -878,7 +878,7 @@ a.link-phone:hover {
   max-width: 100%;
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: 1200px) {
   .col-xl-1 {
     -ms-flex: 0 0 8.33333%;
     flex: 0 0 8.33333%;
@@ -1304,7 +1304,7 @@ a.link-phone:hover {
   align-self: stretch !important;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .flex-xl-column, .flex-xl-row {
     -ms-flex-direction: row !important;
     flex-direction: row !important;
@@ -1908,9 +1908,9 @@ a.link-phone:hover {
 
 .header .header__cart {
   line-height: 18px;
-  padding-left: 50px;
+  padding-left: 40px;
   background: url("../img/cart-orange.svg") no-repeat left center/30px;
-  width: 128px;
+  width: 120px;
   max-width: 100%;
 }
 
@@ -1924,7 +1924,35 @@ a.link-phone:hover {
   height: 46px;
 }
 
-@media all and (max-width: 576px) {
+.header .header__mobile-line,
+.header .header__mobile-nav,
+.header .header__mobile-search {
+  display: none;
+}
+
+@media all and (max-width: 1200px) {
+  .header .form .form__input_search {
+    width: 300px;
+  }
+  .header .header__phone {
+    display: inline-block;
+    font-size: 0;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+    max-width: 40px;
+    height: 40px;
+    padding: 0;
+    background-position: center;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .header .form .form__input_search {
+    width: unset;
+  }
+}
+
+@media all and (max-width: 768px) {
   .header {
     max-width: 100%;
     margin-bottom: 0;
@@ -1989,13 +2017,14 @@ a.link-phone:hover {
     display: none;
   }
   .header .header__mobile-nav {
+    display: block;
     position: fixed;
     background: #ffffff;
     box-shadow: 5px 0 20px -5px #222;
     top: 0;
     left: 0;
     padding: 20px;
-    width: 280px;
+    width: 380px;
     max-width: calc(100% - 40px);
     height: 100vh;
     overflow-y: auto;
@@ -2024,6 +2053,16 @@ a.link-phone:hover {
   }
   .header .btn-mobile_cart {
     background: url("../img/cart-white.svg") no-repeat center/20px;
+  }
+  .header .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .header .header__mobile-nav {
+    width: 280px;
   }
 }
 
@@ -2131,6 +2170,25 @@ a.link-phone:hover {
 
 .footer .navbar .navbar__link:hover {
   color: #ff4300;
+}
+
+@media all and (max-width: 1200px) {
+  .navbar_header .navbar__link {
+    padding: 4px 22px;
+  }
+  .navbar_header .navbar__link_catalog {
+    padding-left: 32px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .navbar_header .navbar__link {
+    padding: 4px 12px;
+  }
+  .navbar_header .navbar__link_catalog {
+    padding-left: 0;
+    background: none;
+  }
 }
 
 .form {
@@ -2414,6 +2472,13 @@ a.link-phone:hover {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@media all and (max-width: 576px) {
+  .btn {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
 }
 
 .pagination {
@@ -2948,7 +3013,9 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .content_error {
-  background: #ffffff url("../img/logo-fire.svg") no-repeat 100% -50px/600px;
+  background: #ffffff url("../img/logo-fire.svg") no-repeat right top/420px;
+  background-position-x: calc(100% + 120px);
+  background-position-y: 40px;
 }
 
 .content_error .content__title {
@@ -2983,12 +3050,45 @@ html .ui-button.ui-state-disabled:active {
   width: calc(100% - 260px);
 }
 
+@media all and (max-width: 1200px) {
+  .content_error {
+    background: #ffffff url("../img/logo-fire.svg") no-repeat 100% 100%/420px;
+    background-position-x: calc(100% + 100px);
+    background-position-y: calc(100% + 50px);
+  }
+}
+
+@media all and (max-width: 992px) {
+  .content_error {
+    background-size: 350px;
+  }
+  .content_error .content__title {
+    font-size: 90px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .content {
+    padding: 30px 40px;
+  }
+  .content_error {
+    background: #ffffff;
+    margin-top: 40px;
+  }
+  .content_error .content__title {
+    font-size: 60px;
+  }
+}
+
 @media all and (max-width: 576px) {
   .inside.inside_text-page .container {
     padding: 0;
   }
   .content {
     padding: 30px 20px;
+  }
+  .content_error .content__title {
+    font-size: 30px;
   }
 }
 

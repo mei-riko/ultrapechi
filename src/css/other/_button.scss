@@ -82,4 +82,9 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'sm')){}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .btn{
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+}

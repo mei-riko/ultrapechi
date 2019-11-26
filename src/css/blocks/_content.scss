@@ -3,7 +3,9 @@
     padding: 60px 80px;
 
     &_error{
-        background: $white url("../img/logo-fire.svg") no-repeat 100% -50px/600px;
+        background: $white url("../img/logo-fire.svg") no-repeat right top/420px;
+        background-position-x: calc(100% + 120px);
+        background-position-y: 40px;
         .content__title{
             font-size: 110px;
             font-weight: bold;
@@ -35,7 +37,37 @@
         width: calc(100% - 260px);
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .content{
+        &_error{
+            background: $white url("../img/logo-fire.svg") no-repeat 100% 100%/420px;
+            background-position-x: calc(100% + 100px);
+            background-position-y: calc(100% + 50px);
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content{
+        &_error{
+            background-size: 350px;
+            .content__title {
+                font-size: 90px;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content{
+        padding: 30px 40px;
+        &_error{
+            background: $white;
+            margin-top: 40px;
+            .content__title {
+                font-size: 60px;
+            }
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .inside.inside_text-page{
         .container{
@@ -44,5 +76,10 @@
     }
     .content{
         padding: 30px 20px;
+        &_error{
+            .content__title {
+                font-size: 30px;
+            }
+        }
     }
 }
