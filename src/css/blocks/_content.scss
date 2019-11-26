@@ -28,7 +28,6 @@
         }
     }
 }
-
 .content-slider{
     .content-slider__col{
         padding-left: 40px;
@@ -81,6 +80,15 @@
             }
         }
     }
+    .content-slider{
+        margin-top: 40px;
+        .content-slider__col{
+            padding-left: 20px;
+    
+            flex: 0 0 100%;
+            width: 100%;
+        }
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .inside.inside_text-page{
@@ -103,6 +111,15 @@
         &_error{
             .content__title {
                 font-size: 30px;
+            }
+        }
+    }
+    .content-slider{
+        margin-top: 0;
+        .content-slider__col{
+            .slider_with-content{
+                margin-left: -20px;
+                margin-right: -20px;
             }
         }
     }

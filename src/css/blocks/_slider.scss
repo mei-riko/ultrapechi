@@ -140,6 +140,7 @@
     }
 }
 
+
 /* UI Slider */
 
 .ui-slider {
@@ -202,4 +203,54 @@ html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
     border: 4px solid $border-color;
     background: $white;
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .slider{
+        &_with-content{
+            .slider__title{
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            .slider__content{
+                max-width: 60%;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .slider{
+        &_with-content{
+            .slider__title{
+                font-size: 1.75rem;
+                font-weight: bold;
+            }
+            .slider__content{
+                background: rgba(45, 45, 45, 0.7);
+
+                text-align: center;
+
+                padding: 40px 40px 60px;
+                height: auto;
+                width: 100%!important;
+                max-width: 100%;
+
+                top: auto;
+                bottom: 0;
+                
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .slider{
+        &_with-content{
+            .slider__title{
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+    }
 }

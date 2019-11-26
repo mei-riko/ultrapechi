@@ -10,13 +10,35 @@
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
     <div class="content-area">
       <header class="header">
         <div class="container">
+          <div class="header__mobile-line d-none">
+            <div class="header__mobile-line__left"><a class="btn-mobile btn-mobile_nav" id="navMobile" href="#"></a><a class="btn-mobile btn-mobile_search" id="searchMobile" href="#"></a></div><a class="header__logo" href="/"></a>
+            <div class="header__mobile-line__right"><a class="btn-mobile btn-mobile_phone" href="tel:88009312425"></a><a class="btn-mobile btn-mobile_cart" href="/cart.html"></a></div>
+          </div>
+          <div class="header__mobile-search">
+            <form class="form form_search" action="">
+              <input class="form__input form__input_search" type="text" placeholder="Поиск по сайту"/>
+              <button class="btn btn_search" type="submit"></button>
+            </form>
+          </div>
+          <div class="header__mobile-nav">
+            <nav class="navbar navbar_mobile">
+              <div class="navbar__item navbar__item_has-child"><a class="navbar__link" href="#">Каталог товаров</a>
+                <div class="navbar__inside"><a class="navbar__link" href="#">Печи-камины</a><a class="navbar__link" href="#">Печи для бани</a><a class="navbar__link" href="#">Отопительно-варочные печи </a><a class="navbar__link" href="#">Каминные топки</a><a class="navbar__link" href="#">Каминные облицовки</a><a class="navbar__link" href="#">Электронагревательные приборы</a><a class="navbar__link" href="#">Котлы и оборудование</a><a class="navbar__link" href="#">Чугунное литье</a><a class="navbar__link" href="#">Изоляция и огнезащита</a><a class="navbar__link" href="#">Дымоходы и комплектующие</a><a class="navbar__link" href="#">Окна и комплектующие</a><a class="navbar__link" href="#">Двери и комплектующие</a><a class="navbar__link" href="#">Топливо</a><a class="navbar__link" href="#">Прочее</a></div>
+              </div>
+              <div class="navbar__item"><a class="navbar__link" href="#">Услуги</a></div>
+              <div class="navbar__item"><a class="navbar__link" href="#">Производство</a></div>
+              <div class="navbar__item"><a class="navbar__link" href="#">О компании</a></div>
+              <div class="navbar__item"><a class="navbar__link" href="#">Контакты</a></div>
+              <div class="navbar__item"><a class="navbar__link" href="#">Расчет дымохода</a></div>
+            </nav>
+          </div>
           <div class="row align-items-center">
-            <div class="col-2"><a class="header__logo" href="/"></a></div>
-            <div class="col-10">
+            <div class="col-2 d-md-none"><a class="header__logo" href="/"></a></div>
+            <div class="col-10 d-md-none">
               <div class="header__line">
                 <form class="form form_search" action="">
                   <input class="form__input form__input_search" type="text" placeholder="Поиск по сайту"/>
@@ -31,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div class="header__nav">
+        <div class="header__nav d-md-none">
           <div class="container">
             <div class="header__line">
               <nav class="navbar navbar_header"><a class="navbar__link navbar__link_catalog" href="#">Каталог товаров</a>
@@ -74,7 +96,7 @@
             <h1 class="h4 card__title">Дымоходы для бани Варвара Мини с баком на вынос 130 л</h1>
             <div class="card__content mb-40">
               <div class="row">
-                <div class="col-5">
+                <div class="col-5 col-sm-12 col-lg-6">
                   <div class="slider slider_product"><img class="slider__item" src="../img/pic-1.png"/><img class="slider__item" src="../img/pic-2.png"/><img class="slider__item" src="../img/pic-3.png"/><img class="slider__item" src="../img/pic-4.png"/></div>
                   <div class="slider slider_product-nav"><img class="slider__item" src="../img/pic-1.png"/><img class="slider__item" src="../img/pic-2.png"/><img class="slider__item" src="../img/pic-3.png"/><img class="slider__item" src="../img/pic-4.png"/></div>
                   <div class="advantage-xs mt-40">
@@ -92,7 +114,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-3 col-sm-12 col-lg-6 mt-sm-20">
                   <div class="card__rating"><svg class="card__rating-icon" viewBox="0 0 100 14" width="79px" height="11px" xmlns="http://www.w3.org/2000/svg">
 <path fill="#fe5202" d="M11.3,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L4.2,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L3.7,9L0.5,6.6C0.1,6.3-0.1,5.8,0.1,5.4c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C6.5,0.3,6.9,0,7.4,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L11.1,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C11.8,14.2,11.6,14.2,11.3,14.2L11.3,14.2z"/>
 <path fill="#fe5202" d="M32.9,14.2c-0.2,0-0.5-0.1-0.7-0.2L29,11.6L25.8,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L25.3,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C28.1,0.3,28.5,0,29,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L32.7,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C33.4,14.2,33.1,14.2,32.9,14.2L32.9,14.2z"/>
@@ -109,25 +131,31 @@
                     <li> <span class="text-grey">Вес: </span>40 кг</li>
                     <li> <span class="text-grey">Артикул: </span>4000123342</li>
                   </ul><a class="card__link scroll" href="#tech">Все характеристики</a>
-                </div>
-                <div class="col-4">
-                  <div class="card__info">
+                  <div class="card__info d-none d-lg-block d-md-none">
                     <div class="card__price"><span class="old-price">65 899 р.</span><span class="adv-price">выгода 11 599 р.</span><span class="new-price">43 451 р.</span></div>
-                    <div class="d-flex justify-content-between align-items-end"><a class="btn btn_buy btn_with-text" href="#">Купить</a><a class="buy-one-click" href="#">Купить в 1 клик</a></div>
+                    <div class="d-flex justify-content-between align-items-end flex-wrap"><a class="btn btn_buy btn_with-text" href="#">Купить</a><a class="buy-one-click" href="#">Купить в 1 клик</a></div>
                   </div>
-                  <div class="card__availible mt-40">
-                    <p class="availible card__info-title">В наличии</p>
-                    <ul class="list text-small">
-                      <li><span class="text-grey">Доставка курьером:: </span>28 октября</li>
-                      <li> <span class="text-grey">Самовывоз: </span>20 октября</li>
-                    </ul>
-                  </div>
-                  <div class="card__pay-info mt-40">
-                    <p class="text-bold card__info-title">Способы оплаты</p>
-                    <ul class="list text-small list_pay">
-                      <li class="list__item list__item_card">картой или по счету</li>
-                      <li class="list__item list__item_cash">наличными в банке или офисе</li>
-                    </ul>
+                </div>
+                <div class="col-4 col-sm-12 col-lg-12 mt-lg-40">
+                  <div class="row no-gutters">
+                    <div class="col-12 card__info d-lg-none d-md-block">
+                      <div class="card__price"><span class="old-price">65 899 р.</span><span class="adv-price">выгода 11 599 р.</span><span class="new-price">43 451 р.</span></div>
+                      <div class="d-flex justify-content-between align-items-end flex-wrap"><a class="btn btn_buy btn_with-text" href="#">Купить</a><a class="buy-one-click" href="#">Купить в 1 клик</a></div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-sm-12 card__availible mt-40 mt-md-20">
+                      <p class="availible card__info-title">В наличии</p>
+                      <ul class="list text-small">
+                        <li><span class="text-grey">Доставка курьером: </span>28&nbsp;октября</li>
+                        <li> <span class="text-grey">Самовывоз: </span>20&nbsp;октября</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 col-lg-6 col-sm-12 card__pay-info mt-40 mt-md-20">
+                      <p class="text-bold card__info-title">Способы оплаты</p>
+                      <ul class="list text-small list_pay">
+                        <li class="list__item list__item_card">картой или по счету</li>
+                        <li class="list__item list__item_cash">наличными в банке или офисе</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -176,8 +204,8 @@
         <aside class="catalog mt-40">
           <div class="container">
             <p class="h4 catalog__title">С товаром часто заказывают</p>
-            <div class="row no-gutters catalog__row">
-              <div class="col-4 d-flex">
+            <div class="slider slider_add catalog__row">
+              <div class="d-flex">
                 <div class="catalog__item catalog__item_preview-row"><img class="catalog__item__col-image img-fluid" src="../img/pic-1.png"/>
                   <div class="catalog__item__col">
                     <div class="catalog__item__category">Каминные топки</div><a class="catalog__item__title" href="/cart.html">Каминная топка Kratki ERYK/700</a>
@@ -185,7 +213,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4 d-flex">
+              <div class="d-flex">
                 <div class="catalog__item catalog__item_preview-row"><img class="catalog__item__col-image img-fluid" src="../img/pic-2.png"/>
                   <div class="catalog__item__col">
                     <div class="catalog__item__category">Каминные топки</div><a class="catalog__item__title" href="/cart.html">Каминная топка Kratki ERYK/700</a>
@@ -193,7 +221,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4 d-flex">
+              <div class="d-flex">
                 <div class="catalog__item catalog__item_preview-row"><img class="catalog__item__col-image img-fluid" src="../img/pic-3.png"/>
                   <div class="catalog__item__col">
                     <div class="catalog__item__category">Каминные топки</div><a class="catalog__item__title" href="/cart.html">Каминная топка Kratki ERYK/700</a>
@@ -207,26 +235,26 @@
         <aside class="catalog catalog_hits mt-40">
           <div class="container">
             <p class="h4 catalog__title">Похожие товары</p>
-            <div class="row no-gutters catalog__row">
-              <div class="col-3 d-flex">
+            <div class="slider catalog__row">
+              <div class="d-flex">
                 <div class="catalog__item catalog__item_column"><img class="img-fluid" src="../img/pic-1.png"/>
                   <div class="catalog__item__category">Каминные топки</div><a class="catalog__item__title" href="/cart.html">Каминная топка Kratki ERYK/700</a>
                   <div class="catalog__item__price"><span class="old-price">65 899 руб.</span><span class="new-price">43 451 руб.</span></div><a class="btn btn_buy" href="#"></a>
                 </div>
               </div>
-              <div class="col-3 d-flex">
+              <div class="d-flex">
                 <div class="catalog__item catalog__item_column"><img class="img-fluid" src="../img/pic-2.png"/>
                   <div class="catalog__item__category">Каминные топки</div><a class="catalog__item__title" href="/cart.html">Печь для бани Варвара Мини с баком вынос 130 объем 320 </a>
                   <div class="catalog__item__price"><span class="old-price"> </span><span class="new-price">43 451 руб.</span></div><a class="btn btn_buy" href="#"></a>
                 </div>
               </div>
-              <div class="col-3 d-flex">
+              <div class="d-flex">
                 <div class="catalog__item catalog__item_column"><img class="img-fluid" src="../img/pic-3.png"/>
                   <div class="catalog__item__category">Каминные топки</div><a class="catalog__item__title" href="/cart.html">Каминная топка Kratki ERYK/700</a>
                   <div class="catalog__item__price"><span class="old-price"> </span><span class="new-price">43 451 руб.</span></div><a class="btn btn_buy" href="#"></a>
                 </div>
               </div>
-              <div class="col-3 d-flex">
+              <div class="d-flex">
                 <div class="catalog__item catalog__item_column"><img class="img-fluid" src="../img/pic-4.png"/>
                   <div class="catalog__item__category">Каминные топки</div><a class="catalog__item__title" href="/cart.html">Каминная топка Kratki ERYK/700</a>
                   <div class="catalog__item__price"><span class="old-price"> </span><span class="new-price">43 451 руб.</span></div><a class="btn btn_buy" href="#"></a>
@@ -239,10 +267,10 @@
           <div class="container">
             <div class="content content_header-block">
               <div class="content__title row no-gutters align-items-center">
-                <div class="col-6">
+                <div class="col-6 col-sm-12">
                   <p class="h5 text-bold">Технические характеристики</p>
                 </div>
-                <div class="col-6 text-right"><a class="btn btn_buy btn_with-text btn_no-availible" href="#">Купить</a></div>
+                <div class="col-6 text-right col-sm-12 mt-sm-20 text-sm-left"><a class="btn btn_buy btn_with-text btn_no-availible" href="#">Купить</a></div>
               </div>
               <div class="content__offer">
                 <div class="table table_card">
@@ -279,15 +307,15 @@
           <div class="container">
             <div class="content content_header-block">
               <div class="content__title row no-gutters align-items-center">
-                <div class="col-6">
+                <div class="col-6 col-sm-12">
                   <p class="h5">Отзывы <span class="text-bold">(10)</span></p>
                 </div>
-                <div class="col-6 text-right"><a class="btn btn_cta" href="#">Оставить отзыв</a></div>
+                <div class="col-6 text-right col-sm-12 mt-sm-20 text-sm-left"><a class="btn btn_cta" href="#">Оставить отзыв</a></div>
               </div>
               <div class="content__offer">
                 <div class="card_review">
                   <div class="review row no-gutters">
-                    <div class="col-4">
+                    <div class="col-4 col-md-12">
                       <div class="review__name">Александра</div>
                       <div class="review__data">12 декабря 2019</div>
                       <div class="review__rating">
@@ -300,7 +328,7 @@
 </svg>                                            
                       </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 col-md-12 mt-md-20">
                       <ul class="review__content">
                         <li class="review__item review__item-positive">1) Широкоугольная камера. 2) Аккумулятор держит долго намного дольше чем на 8-ке. В обычном пользовании хватает на 2 дня, если чисто играть в игры тяжелые, то хватает на день с 8 до 23:00. 3) В белом цвете выглядит классно, особенно днём выглядит ярко-сочно. 4) челка нравится</li>
                         <li class="review__item review__item-negative">Дизайн почти не отличается корпусом от 8-Ки. - в России пока не сделали сеть под цифровую симку, которую он поддерживает. А так минусов по работе нет.</li>
@@ -309,7 +337,7 @@
                     </div>
                   </div>
                   <div class="review row no-gutters mt-40">
-                    <div class="col-4">
+                    <div class="col-4 col-md-12">
                       <div class="review__name">Александра</div>
                       <div class="review__data">12 декабря 2019</div>
                       <div class="review__rating">
@@ -322,7 +350,7 @@
 </svg>                                            
                       </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 col-md-12 mt-md-20">
                       <ul class="review__content">
                         <li class="review__item review__item-positive">1) Широкоугольная камера. 2) Аккумулятор держит долго намного дольше чем на 8-ке. В обычном пользовании хватает на 2 дня, если чисто играть в игры тяжелые, то хватает на день с 8 до 23:00. 3) В белом цвете выглядит классно, особенно днём выглядит ярко-сочно. 4) челка нравится</li>
                         <li class="review__item review__item-negative">Дизайн почти не отличается корпусом от 8-Ки. - в России пока не сделали сеть под цифровую симку, которую он поддерживает. А так минусов по работе нет.</li>
@@ -340,11 +368,11 @@
       <footer class="footer">
         <div class="container">
           <div class="row">
-            <div class="col-3"><a class="footer__logo" href="/"></a>
+            <div class="col-3 col-sm-12 col-md-6 col-lg-6"><a class="footer__logo" href="/"></a>
               <p class="footer__info">Ipsa, quae ab illo inventore veritatis. Sequi nesciunt, neque porro quisquam est, omnis iste. Et quas molestias excepturi sint. Natus error sit voluptatem accusantium doloremque laudantium. Nisi ut labore.</p>
               <p class="footer__info footer__info_copyright">© 2019 Все права защищены</p>
             </div>
-            <div class="col-3">
+            <div class="col-3 col-sm-12 mt-sm-40 col-md-6 col-lg-6">
               <p class="footer__label">Продукция</p>
               <nav class="navbar">
                 <div class="navbar__item"><a class="navbar__link" href="#">Печи-камины</a></div>
@@ -363,7 +391,7 @@
                 <div class="navbar__item navbar__item--last"><a class="navbar__link" href="#">Прочее</a></div>
               </nav>
             </div>
-            <div class="col-3">
+            <div class="col-3 col-sm-12 mt-lg-40 col-md-6 col-lg-6">
               <p class="footer__label">Компания</p>
               <nav class="navbar">
                 <div class="navbar__item"><a class="navbar__link" href="#">О компании</a></div>
@@ -375,7 +403,7 @@
                 <div class="navbar__item navbar__item--last"><a class="navbar__link" href="#">FAQ</a></div>
               </nav>
             </div>
-            <div class="col-3">
+            <div class="col-3 col-sm-12 mt-lg-40 col-md-6 col-lg-6">
               <p class="footer__label">Связаться с нами</p>
               <form class="form" action="">
                 <input class="form__input form__input_fullwidth phone" placeholder="Телефон" type="tel"/><a class="btn btn_cta btn_fullwidth" href="#">Заказать звонок</a>

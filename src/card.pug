@@ -10,7 +10,7 @@ html(lang="ru")
         link(href='./css/style.css', rel='stylesheet')
 
     body
-        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        script(src="./js/jquery.min.js")
         .content-area
             include chunks/header
             main.inside.inside_text-page
@@ -29,7 +29,7 @@ html(lang="ru")
                         h1.h4.card__title Дымоходы для бани Варвара Мини с баком на вынос 130 л
                         .card__content.mb-40
                             .row
-                                .col-5
+                                .col-5.col-sm-12.col-lg-6
                                     .slider.slider_product
                                         img.slider__item(src="../img/pic-1.png")
                                         img.slider__item(src="../img/pic-2.png")
@@ -49,7 +49,7 @@ html(lang="ru")
                                             .advantage-xs__title.icon-check Бесплатный замер
                                         .advantage-xs__item
                                             .advantage-xs__title.icon-delivery Доставка и&nbsp;монтаж
-                                .col-3
+                                .col-3.col-sm-12.col-lg-6.mt-sm-20
                                     .card__rating
                                         <svg class="card__rating-icon" viewBox="0 0 100 14" width="79px" height="11px" xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#fe5202" d="M11.3,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L4.2,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L3.7,9L0.5,6.6C0.1,6.3-0.1,5.8,0.1,5.4c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C6.5,0.3,6.9,0,7.4,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L11.1,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C11.8,14.2,11.6,14.2,11.3,14.2L11.3,14.2z"/>
@@ -76,29 +76,38 @@ html(lang="ru")
                                             span.text-grey Артикул: 
                                             | 4000123342
                                     a.card__link.scroll(href="#tech") Все характеристики
-                                .col-4
-                                    .card__info
+                                    .card__info.d-none.d-lg-block.d-md-none
                                         .card__price
                                             span.old-price 65 899 р.
                                             span.adv-price выгода 11 599 р.
                                             span.new-price 43 451 р.
-                                        .d-flex.justify-content-between.align-items-end
+                                        .d-flex.justify-content-between.align-items-end.flex-wrap
                                             a.btn.btn_buy.btn_with-text(href="#") Купить
                                             a.buy-one-click(href="#") Купить в 1 клик
-                                    .card__availible.mt-40
-                                        p.availible.card__info-title В наличии
-                                        ul.list.text-small
-                                            li
-                                                span.text-grey Доставка курьером:: 
-                                                | 28 октября
-                                            li 
-                                                span.text-grey Самовывоз: 
-                                                | 20 октября
-                                    .card__pay-info.mt-40
-                                        p.text-bold.card__info-title Способы оплаты
-                                        ul.list.text-small.list_pay
-                                            li.list__item.list__item_card картой или по счету
-                                            li.list__item.list__item_cash наличными в банке или офисе
+                                .col-4.col-sm-12.col-lg-12.mt-lg-40
+                                    .row.no-gutters
+                                        .col-12.card__info.d-lg-none.d-md-block
+                                            .card__price
+                                                span.old-price 65 899 р.
+                                                span.adv-price выгода 11 599 р.
+                                                span.new-price 43 451 р.
+                                            .d-flex.justify-content-between.align-items-end.flex-wrap
+                                                a.btn.btn_buy.btn_with-text(href="#") Купить
+                                                a.buy-one-click(href="#") Купить в 1 клик
+                                        .col-12.col-lg-6.col-sm-12.card__availible.mt-40.mt-md-20
+                                            p.availible.card__info-title В наличии
+                                            ul.list.text-small
+                                                li
+                                                    span.text-grey Доставка курьером: 
+                                                    | 28&nbsp;октября
+                                                li 
+                                                    span.text-grey Самовывоз: 
+                                                    | 20&nbsp;октября
+                                        .col-12.col-lg-6.col-sm-12.card__pay-info.mt-40.mt-md-20
+                                            p.text-bold.card__info-title Способы оплаты
+                                            ul.list.text-small.list_pay
+                                                li.list__item.list__item_card картой или по счету
+                                                li.list__item.list__item_cash наличными в банке или офисе
                         ul.nav#cardTab(role="tablist")
                             li.nav__item
                                 a.nav__link.active#content-tab(data-toggle="tab" href="#content" role="tab" aria-controls="content" aria-selected="true") Описание
@@ -145,8 +154,8 @@ html(lang="ru")
                 aside.catalog.mt-40
                     .container
                         p.h4.catalog__title С товаром часто заказывают
-                        .row.no-gutters.catalog__row
-                            .col-4.d-flex
+                        .slider.slider_add.catalog__row
+                            .d-flex
                                 .catalog__item.catalog__item_preview-row
                                     img.catalog__item__col-image.img-fluid(src="../img/pic-1.png")
                                     .catalog__item__col
@@ -156,7 +165,7 @@ html(lang="ru")
                                             span.old-price 65 899 руб.
                                             span.new-price 43 451 руб.
                                         a.btn.btn_buy(href="#")
-                            .col-4.d-flex
+                            .d-flex
                                 .catalog__item.catalog__item_preview-row
                                     img.catalog__item__col-image.img-fluid(src="../img/pic-2.png")
                                     .catalog__item__col
@@ -166,7 +175,7 @@ html(lang="ru")
                                             span.old-price 65 899 руб.
                                             span.new-price 43 451 руб.
                                         a.btn.btn_buy(href="#")
-                            .col-4.d-flex
+                            .d-flex
                                 .catalog__item.catalog__item_preview-row
                                     img.catalog__item__col-image.img-fluid(src="../img/pic-3.png")
                                     .catalog__item__col
@@ -179,8 +188,8 @@ html(lang="ru")
                 aside.catalog.catalog_hits.mt-40
                     .container
                         p.h4.catalog__title Похожие товары
-                        .row.no-gutters.catalog__row
-                            .col-3.d-flex
+                        .slider.catalog__row
+                            .d-flex
                                 .catalog__item.catalog__item_column
                                     img.img-fluid(src="../img/pic-1.png")
                                     .catalog__item__category Каминные топки
@@ -189,7 +198,7 @@ html(lang="ru")
                                         span.old-price 65 899 руб.
                                         span.new-price 43 451 руб.
                                     a.btn.btn_buy(href="#")
-                            .col-3.d-flex
+                            .d-flex
                                 .catalog__item.catalog__item_column
                                     img.img-fluid(src="../img/pic-2.png")
                                     .catalog__item__category Каминные топки
@@ -198,7 +207,7 @@ html(lang="ru")
                                         span.old-price 
                                         span.new-price 43 451 руб.
                                     a.btn.btn_buy(href="#")
-                            .col-3.d-flex
+                            .d-flex
                                 .catalog__item.catalog__item_column
                                     img.img-fluid(src="../img/pic-3.png")
                                     .catalog__item__category Каминные топки
@@ -207,7 +216,7 @@ html(lang="ru")
                                         span.old-price 
                                         span.new-price 43 451 руб.
                                     a.btn.btn_buy(href="#")
-                            .col-3.d-flex
+                            .d-flex
                                 .catalog__item.catalog__item_column
                                     img.img-fluid(src="../img/pic-4.png")
                                     .catalog__item__category Каминные топки
@@ -220,9 +229,9 @@ html(lang="ru")
                     .container
                         .content.content_header-block
                             .content__title.row.no-gutters.align-items-center
-                                .col-6
+                                .col-6.col-sm-12
                                     p.h5.text-bold Технические характеристики
-                                .col-6.text-right
+                                .col-6.text-right.col-sm-12.mt-sm-20.text-sm-left
                                     a.btn.btn_buy.btn_with-text.btn_no-availible(href="#") Купить
                             .content__offer
                                 .table.table_card
@@ -250,15 +259,15 @@ html(lang="ru")
                     .container
                         .content.content_header-block
                             .content__title.row.no-gutters.align-items-center
-                                .col-6
+                                .col-6.col-sm-12
                                     p.h5 Отзывы 
                                         span.text-bold (10)
-                                .col-6.text-right
+                                .col-6.text-right.col-sm-12.mt-sm-20.text-sm-left
                                     a.btn.btn_cta(href="#") Оставить отзыв
                             .content__offer
                                 .card_review
                                     .review.row.no-gutters
-                                        .col-4
+                                        .col-4.col-md-12
                                             .review__name Александра
                                             .review__data 12 декабря 2019
                                             .review__rating
@@ -270,13 +279,13 @@ html(lang="ru")
                                                     <path fill="#e6e6e6" d="M75.1,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L68,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L67.6,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C70.3,0.3,70.8,0,71.2,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L74.9,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C75.6,14.2,75.4,14.2,75.1,14.2L75.1,14.2z"/>
                                                     <path fill="#e6e6e6" d="M99.6,6.6L96.3,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3c-0.2,0.1-0.4,0.2-0.7,0.2l0,0c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L89.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L88.9,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C91.7,0.3,92.1,0,92.6,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8"/>
                                                 </svg>                                            
-                                        .col-8
+                                        .col-8.col-md-12.mt-md-20
                                             ul.review__content
                                                 li.review__item.review__item-positive 1) Широкоугольная камера. 2) Аккумулятор держит долго намного дольше чем на 8-ке. В обычном пользовании хватает на 2 дня, если чисто играть в игры тяжелые, то хватает на день с 8 до 23:00. 3) В белом цвете выглядит классно, особенно днём выглядит ярко-сочно. 4) челка нравится
                                                 li.review__item.review__item-negative Дизайн почти не отличается корпусом от 8-Ки. - в России пока не сделали сеть под цифровую симку, которую он поддерживает. А так минусов по работе нет.
                                                 li.review__item.review__item-comment Перешла с 8-ки на XR, выбор был ещё Х, но посмотрев почитав отзывы, выбрала XR, нисколько не пожалела. Отличный аппарат за свои деньги, все работает четко и т.д думали ещё на счёт 11, но камера отпугнула своим видом и особых отличий у них как бы нет, только лишь в широкоуголке, которая применяется редко, на XR вполне устраивает и единичная камера на много лучше этих двойных плит. Хотя по деньгам могли бы 11 взять, не особо значительная разница у них что по начинке, что по деньгам
                                     .review.row.no-gutters.mt-40
-                                        .col-4
+                                        .col-4.col-md-12
                                             .review__name Александра
                                             .review__data 12 декабря 2019
                                             .review__rating
@@ -288,7 +297,7 @@ html(lang="ru")
                                                     <path fill="#fe5202" d="M75.1,14.2c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L68,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L67.6,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C70.3,0.3,70.8,0,71.2,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8c0.2,0.5,0,1-0.4,1.3L74.9,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3C75.6,14.2,75.4,14.2,75.1,14.2L75.1,14.2z"/>
                                                     <path fill="#e6e6e6" d="M99.6,6.6L96.3,9l1.3,3.8c0.2,0.5,0,1-0.4,1.3c-0.2,0.1-0.4,0.2-0.7,0.2l0,0c-0.2,0-0.5-0.1-0.7-0.2l-3.2-2.4L89.4,14c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.5-0.1-0.7-0.2c-0.4-0.3-0.6-0.8-0.4-1.3L88.9,9l-3.3-2.3c-0.4-0.3-0.6-0.8-0.4-1.3c0.2-0.5,0.6-0.8,1.1-0.8c0,0,0,0,0,0l4,0l1.2-3.8C91.7,0.3,92.1,0,92.6,0c0.5,0,0.9,0.3,1.1,0.8l1.2,3.8l4,0c0,0,0,0,0,0c0.5,0,0.9,0.3,1.1,0.8"/>
                                                 </svg>                                            
-                                        .col-8
+                                        .col-8.col-md-12.mt-md-20
                                             ul.review__content
                                                 li.review__item.review__item-positive 1) Широкоугольная камера. 2) Аккумулятор держит долго намного дольше чем на 8-ке. В обычном пользовании хватает на 2 дня, если чисто играть в игры тяжелые, то хватает на день с 8 до 23:00. 3) В белом цвете выглядит классно, особенно днём выглядит ярко-сочно. 4) челка нравится
                                                 li.review__item.review__item-negative Дизайн почти не отличается корпусом от 8-Ки. - в России пока не сделали сеть под цифровую симку, которую он поддерживает. А так минусов по работе нет.

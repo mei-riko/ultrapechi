@@ -75,3 +75,11 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .review{
+        .review__content{
+            padding: 30px 20px;
+        }
+    }
+}

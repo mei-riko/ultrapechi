@@ -44,6 +44,22 @@ $(document).ready(() =>{
             arrows: false,
 			dots: false,
 			autoplay: true,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 2,
+					}
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					}
+				}
+			]
 		});
 		
 		let $slickCard = $('.slider.slider_product');
@@ -65,17 +81,109 @@ $(document).ready(() =>{
 			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
 			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
             centerMode: true,
-            focusOnSelect: true
-        });
+			focusOnSelect: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						centerMode: false,
+					}
+				},
+				{
+					breakpoint: 640,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						centerMode: false,
+					}
+				},
+				{
+					breakpoint: 577,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 380,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					}
+				}
+			]
+		});
+		
+		let $catalogHit = $('.slider.catalog__row:not(.slider_add)');
+		$catalogHit.slick({
+            slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
+			dots: false,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					}
+				}
+			]
+		});
+		let $catalogAdd = $('.slider.catalog__row.slider_add');
+		$catalogAdd.slick({
+            slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
+			dots: false,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 880,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					}
+				}
+			]
+		});
 	}
 
 	// Slider Index
 	if( $('.catalog-nav-show .slider#slider-index').length > 0 ) {
-		let $slickIndex = $('.slider#slider-index');
-		let $navHeight = $('.catalog-nav-show .navbar_catalog').height();
-		let $advantage = $('.catalog-nav-show .content-slider__col .advantage').outerHeight();
+		var $slickIndex = $('.slider#slider-index');
+		var $navHeight = $('.catalog-nav-show .navbar_catalog').height();
+		var $advantage = $('.catalog-nav-show .content-slider__col .advantage').outerHeight();
 
-		$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80 );
+		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
+			$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80 );
+		}
 
 		$slickIndex.slick({
             slidesToShow: 1,
@@ -117,20 +225,27 @@ $(document).ready(() =>{
 	// Filter Mobile
 	$("#filterMobile").on("click", function(e){
 		e.preventDefault();
-		$(this).toggleClass("active");
+
+		if( !$(this).hasClass("active")){
+			$(this).addClass("active");
+			$(this).html("Скрыть фильтры");
+		}else{
+			$(this).removeClass("active");
+			$(this).html("Показать фильтры");
+		}
+
 		$(".filters").toggleClass("filters--active");
 		$(".filters").slideToggle();
 	});
 
 
-	// Navbar 
+	// Navbar Mobile
 	$(".navbar .navbar__item.navbar__item_has-child .navbar__link").on("click", function(e){
 		e.preventDefault();
 
 		let inside = $(this).parent().find(".navbar__inside");
 		inside.slideToggle();
 	});
-
 	$("#navMobile").on("click", function(e){
 		e.preventDefault();
 		if( !$(this).hasClass("btn-mobile--active")){
@@ -143,7 +258,15 @@ $(document).ready(() =>{
 			$("body").attr("style", "");
 		}
 	});
-	// Hide Navigation on Desktop
+
+	// Navbar Desktop
+	$(".navbar .navbar__link.navbar__link_catalog").on("click", function(e){
+		e.preventDefault();
+		let catalogNav = $(".catalog-nav-hidden .navbar.navbar_catalog");
+		catalogNav.slideToggle();
+	});
+
+	// Hide on Desktop & Resize
 	$(window).resize(function(){
 		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
 
@@ -156,7 +279,12 @@ $(document).ready(() =>{
 
 			$(".filters").removeClass("filters--active");
 			$(".filters").show();
+
+			if( $('.catalog-nav-show .slider#slider-index').length > 0 ) {
+				$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80 );
+			}
 		}
+		$(".catalog-nav-hidden .navbar.navbar_catalog").slideUp();
 	});
 
 	$(document).mouseup(function (e){ // событие клика по веб-документу
@@ -176,6 +304,14 @@ $(document).ready(() =>{
 			&& !$(".btn-mobile#searchMobile").is(e.target) ) { 
 				searchActive.slideUp();
 				searchActive.removeClass("header__mobile-search--active");
+		}
+
+		let navCatalog = $(".catalog-nav-hidden .navbar.navbar_catalog");
+		if (!navCatalog.is(e.target) // клик был не по блоку
+			&& navCatalog.has(e.target).length === 0 // и не по его дочерним элементам
+			&& !$(".navbar .navbar__link.navbar__link_catalog").is(e.target) ) { 
+				navCatalog.slideUp();
+				navCatalog.removeClass("header__mobile-search--active");
 		}
 	});
 });

@@ -14,6 +14,9 @@
         padding: 20px 30px;
         box-shadow: 0px 0px 30px 0px rgba(229, 229, 229, 0.7);
 
+        .btn{
+            margin-right: 10px;
+        }
         .buy-one-click{
             font-size: 12px;
             display: inline-block;
@@ -38,8 +41,6 @@
         padding: 20px 30px;
         background: #f7f0e7;
     }
-    
-
     .card__info-title{
         margin-bottom: 10px;
     }
@@ -128,9 +129,7 @@
     line-height: 18px;
     text-decoration: line-through;
 
-    & + .adv-price{
-        margin-left: 10px;
-    }
+    margin-right: 10px;
 }
 .new-price{
     font-size: 1.5rem;
@@ -145,4 +144,27 @@
 
     // font-size: 13px;
     line-height: 1;
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .card{
+        .card__link + * {
+            margin-top: 20px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .new-price{
+        font-size: 1.25rem;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .card{
+        .card__title{
+            padding: 30px 20px;
+        }
+        .card__content{
+            padding: 30px 20px;
+        }
+    }
 }

@@ -87,8 +87,23 @@
     }
 }
 .catalog-nav-show{
+    .navbar{
+        .navbar__link{
+            &_catalog{
+                cursor: default;
+                &:hover{
+                    color: $white;
+                }
+            }
+        }
+    }
     .navbar_catalog{
         display: block;
+    }
+}
+.catalog-nav-hidden{
+    .navbar_catalog{
+        border: 1px solid $border-color;
     }
 }
 .footer{

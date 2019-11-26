@@ -120,7 +120,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			slidesToShow: 6,
 			arrows: false,
 			dots: false,
-			autoplay: true
+			autoplay: true,
+			responsive: [{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 2
+				}
+			}, {
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			}]
 		});
 
 		var $slickCard = (0, _jquery2.default)('.slider.slider_product');
@@ -142,7 +155,85 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
 			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
 			centerMode: true,
-			focusOnSelect: true
+			focusOnSelect: true,
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerMode: false
+				}
+			}, {
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: false
+				}
+			}, {
+				breakpoint: 577,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			}, {
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}]
+		});
+
+		var $catalogHit = (0, _jquery2.default)('.slider.catalog__row:not(.slider_add)');
+		$catalogHit.slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
+			dots: false,
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			}, {
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			}, {
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}]
+		});
+		var $catalogAdd = (0, _jquery2.default)('.slider.catalog__row.slider_add');
+		$catalogAdd.slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
+			dots: false,
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			}, {
+				breakpoint: 880,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}]
 		});
 	}
 
@@ -152,7 +243,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		var $navHeight = (0, _jquery2.default)('.catalog-nav-show .navbar_catalog').height();
 		var $advantage = (0, _jquery2.default)('.catalog-nav-show .content-slider__col .advantage').outerHeight();
 
-		$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80);
+		if ((0, _jquery2.default)(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches) {
+			$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80);
+		}
 
 		$slickIndex.slick({
 			slidesToShow: 1,
@@ -194,19 +287,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	// Filter Mobile
 	(0, _jquery2.default)("#filterMobile").on("click", function (e) {
 		e.preventDefault();
-		(0, _jquery2.default)(this).toggleClass("active");
+
+		if (!(0, _jquery2.default)(this).hasClass("active")) {
+			(0, _jquery2.default)(this).addClass("active");
+			(0, _jquery2.default)(this).html("Скрыть фильтры");
+		} else {
+			(0, _jquery2.default)(this).removeClass("active");
+			(0, _jquery2.default)(this).html("Показать фильтры");
+		}
+
 		(0, _jquery2.default)(".filters").toggleClass("filters--active");
 		(0, _jquery2.default)(".filters").slideToggle();
 	});
 
-	// Navbar 
+	// Navbar Mobile
 	(0, _jquery2.default)(".navbar .navbar__item.navbar__item_has-child .navbar__link").on("click", function (e) {
 		e.preventDefault();
 
 		var inside = (0, _jquery2.default)(this).parent().find(".navbar__inside");
 		inside.slideToggle();
 	});
-
 	(0, _jquery2.default)("#navMobile").on("click", function (e) {
 		e.preventDefault();
 		if (!(0, _jquery2.default)(this).hasClass("btn-mobile--active")) {
@@ -219,7 +319,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 			(0, _jquery2.default)("body").attr("style", "");
 		}
 	});
-	// Hide Navigation on Desktop
+
+	// Navbar Desktop
+	(0, _jquery2.default)(".navbar .navbar__link.navbar__link_catalog").on("click", function (e) {
+		e.preventDefault();
+		var catalogNav = (0, _jquery2.default)(".catalog-nav-hidden .navbar.navbar_catalog");
+		catalogNav.slideToggle();
+	});
+
+	// Hide on Desktop & Resize
 	(0, _jquery2.default)(window).resize(function () {
 		if ((0, _jquery2.default)(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches) {
 
@@ -232,7 +340,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 			(0, _jquery2.default)(".filters").removeClass("filters--active");
 			(0, _jquery2.default)(".filters").show();
+
+			if ((0, _jquery2.default)('.catalog-nav-show .slider#slider-index').length > 0) {
+				$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80);
+			}
 		}
+		(0, _jquery2.default)(".catalog-nav-hidden .navbar.navbar_catalog").slideUp();
 	});
 
 	(0, _jquery2.default)(document).mouseup(function (e) {
@@ -253,6 +366,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		&& !(0, _jquery2.default)(".btn-mobile#searchMobile").is(e.target)) {
 			searchActive.slideUp();
 			searchActive.removeClass("header__mobile-search--active");
+		}
+
+		var navCatalog = (0, _jquery2.default)(".catalog-nav-hidden .navbar.navbar_catalog");
+		if (!navCatalog.is(e.target) // клик был не по блоку
+		&& navCatalog.has(e.target).length === 0 // и не по его дочерним элементам
+		&& !(0, _jquery2.default)(".navbar .navbar__link.navbar__link_catalog").is(e.target)) {
+			navCatalog.slideUp();
+			navCatalog.removeClass("header__mobile-search--active");
 		}
 	});
 });

@@ -17,15 +17,16 @@
     .advantage__title{
         font-size: 14px;
         font-weight: bold;
+        line-height: 18px;
         text-transform: uppercase;
         margin-bottom: 10px;
     }
     .advantage__content{
         font-size: 12px;
+        line-height: 16px;
         color: $brown;
     }
 }
-
 .advantage-xs{
     padding: 10px 20px;
     background: $body-bg;
@@ -81,6 +82,51 @@
         &.icon-delivery::before{
             background-image: url("../img/box-orange.svg");
             background-size: 14px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .advantage{
+        .advantage__item{
+            flex: 0 0 50%;
+            max-width: 50%;
+    
+
+            &:nth-child(1),
+            &:nth-child(2){
+                border-bottom: 1px solid $body-bg;
+            }
+            &:nth-child(2n){
+                border-right: none;
+            }
+        }
+    }
+    .advantage-xs{
+        display: none;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .advantage{
+        .advantage__item{
+            flex: 0 0 100%;
+            max-width: 100%;
+    
+            padding: 20px;
+            border-right: none;
+            border-bottom: 1px solid $body-bg;
+
+            &_last{
+                border-bottom: none;
+            }
+        }
+    }
+    .advantage-xs{
+        display: block;
+        .advantage-xs__item{
+            flex: 0 0 100%;
+            max-width: 100%;
         }
     }
 }

@@ -24,9 +24,21 @@
     }
     &_card{
         .table-row{
+            margin-left: -20px;
+            margin-right: -20px;
             & + .table-row{
                 border-top: 1px solid $body-bg;
             }
         }
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .table{
+        // &_card{
+        //     margin-left: -20px;
+        //     margin-right: -20px;
+        //     max-width: calc( 100% + 40px );
+        // }
     }
 }

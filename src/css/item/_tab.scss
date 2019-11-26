@@ -27,3 +27,11 @@
         background: $white;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .tab-content{
+        &_product{
+            padding: 30px 20px;
+        }
+    }
+}
