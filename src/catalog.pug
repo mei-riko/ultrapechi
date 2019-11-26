@@ -33,7 +33,8 @@ html(lang="ru")
                                 a.catalog__category-tags(href="#") эмалированные
                                 a.catalog__category-modal(href="#") Показать все
                         .row.no-gutters.justify-content-end
-                            .col-4
+                            .col-4.col-md-12
+                                a.btn-mobile.btn-mobile_filters#filterMobile(href="#") Показать фильтры
                                 form.filters.form.bg-white
                                     .filters-item.filters-item--active
                                         .filters-item__title Категории товаров
@@ -80,7 +81,7 @@ html(lang="ru")
                                                         | До
                                                         input.form__input.form__input_fullwidth#price2(type="text" name="ms|price" value="113")
                                     a.filters-reset(href="#") Сбросить фильтр
-                            .col-8.bg-white
+                            .col-8.col-md-12.bg-white
                                 .catalog__item.catalog__item_row
                                     img.img-fluid(src="../img/pic-1.png")
                                     .catalog__item__col.catalog__item__col_content
@@ -112,7 +113,6 @@ html(lang="ru")
                                             span.new-price 43 451 руб.
                                         a.btn.btn_buy.btn_with-text(href="#") Купить
                                         .availible в наличии
-                                        .no-availible нет в наличии
                                 .catalog__item.catalog__item_row
                                     img.img-fluid(src="../img/pic-1.png")
                                     .catalog__item__col.catalog__item__col_content
@@ -143,7 +143,6 @@ html(lang="ru")
                                             span.old-price 65 899 руб.
                                             span.new-price 43 451 руб.
                                         a.btn.btn_buy.btn_no-availible.btn_with-text(href="#") Купить
-                                        .availible в наличии
                                         .no-availible нет в наличии
                                 .catalog__item.catalog__item_row
                                     img.img-fluid(src="../img/pic-1.png")
@@ -176,8 +175,7 @@ html(lang="ru")
                                             span.new-price 43 451 руб.
                                         a.btn.btn_buy.btn_with-text(href="#") Купить
                                         .availible в наличии
-                                        .no-availible нет в наличии
-                            .col-8.mt-40
+                            .col-8.col-md-12.mt-40
                                 ul.pagination
                                     li.pagination__item
                                         span.pagination__active 1

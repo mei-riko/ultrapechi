@@ -191,6 +191,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		(0, _jquery2.default)(".header__mobile-search").slideToggle();
 	});
 
+	// Filter Mobile
+	(0, _jquery2.default)("#filterMobile").on("click", function (e) {
+		e.preventDefault();
+		(0, _jquery2.default)(this).toggleClass("active");
+		(0, _jquery2.default)(".filters").toggleClass("filters--active");
+		(0, _jquery2.default)(".filters").slideToggle();
+	});
+
 	// Navbar 
 	(0, _jquery2.default)(".navbar .navbar__item.navbar__item_has-child .navbar__link").on("click", function (e) {
 		e.preventDefault();
@@ -213,13 +221,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	});
 	// Hide Navigation on Desktop
 	(0, _jquery2.default)(window).resize(function () {
-		if ((0, _jquery2.default)(window).width() > 767 || !window.matchMedia('screen and (max-width: 768px)').matches) {
+		if ((0, _jquery2.default)(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches) {
+
 			(0, _jquery2.default)(".btn-mobile#navMobile").removeClass("btn-mobile--active");
 			(0, _jquery2.default)(".header__mobile-nav.header__mobile-nav--active").removeClass("header__mobile-nav--active");
 			(0, _jquery2.default)("body").attr("style", "");
 
 			(0, _jquery2.default)(".header__mobile-search.header__mobile-search--active").removeClass("header__mobile-search--active");
 			(0, _jquery2.default)(".header__mobile-search").hide();
+
+			(0, _jquery2.default)(".filters").removeClass("filters--active");
+			(0, _jquery2.default)(".filters").show();
 		}
 	});
 

@@ -114,6 +114,14 @@ $(document).ready(() =>{
 		$(".header__mobile-search").slideToggle();
 	});
 
+	// Filter Mobile
+	$("#filterMobile").on("click", function(e){
+		e.preventDefault();
+		$(this).toggleClass("active");
+		$(".filters").toggleClass("filters--active");
+		$(".filters").slideToggle();
+	});
+
 
 	// Navbar 
 	$(".navbar .navbar__item.navbar__item_has-child .navbar__link").on("click", function(e){
@@ -137,13 +145,17 @@ $(document).ready(() =>{
 	});
 	// Hide Navigation on Desktop
 	$(window).resize(function(){
-		if ( $(window).width() > 767 || !window.matchMedia('screen and (max-width: 768px)').matches ){
+		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
+
 			$(".btn-mobile#navMobile").removeClass("btn-mobile--active");
 			$(".header__mobile-nav.header__mobile-nav--active").removeClass("header__mobile-nav--active");
 			$("body").attr("style", "");
 		
 			$(".header__mobile-search.header__mobile-search--active").removeClass("header__mobile-search--active");
 			$(".header__mobile-search").hide();
+
+			$(".filters").removeClass("filters--active");
+			$(".filters").show();
 		}
 	});
 
