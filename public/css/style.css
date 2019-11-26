@@ -3084,6 +3084,9 @@ html .ui-button.ui-state-disabled:active {
   .content_header-block .content__offer {
     padding: 20px 30px;
   }
+  .content_contact {
+    margin-top: 40px;
+  }
   .content_error {
     background: #ffffff;
     margin-top: 40px;
