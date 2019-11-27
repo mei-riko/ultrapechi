@@ -1943,7 +1943,7 @@ a.link-phone:hover {
 }
 
 @media all and (max-width: 1200px) {
-  .header .form .form__input_search {
+  .header .header__line .form .form__input_search {
     width: 300px;
   }
   .header .header__phone {
@@ -1959,7 +1959,7 @@ a.link-phone:hover {
 }
 
 @media all and (max-width: 992px) {
-  .header .form .form__input_search {
+  .header .header__line .form .form__input_search {
     width: unset;
   }
 }
@@ -2031,6 +2031,7 @@ a.link-phone:hover {
   .header .header__mobile-nav {
     display: block;
     position: fixed;
+    z-index: 101;
     background: #ffffff;
     box-shadow: 5px 0 20px -5px #222;
     top: 0;
@@ -2518,8 +2519,6 @@ a.link-phone:hover {
   flex-wrap: wrap;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-left: -6px;
-  margin-right: -6px;
 }
 
 .pagination .pagination__item {
@@ -3120,6 +3119,9 @@ html .ui-button.ui-state-disabled:active {
   .slider_with-content .slider__content:after {
     display: none;
   }
+  .slider_with-content .slider-arrow {
+    bottom: 14px;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -3242,7 +3244,7 @@ html .ui-button.ui-state-disabled:active {
     padding: 20px;
   }
   .content_error .content__title {
-    font-size: 30px;
+    font-size: 42px;
   }
   .content-slider {
     margin-top: 0;
@@ -3371,14 +3373,25 @@ html .ui-button.ui-state-disabled:active {
 }
 
 @media all and (max-width: 576px) {
+  .blog-item {
+    padding: 64px 20px 20px;
+  }
+  .blog-item .blog-item__label {
+    left: 20px;
+    top: 24px;
+  }
   .blog-item_type-1.blog-item_image {
     padding-bottom: 180px;
     padding-right: 40px;
   }
   .blog-item_type-1.blog-item_image .blog-item__bg {
     width: 100%;
-    height: 180px;
+    height: 150px;
     z-index: 1;
+    background-size: cover;
+  }
+  .blog-item_type-3 {
+    padding: 0;
   }
 }
 
@@ -3819,6 +3832,9 @@ html .ui-button.ui-state-disabled:active {
     max-width: calc(35% - 60px);
     margin-left: 20px;
   }
+  .catalog .catalog__item_column .new-price {
+    font-size: 2rem;
+  }
   .filters {
     display: none;
     border-right: none;
@@ -4044,7 +4060,7 @@ html .ui-button.ui-state-disabled:active {
 
 @media all and (max-width: 768px) {
   .new-price {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
