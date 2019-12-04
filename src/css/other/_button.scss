@@ -80,6 +80,18 @@
         right: 0;
 
     }
+
+    &_small{
+        font-size: 12px;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+
+    &.btn-more{
+        width: auto;
+        margin: 0;
+        display: inline-block;
+    }
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){

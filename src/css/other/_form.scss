@@ -2,6 +2,20 @@
     margin: 0;
     padding: 0;
 
+    &#msOrder{
+        .row.no-gutters{
+            .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+                padding: 0 20px;
+            }
+        }
+        
+    }
+
+    .form__group{
+        & + .form__group{
+            margin-top: 20px;
+        }
+    }
     .form__input{
         font-size: 14px;
 
@@ -94,7 +108,7 @@
 }
 .checkbox-filter{
     .checkbox__label{
-        line-height: 28px;
+        line-height: 18px;
     }
 
     & + .checkbox-filter{
@@ -103,6 +117,8 @@
 }
 .checkbox-tags{
     display: inline-block;
+    margin-right: 5px;
+
     .checkbox-tags__input{
         display: none;
         &:checked + .checkbox-tags__name{
@@ -154,36 +170,37 @@
     .jGrowl-notification {
         width: 320px;
         padding: 40px 20px;
-        border: 1px solid $light-brown;
-        border-radius: 0;
+        border: none;
+        border-radius: 8px;
 
         font-size: 14px;
-        color: $brown;
+        font-weight: bold;
+        color: $white;
 
         .jGrowl-close {
             position: absolute;
             top: 10px;
             right: 10px;
-            font-size: 30px;
+            font-size: 26px;
             line-height: 30px;
             width: 34px;
             text-align: center;
-            border-radius: 0 0 0 15px;
-            color: #fff;
+            border-radius: 0 8px 0 0;
+            background: $white;
             outline: 0
         }
-
+        &.ms2-message-success,
         &.af-message-success {
-            background-color: #f9fcf7!important;
+            background-color: rgb(51, 182, 121)!important;
             .jGrowl-close {
-                background: $grey;
+                color: rgb(51, 182, 121);
             }
         }
-
+        &.ms2-message-error,
         &.af-message-error {
-            background-color: #fef8f8!important;
+            background-color: $orange!important;
             .jGrowl-close {
-                background: #df0a0a;
+                color: $orange;
             }
         }
     }

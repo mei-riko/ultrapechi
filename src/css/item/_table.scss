@@ -23,6 +23,7 @@
         }
     }
     &_card{
+        width: 740px;
         .table-row{
             margin-left: -20px;
             margin-right: -20px;
@@ -31,14 +32,99 @@
             }
         }
     }
+
+    &_cart{
+        .table-col{
+            &.title{
+                flex: 0 0 calc(100% - 500px);
+                max-width: calc(100% - 500px);
+            }
+            &.count{
+                flex: 0 0 170px;
+                max-width: 170px;
+            }
+            &.price{
+                flex: 0 0 200px;
+                max-width: 200px;
+            }
+            &.remove{
+                flex: 0 0 130px;
+                max-width: 130px;
+            }
+        }
+    }
 }
 
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .table{
+        &_cart{
+            .table-row{
+                flex-wrap: wrap;
+            }
+            .table-col{
+                padding: 16px 10px;
+                &.title{
+                    flex: 0 0 calc(100% - 360px);
+                    max-width: calc(100% - 360px);
+                }
+                &.count,
+                &.price,
+                &.remove{
+                    flex: 0 0 120px;
+                    max-width: 120px;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .table{
+        &_cart{
+            .table-row{
+                flex-wrap: wrap;
+                align-items: flex-end;
+
+                &_header{
+                    display: none;
+                }
+            }
+            .table-col{
+                &.title{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                &.count,
+                &.price{
+                    flex: 0 0 calc(50% - 70px);
+                    max-width: calc(50% - 70px);
+                }
+                &.remove{
+                    flex: 0 0 140px;
+                    max-width: 140px;
+                }
+            }
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .table{
-        // &_card{
-        //     margin-left: -20px;
-        //     margin-right: -20px;
-        //     max-width: calc( 100% + 40px );
-        // }
+        &_cart{
+            .table-col{
+                padding: 16px 20px;
+                &.count{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding: 0 20px;
+                }
+                &.price{
+                    flex: 0 0 calc(100% - 140px);
+                    max-width: calc(100% - 140px);
+                }
+                &.remove{
+                    flex: 0 0 140px;
+                    max-width: 140px;
+                }
+            }
+        }
     }
 }
