@@ -301,7 +301,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	});
 
 	// Navbar Mobile
-	(0, _jquery2.default)(".navbar .navbar__item.navbar__item_has-child .navbar__link").on("click", function (e) {
+	(0, _jquery2.default)(".navbar .navbar__item.navbar__item_has-child > .navbar__link").on("click", function (e) {
 		e.preventDefault();
 
 		var inside = (0, _jquery2.default)(this).parent().find(".navbar__inside");

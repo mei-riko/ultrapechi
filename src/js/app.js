@@ -240,7 +240,7 @@ $(document).ready(() =>{
 
 
 	// Navbar Mobile
-	$(".navbar .navbar__item.navbar__item_has-child .navbar__link").on("click", function(e){
+	$(".navbar .navbar__item.navbar__item_has-child > .navbar__link").on("click", function(e){
 		e.preventDefault();
 
 		let inside = $(this).parent().find(".navbar__inside");
