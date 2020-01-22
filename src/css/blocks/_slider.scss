@@ -113,6 +113,16 @@
     }
     &_partners{
         padding: 30px 20px;
+        .slider-arrow{
+            bottom: auto;
+            top: -60px;
+            &_next {
+                right: 30px;
+            }
+            &_prev{
+                right: 70px;
+            }
+        }
     }
     &_product{
         border: 1px solid $border-color;
@@ -284,6 +294,11 @@
             .slider__title{
                 font-size: 1.5rem;
                 font-weight: bold;
+            }
+        }
+        &_partners{
+            .slider-arrow{
+                top: -50px;
             }
         }
     }

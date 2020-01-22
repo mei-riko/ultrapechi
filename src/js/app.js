@@ -41,7 +41,9 @@ $(document).ready(() =>{
 		let $slickPartners = $('.slider#slider-partners');
         $slickPartners.slick({
             slidesToShow: 6,
-            arrows: false,
+            arrows: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
 			dots: false,
 			autoplay: true,
 			responsive: [

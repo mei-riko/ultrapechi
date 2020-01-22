@@ -3116,6 +3116,19 @@ a.link-phone:hover {
   padding: 30px 20px;
 }
 
+.slider_partners .slider-arrow {
+  bottom: auto;
+  top: -60px;
+}
+
+.slider_partners .slider-arrow_next {
+  right: 30px;
+}
+
+.slider_partners .slider-arrow_prev {
+  right: 70px;
+}
+
 .slider_product {
   border: 1px solid #e0dcd6;
   margin-bottom: 20px;
@@ -3287,6 +3300,9 @@ a.link-phone:hover {
   .slider_with-content .slider__title {
     font-size: 1.5rem;
     font-weight: bold;
+  }
+  .slider_partners .slider-arrow {
+    top: -50px;
   }
 }
 

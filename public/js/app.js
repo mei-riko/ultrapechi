@@ -118,7 +118,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 		var $slickPartners = (0, _jquery2.default)('.slider#slider-partners');
 		$slickPartners.slick({
 			slidesToShow: 6,
-			arrows: false,
+			arrows: true,
+			prevArrow: '<span class="slider-arrow slider-arrow_prev"></span>',
+			nextArrow: '<span class="slider-arrow slider-arrow_next"></span>',
 			dots: false,
 			autoplay: true,
 			responsive: [{
