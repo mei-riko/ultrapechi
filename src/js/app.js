@@ -8,7 +8,18 @@ $(document).ready(() =>{
            easing: "swing"
         });
         return false;
+	});
+	$(window).scroll(function() {
+        if ($(window).scrollTop() > 100) {
+            $("#scrollTop").addClass('show');
+        } else {
+            $("#scrollTop").removeClass('show');
+        }
     });
+    $("#scrollTop").click(function(e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 600);
+    })
 	
 	// Input mask
 	if( $('.phone').length > 0 ) {

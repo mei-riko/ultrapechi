@@ -2,6 +2,12 @@
     background: $white;
     padding: 60px 80px;
 
+    ul, ol{
+        li + li {
+            margin-top: 6px;
+        }
+    }
+
     &_error{
         background: $white url("../img/logo-fire.svg") no-repeat right top/420px;
         background-position-x: calc(100% + 120px);

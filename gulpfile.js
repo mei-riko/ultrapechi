@@ -82,31 +82,11 @@ gulp.task('css', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./src/*.pug'], ['html']);
-  gulp.watch(['./src/chunks/*.pug'], ['html']);
-  gulp.watch(['./src/css/*.scss'], ['css']);
-  gulp.watch(['./src/css/*/*.scss'], ['css']);
-  gulp.watch(['./src/js/*.js'], ['scripts']);
+  gulp.watch(['./src/*.pug'], gulp.parallel('html'));
+  gulp.watch(['./src/chunks/*.pug'], gulp.parallel('html'));
+  gulp.watch(['./src/css/*.scss'], gulp.parallel('css'));
+  gulp.watch(['./src/css/*/*.scss'], gulp.parallel('css'));
+  gulp.watch(['./src/js/*.js'], gulp.parallel('scripts'));
 });
 
-gulp.task("image", function() {
-  gulp
-    .src("public/images/**/**/*")
-    .pipe(newer('public/img-shakal'))
-    .pipe(image({
-      pngquant: true,
-      optipng: false,
-      zopflipng: true,
-      jpegRecompress: false,
-      mozjpeg: true,
-      guetzli: false,
-      gifsicle: true,
-      svgo: true,
-      concurrent: 10,
-      quiet: false // defaults to false
-    }))
-    .pipe(gulp.dest("public/img-shakal"));
-});
-
-
-gulp.task('default', ['html', 'css', 'scripts', 'watch', 'browser-sync' ]);
+gulp.task('default', gulp.parallel('html', 'css', 'scripts', 'watch', 'browser-sync'));

@@ -86,6 +86,23 @@
         }
     }
 }
+.navbar_footer{
+    .navbar__item{
+        margin-bottom: 12px;
+        &--last{
+            margin-bottom: 0px;
+        }
+    }
+    .navbar__link{
+        @extend .text-small;
+        line-height: 16px;
+        color: $light-brown;
+        &:hover{
+            color: $link-hover-color;
+        }
+    }
+}
+
 .catalog-nav-show{
     .navbar{
         .navbar__link{
@@ -106,24 +123,40 @@
         border: 1px solid $border-color;
     }
 }
-.footer{
-    .navbar{
-        .navbar__item{
-            margin-bottom: 12px;
-            &--last{
-                margin-bottom: 0px;
-            }
-        }
-        .navbar__link{
-            @extend .text-small;
-            line-height: 16px;
-            color: $light-brown;
-            &:hover{
-                color: $link-hover-color;
-            }
+
+.sub-nav{
+    &__item{
+        width: 50px;
+        height: 50px;
+        border-radius:25px;
+
+        position: fixed;
+        right: 20px;
+        z-index: 999;
+    }
+    &__scroll{
+        background: $orange url("../img/arrow-up.svg") no-repeat center / 22px;
+        bottom: 160px;
+
+        opacity: 0;
+        transition: .4s;
+
+        &.show{
+            opacity: 1;
         }
     }
+
+    &__tlg{
+        bottom: 90px;
+        background:#27A5E7 url("../img/telegram-white.svg") no-repeat 12px 13px/ 24px;
+    }
+    &__wa{
+        bottom: 20px;
+        background:#25D366 url("../img/whatsapp-white.svg") no-repeat 12px 13px/ 24px;
+    }
 }
+
+
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .navbar{
         &_catalog{
@@ -149,6 +182,44 @@
                     background: none;
                 }
             }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .sub-nav{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 999;
+
+        width: 100%;
+        height: 40px;
+
+        background-color: $brown;
+
+        display: flex;
+        justify-content: space-around;
+
+        &__item{
+            position: unset;
+
+            flex: 0 0 calc(100%/3);
+            max-width: calc(100%/3);
+            height: 40px;
+
+            border-radius: 0;
+
+            // margin: 10px;
+        }
+
+        &__scroll{
+            opacity: 1;
+        }
+        &__tlg{
+            background-position: center;
+        }
+        &__wa{
+            background-position: center;
         }
     }
 }
