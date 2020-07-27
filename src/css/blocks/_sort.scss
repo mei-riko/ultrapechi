@@ -1,0 +1,79 @@
+.sort{
+    font-size: 14px;
+    line-height: 16px;
+    padding: 4px 8px;
+
+    color: $grey;
+
+    &--active{
+        color: $black;
+        font-weight: 800;
+
+        .sort__status{
+            background-color: $border-color;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    }
+
+    &_price{
+        &[data-dir=asc]{
+            .sort__status{
+                background-color: #bbe4d3;
+                &:after{
+                    content: 'по возрастанию'
+                }
+            }
+        }
+        &[data-dir=desc]{
+            .sort__status{
+                &:after{
+                    content: 'по убыванию'
+                }
+            }
+        }
+    }
+    &_availible{
+        &[data-dir=asc]{
+            .sort__status{
+                &:after{
+                    content: 'нет'
+                }
+            }
+        }
+        &[data-dir=desc]{
+            .sort__status{
+                background-color: #bbe4d3;
+                &:after{
+                    content: 'есть'
+                }
+            }
+        }
+    }
+    &_pagetitle{
+        &[data-dir=asc]{
+            .sort__status{
+                background-color: #bbe4d3;
+                &:after{
+                    content: 'А-Я'
+                }
+            }
+        }
+        &[data-dir=desc]{
+            .sort__status{
+                &:after{
+                    content: 'Я-А'
+                }
+            }
+        }
+    }
+
+    &__status{
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.sort-container{
+    padding: 10px 20px;
+}

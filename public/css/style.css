@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -4429,6 +4430,69 @@ a.link-phone:hover {
     padding-left: 20px;
     max-width: 80%;
   }
+}
+
+.sort {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 8px;
+  color: #726d72;
+}
+
+.sort--active {
+  color: #000000;
+  font-weight: 800;
+}
+
+.sort--active .sort__status {
+  background-color: #e0dcd6;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.sort_price[data-dir=asc] .sort__status {
+  background-color: #bbe4d3;
+}
+
+.sort_price[data-dir=asc] .sort__status:after {
+  content: 'по возрастанию';
+}
+
+.sort_price[data-dir=desc] .sort__status:after {
+  content: 'по убыванию';
+}
+
+.sort_availible[data-dir=asc] .sort__status:after {
+  content: 'нет';
+}
+
+.sort_availible[data-dir=desc] .sort__status {
+  background-color: #bbe4d3;
+}
+
+.sort_availible[data-dir=desc] .sort__status:after {
+  content: 'есть';
+}
+
+.sort_pagetitle[data-dir=asc] .sort__status {
+  background-color: #bbe4d3;
+}
+
+.sort_pagetitle[data-dir=asc] .sort__status:after {
+  content: 'А-Я';
+}
+
+.sort_pagetitle[data-dir=desc] .sort__status:after {
+  content: 'Я-А';
+}
+
+.sort__status {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.sort-container {
+  padding: 10px 20px;
 }
 
 .card {
