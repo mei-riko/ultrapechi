@@ -4439,12 +4439,12 @@ a.link-phone:hover {
   color: #726d72;
 }
 
-.sort--active {
+.sort.active {
   color: #000000;
   font-weight: 800;
 }
 
-.sort--active .sort__status {
+.sort.active .sort__status {
   background-color: #e0dcd6;
   padding: 2px 4px;
   border-radius: 3px;
