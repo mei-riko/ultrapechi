@@ -131,9 +131,7 @@ a{
     min-height: 100vh;
     .inside{
         flex: 1 0 auto;
-        &_text-page{
-            margin-top: 20px;
-        }
+
         &_service{
             & + .footer{
                 margin-top: 0;

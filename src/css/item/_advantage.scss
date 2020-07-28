@@ -7,11 +7,15 @@
     flex-wrap: wrap;
 
     .advantage__item{
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 100%;
+        max-width: 100%;
 
-        padding: 20px;
-        border-right: 1px solid $body-bg;
+        padding: 15px 20px;
+        border-bottom: 1px solid $border-color;
+
+        &:last-of-type{
+            border-bottom: none;
+        }
     }
 
     .advantage__title{
@@ -90,14 +94,11 @@
         .advantage__item{
             flex: 0 0 50%;
             max-width: 50%;
-    
+            border-bottom: 0;
 
             &:nth-child(1),
             &:nth-child(2){
-                border-bottom: 1px solid $body-bg;
-            }
-            &:nth-child(2n){
-                border-right: none;
+                border-bottom: 1px solid $border-color;
             }
         }
     }
@@ -105,8 +106,7 @@
         display: none;
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
-}
+
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .advantage{
         .advantage__item{
@@ -115,9 +115,9 @@
     
             padding: 20px;
             border-right: none;
-            border-bottom: 1px solid $body-bg;
+            border-bottom: 1px solid $border-color;
 
-            &_last{
+            &:last-of-type{
                 border-bottom: none;
             }
         }

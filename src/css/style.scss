@@ -6,11 +6,14 @@
 @import "grid.scss";
 @import "position.scss";
 
-@import "other/header.scss";
-@import "other/nav.scss";
+@import "other/navbar.scss";
+@import "other/nav-menu.scss";
 @import "other/form.scss";
+@import "other/checkbox.scss";
 @import "other/button.scss";
 @import "other/pagination.scss";
+
+@import "other/header.scss";
 @import "other/footer.scss";
 
 @import "item/advantage.scss";

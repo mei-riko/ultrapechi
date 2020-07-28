@@ -9,33 +9,30 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .content-area.catalog-nav-show
+        .content-area
             include chunks/header
             main.inside.inside_service
-                section
-                    .container
-                        .row.justify-content-end
-                            .col.service-col
-                                .content.content_header-block.mb-40
-                                    h1.h4.content__title Наши услуги
-                                    p.content__offer Lorem ipsum dolor sit amet. Porro quisquam est, qui dolorem ipsum quia. Inventore veritatis et accusamus et expedita distinctio aperiam eaque. Quaerat voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae. Alias consequatur aut perferendis doloribus asperiores repellat. adipisci. Consectetur, adipisci velit, sed ut et iusto odio dignissimos ducimus.
-                                .row
-                                    .col-6.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
-                                        a.service-item(href="#")
-                                            .service-item__bg(style="background-image: url('../img/service-01.png')")
-                                            .service-item__title Монтаж продукции
-                                    .col-6.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
-                                        a.service-item(href="#")
-                                            .service-item__bg(style="background-image: url('../img/service-02.png')")
-                                            .service-item__title Замеры
-                                    .col-6.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
-                                        a.service-item(href="#")
-                                            .service-item__bg(style="background-image: url('../img/service-03.png')")
-                                            .service-item__title Доставка
-                                    .col-6.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
-                                        a.service-item(href="#")
-                                            .service-item__bg(style="background-image: url('../img/service-04.png')")
-                                            .service-item__title Гарантийное обслуживание
+                section.container
+                        .content.content_header-block.mb-40
+                            h1.h2.text-bold.content__title Наши услуги
+                            p.content__offer Lorem ipsum dolor sit amet. Porro quisquam est, qui dolorem ipsum quia. Inventore veritatis et accusamus et expedita distinctio aperiam eaque. Quaerat voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae. Alias consequatur aut perferendis doloribus asperiores repellat. adipisci. Consectetur, adipisci velit, sed ut et iusto odio dignissimos ducimus.
+                        .row
+                            .col-4.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
+                                a.service-item(href="#")
+                                    .service-item__title Монтаж продукции
+                                    .service-item__bg(style="background-image: url('../img/service-01.png')")
+                            .col-4.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
+                                a.service-item(href="#")
+                                    .service-item__title Замеры
+                                    .service-item__bg(style="background-image: url('../img/service-02.png')")
+                            .col-4.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
+                                a.service-item(href="#")
+                                    .service-item__title Доставка
+                                    .service-item__bg(style="background-image: url('../img/service-03.png')")
+                            .col-4.d-flex.mb-40.col-sm-12.col-md-6.col-lg-12
+                                a.service-item(href="#")
+                                    .service-item__title Гарантийное обслуживание
+                                    .service-item__bg(style="background-image: url('../img/service-04.png')")
             include chunks/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 
+    // For MODx Cart
     &#msOrder{
         .row.no-gutters{
             .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
@@ -11,6 +12,7 @@
         
     }
 
+    // Elements
     .form__group{
         & + .form__group{
             margin-top: 20px;
@@ -21,29 +23,31 @@
 
         outline: none;
         border: 1px solid $border-color;
-        border-radius: 12px;
+        border-radius: 6px;
 
         padding: 12px 20px;
 
         max-width: 100%;
 
+        &::placeholder{
+            opacity: 0.5;
+        }
         &:focus::placeholder{
             opacity: 0;
         }
 
-        &_fullwidth{
-            width: 100%;
-        }
+
+        &_fullwidth{ width: 100%;}
         &_search{
-            border: 1px solid #dcd8d3;
-            border-radius: 20px;
+            border: none;
+            background-color: $white;
+            width: 100%;
         }
     }
 
     * + .btn{
         margin-top: 12px;
     }
-    
     * + .checkbox{
         margin-top: 12px;
     }
@@ -53,106 +57,6 @@
     }
 }
 
-/* Checkbox */
-.checkbox{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    font-size: 12px;
-
-    &__input{
-        display: none;
-
-        &:checked + .checkbox__label:after {
-            content: '';
-            display: block;
-            background-color: $orange;
-
-            width: 8px;
-            height: 8px;
-            border-radius: 4px;
-
-            position: absolute;
-            left: 6px;
-            top: calc(50% - 4px);
-        }
-    }
-    &__label{
-        position: relative;
-        margin: 0;
-        padding-left: 28px;
-        line-height: 14px;
-
-        cursor: pointer;
-
-        &:before{
-            content:'';
-            display: block;
-
-            border: 1px solid $light-brown;
-            background: $white;
-
-            width: 20px;
-            height: 20px;
-            border-radius: 6px;
-
-            position: absolute;
-            left: 0;
-            top: calc(50% - 10px);
-        }
-    }
-    &__link{
-        text-decoration: underline;
-    }
-}
-.checkbox-filter{
-    .checkbox__label{
-        line-height: 18px;
-    }
-
-    & + .checkbox-filter{
-        margin-top: 12px;
-    }
-}
-.checkbox-tags{
-    display: inline-block;
-    margin-right: 5px;
-
-    .checkbox-tags__input{
-        display: none;
-        &:checked + .checkbox-tags__name{
-            background: $light-grey;
-            color: $white;
-        }
-    }
-    .checkbox-tags__name{
-        line-height: 1;
-
-        padding: 8px 12px;
-        text-align: center;
-
-        background: $border-color;
-        border-radius: 6px;
-
-        cursor: pointer;
-    }
-}
-
-.footer{
-    .checkbox{
-        &__label{
-            color: $light-brown;
-        }
-        &__link{
-            display: inline;
-            color: $light-brown;
-            &:hover{
-                color: $link-hover-color;
-            }
-        }
-    }
-}
 
 /* MODx Revo Alert*/
 .jGrowl {

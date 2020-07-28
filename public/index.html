@@ -11,102 +11,61 @@
   </head>
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <div class="content-area catalog-nav-show">
+    <div class="content-area">
       <header class="header">
-        <div class="container">
-          <div class="header__mobile-line d-none">
-            <div class="header__mobile-line__left"><a class="btn-mobile btn-mobile_nav" id="navMobile" href="#"></a><a class="btn-mobile btn-mobile_search" id="searchMobile" href="#"></a></div><a class="header__logo" href="/"></a>
-            <div class="header__mobile-line__right"><a class="btn-mobile btn-mobile_phone" href="tel:88009312425"></a><a class="btn-mobile btn-mobile_cart" href="/cart.html"></a></div>
-          </div>
-          <div class="header__mobile-search">
-            <form class="form form_search" action="">
-              <input class="form__input form__input_search" type="text" placeholder="Поиск по сайту"/>
-              <button class="btn btn_search" type="submit"></button>
-            </form>
-          </div>
-          <div class="header__mobile-nav">
-            <nav class="navbar navbar_mobile">
-              <div class="navbar__item navbar__item_has-child"><a class="navbar__link" href="#">Каталог товаров</a>
-                <div class="navbar__inside"><a class="navbar__link" href="#">Печи-камины</a><a class="navbar__link" href="#">Печи для бани</a><a class="navbar__link" href="#">Отопительно-варочные печи </a><a class="navbar__link" href="#">Каминные топки</a><a class="navbar__link" href="#">Каминные облицовки</a><a class="navbar__link" href="#">Электронагревательные приборы</a><a class="navbar__link" href="#">Котлы и оборудование</a><a class="navbar__link" href="#">Чугунное литье</a><a class="navbar__link" href="#">Изоляция и огнезащита</a><a class="navbar__link" href="#">Дымоходы и комплектующие</a><a class="navbar__link" href="#">Окна и комплектующие</a><a class="navbar__link" href="#">Двери и комплектующие</a><a class="navbar__link" href="#">Топливо</a><a class="navbar__link" href="#">Прочее</a></div>
-              </div>
-              <div class="navbar__item"><a class="navbar__link" href="#">Услуги</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="#">Производство</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="#">О компании</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="#">Контакты</a></div>
-              <div class="navbar__item"><a class="navbar__link" href="#">Расчет дымохода</a></div>
-            </nav>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-2 d-md-none"><a class="header__logo" href="/"></a></div>
-            <div class="col-10 d-md-none">
-              <div class="header__line">
-                <form class="form form_search" action="">
-                  <input class="form__input form__input_search" type="text" placeholder="Поиск по сайту"/>
-                  <button class="btn btn_search" type="submit"></button>
-                </form>
-                <div class="header__info">
-                  <p class="text-small mb-0">Санкт-Петербург и ЛО</p>
-                  <p class="text-small text-bold mb-0">с 10.00 до 19.00 (ПН-ПТ)</p>
-                  <p class="text-small mb-0"><a class="link-inverse" href="">заказать звонок</a></p>
-                </div><a class="header__cart" href="/cart.html">В корзине нет товаров</a>
-              </div>
-            </div>
+        <div class="bg-white">
+          <div class="header__line container">
+            <div class="header__item d-md-none">Санкт-Петербург и ЛО</div>
+            <div class="header__item d-md-none">с 10.00 до 19.00 (ПН-ПТ)</div>
+            <div class="header__item header__item_contact"><a class="header__phone" href="tel:8 800 000 00 00">8 800 000 00 00</a><a class="header__label" href="">заказать звонок</a></div>
           </div>
         </div>
-        <div class="header__nav d-md-none">
-          <div class="container">
-            <div class="header__line">
-              <nav class="navbar navbar_header"><a class="navbar__link navbar__link_catalog" href="#">Каталог товаров</a>
-                <div class="sep"></div><a class="navbar__link" href="#">Услуги</a>
-                <div class="sep"></div><a class="navbar__link" href="#">Производство</a>
-                <div class="sep"></div><a class="navbar__link" href="#">О компании</a>
-                <div class="sep"></div><a class="navbar__link" href="#">Контакты</a>
-                <div class="sep"></div><a class="navbar__link" href="#">Расчет дымохода</a>
-              </nav><a class="header__phone" href="tel:8 800 000 00 00">8 800 000 00 00</a>
-              <nav class="navbar navbar_catalog">
-                <div class="navbar__item"><a class="navbar__link" href="#">Печи-камины</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Печи для бани</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Отопительно-варочные печи </a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Каминные топки</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Каминные облицовки</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Электронагревательные приборы</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Котлы и оборудование</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Чугунное литье</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Изоляция и огнезащита</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Дымоходы и комплектующие</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Окна и комплектующие</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Двери и комплектующие</a></div>
-                <div class="navbar__item"><a class="navbar__link" href="#">Топливо</a></div>
-                <div class="navbar__item navbar__item--last"><a class="navbar__link" href="#">Прочее</a></div>
-              </nav>
-            </div>
-          </div>
+        <div class="header__line header__line_main container"><a class="header__link header__link_menu" href="#">Меню</a><a class="header__logo" href="/"></a>
+          <nav class="header__navbar navbar navbar_header"><a class="navbar__link navbar_header__link navbar_header__link_catalog" href="#">Каталог</a><a class="navbar__link navbar_header__link" href="#">Услуги</a><a class="navbar__link navbar_header__link" href="#">О компании</a><a class="navbar__link navbar_header__link" href="#">Контакты</a></nav>
+          <form class="form form_search header__search" action="">
+            <input class="form__input form__input_search" type="text" placeholder="Поиск"/>
+            <button class="btn btn_search" type="submit"></button>
+          </form><a class="header__link header__link_pay" href="#">Оплата</a><a class="header__link header__link_delivery" href="#">Доставка</a><a class="header__link header__link_cart" href="/cart.html">Корзина</a>
         </div>
+        <div class="nav-menu"><span class="nav-menu__close"></span><a class="nav-menu__logo" href="/"></a>
+          <nav class="navbar">
+            <div class="navbar__item"><a class="nav-menu__link nav-menu__link_parent" href="#">Каталог товаров</a></div>
+            <div class="nav-menu__inside"><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a><a class="nav-menu__link" href="#">Печи-камины</a></div>
+            <div class="navbar__item"><a class="nav-menu__link nav-menu__link_parent" href="#">Услуги</a></div>
+            <div class="nav-menu__inside"><a class="nav-menu__link" href="#">Монтаж продукции</a><a class="nav-menu__link" href="#">Замерыдля печи</a><a class="nav-menu__link" href="#">Доставка </a><a class="nav-menu__link" href="#">Гарантийное обслуживание</a></div>
+            <div class="navbar__item"><a class="nav-menu__link nav-menu__link_parent" href="#">О компании</a></div>
+            <div class="nav-menu__inside"><a class="nav-menu__link" href="#">Доставка и самовывоз</a><a class="nav-menu__link" href="#">Оплата</a><a class="nav-menu__link" href="#">FAQ</a></div>
+            <div class="navbar__item"><a class="nav-menu__link nav-menu__link_parent" href="#">Контакты</a></div>
+          </nav>
+        </div>
+        <div class="nav-overlay"></div>
       </header>
       <main class="inside inside_index">
         <section class="content-slider">
           <div class="container">
             <div class="row justify-content-end">
-              <div class="col content-slider__col">
+              <div class="col-9 col-xl-8 col-lg-12">
                 <div class="slider slider_with-content" id="slider-index">
                   <div class="slider__item">
-                    <div class="slider__content" style="width:360px;">
+                    <div class="slider__content" style="width:320px;">
                       <div class="slider__title">Печи с&nbsp;гарантией до&nbsp;15&nbsp;лет</div>
                       <p class="slider__offer">от отечественного производителя </p>
-                      <p class="mb-0"><a class="btn btn_cta" href="#">ПЕРЕЙТИ В КАТАЛОГ</a></p>
+                      <p class="mb-0"><a class="btn btn_cta" href="#">Перейти в каталог</a></p>
                     </div>
                     <div class="slider__bg" style="background-image: url('../img/slider.jpg');"></div>
                   </div>
                   <div class="slider__item">
-                    <div class="slider__content" style="width:440px;">
+                    <div class="slider__content" style="width:400px;">
                       <div class="slider__title">Двери и&nbsp;комплектующие</div>
                       <p class="slider__offer">с&nbsp;доставкой до двери квартиры </p>
-                      <p class="mb-0"><a class="btn btn_cta" href="#">ПЕРЕЙТИ В КАТАЛОГ</a></p>
+                      <p class="mb-0"><a class="btn btn_cta" href="#">Перейти в каталог</a></p>
                     </div>
                     <div class="slider__bg" style="background-image: url('../img/slider.jpg');"></div>
                   </div>
                 </div>
-                <div class="advantage mt-40">
+              </div>
+              <div class="col-3 col-xl-4 col-lg-12">
+                <div class="advantage">
                   <div class="advantage__item">
                     <div class="advantage__title">Экономия до&nbsp;15%</div>
                     <div class="advantage__content">собственное производство, без&nbsp;посредников</div>
@@ -229,16 +188,17 @@
           </div>
         </aside>
       </main>
+      <div class="sub-nav"><a class="sub-nav__item sub-nav__scroll" id="scrollTop" href="#"></a><a class="sub-nav__item sub-nav__tlg" href="https://telegram.im/@Ultrapechi" target="_blank" title="Связаться в УльтраПечи в Telegram"></a><a class="sub-nav__item sub-nav__wa" href="https://wa.me/+79211827164" target="_blank" title="Связаться в УльтраПечи в What's App"></a></div>
       <footer class="footer">
         <div class="container">
           <div class="row">
-            <div class="col-3 col-sm-12 col-md-6 col-lg-6"><a class="footer__logo" href="/"></a>
+            <div class="col-3 col-sm-12 col-md-6 col-lg-6 footer__intro"><a class="footer__logo" href="/"></a>
               <p class="footer__info">Ipsa, quae ab illo inventore veritatis. Sequi nesciunt, neque porro quisquam est, omnis iste. Et quas molestias excepturi sint. Natus error sit voluptatem accusantium doloremque laudantium. Nisi ut labore.</p>
               <p class="footer__info footer__info_copyright">© 2019 Все права защищены</p>
             </div>
-            <div class="col-3 col-sm-12 mt-sm-40 col-md-6 col-lg-6">
+            <div class="col-3 col-sm-12 mt-lg-40 col-md-6 col-lg-6 footer__catalog">
               <p class="footer__label">Продукция</p>
-              <nav class="navbar">
+              <nav class="navbar navbar_footer">
                 <div class="navbar__item"><a class="navbar__link" href="#">Печи-камины</a></div>
                 <div class="navbar__item"><a class="navbar__link" href="#">Печи для бани</a></div>
                 <div class="navbar__item"><a class="navbar__link" href="#">Отопительно-варочные печи </a></div>
@@ -255,9 +215,9 @@
                 <div class="navbar__item navbar__item--last"><a class="navbar__link" href="#">Прочее</a></div>
               </nav>
             </div>
-            <div class="col-3 col-sm-12 mt-lg-40 col-md-6 col-lg-6">
+            <div class="col-3 col-sm-12 mt-lg-40 col-md-6 col-lg-6 footer__nav">
               <p class="footer__label">Компания</p>
-              <nav class="navbar">
+              <nav class="navbar navbar_footer">
                 <div class="navbar__item"><a class="navbar__link" href="#">О компании</a></div>
                 <div class="navbar__item"><a class="navbar__link" href="#">Доставка и самовывоз</a></div>
                 <div class="navbar__item"><a class="navbar__link" href="#">Оплата заказа</a></div>
@@ -267,7 +227,7 @@
                 <div class="navbar__item navbar__item--last"><a class="navbar__link" href="#">FAQ</a></div>
               </nav>
             </div>
-            <div class="col-3 col-sm-12 mt-lg-40 col-md-6 col-lg-6">
+            <div class="col-3 col-sm-12 mt-lg-40 col-md-6 col-lg-6 footer__form">
               <p class="footer__label">Связаться с нами</p>
               <form class="form" action="">
                 <input class="form__input form__input_fullwidth phone" placeholder="Телефон" type="tel"/><a class="btn btn_cta btn_fullwidth" href="#">Заказать звонок</a>

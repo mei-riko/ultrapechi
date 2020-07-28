@@ -1,14 +1,14 @@
 .catalog{
-    .catalog__title{
+    &__title{
         background: $white;
         margin: 0;
         padding: 30px 40px;
         border-bottom: 1px solid $body-bg;
-        &.catalog__title_slider{
+        &_slider{
             padding-right: 120px;
         }
     }
-    .catalog__row{
+    &__row{
         background: $white;
 
         &.slider{
@@ -24,7 +24,7 @@
             margin-left: 0!important;
         }
     }
-    .catalog__item{
+    &__item{
         position: relative;
         .catalog__item__category{
             font-size: 13px;
@@ -93,7 +93,7 @@
                     padding: 20px 0 20px 40px;
                     border-left: 1px solid $border-color;
 
-                    .btn.btn_buy{
+                    .btn{
                         margin: 20px 0;
                     }
                 }
@@ -128,7 +128,7 @@
             }
         }
     }
-    .catalog__category{
+    &__category{
         padding: 12px 40px;
         border-bottom: 1px solid $body-bg;
 
@@ -140,16 +140,19 @@
     
             padding: 6px 10px;
             text-align: center;
-            text-transform: uppercase;
+            // text-transform: uppercase;
     
-            background: $border-color;
-            border-radius: 6px;
+            background: $label-light;
+            color: $black;
+            border-radius: 16px;
     
-            margin: 6px;
+            margin: 4px;
             white-space: nowrap;
 
-            &:hover{
+            &:hover, &:focus{
+                background-color: $border-color;
                 text-decoration: none;
+                color: $black;
             }
 
             &--active{
@@ -297,7 +300,7 @@
 
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .catalog{
-        .catalog__item{
+        &__item{
             &_row{
                 .catalog__item__col{
                     &_sidebar {
@@ -315,7 +318,7 @@
         }
     }
     .catalog{
-        .catalog__item{
+        &__item{
             &_row{
                 flex-wrap: wrap;
 

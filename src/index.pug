@@ -11,29 +11,30 @@ html(lang="ru")
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
-        .content-area.catalog-nav-show
+        .content-area
             include chunks/header
             main.inside.inside_index
                 section.content-slider
                     .container
                         .row.justify-content-end
-                            .col.content-slider__col
+                            .col-9.col-xl-8.col-lg-12
                                 .slider.slider_with-content#slider-index
                                     .slider__item
-                                        .slider__content(style="width:360px;")
+                                        .slider__content(style="width:320px;")
                                             .slider__title Печи с&nbsp;гарантией до&nbsp;15&nbsp;лет
                                             p.slider__offer от отечественного производителя 
                                             p.mb-0
-                                                a.btn.btn_cta(href="#") ПЕРЕЙТИ В КАТАЛОГ
+                                                a.btn.btn_cta(href="#") Перейти в каталог
                                         .slider__bg(style="background-image: url('../img/slider.jpg');")
                                     .slider__item
-                                        .slider__content(style="width:440px;")
+                                        .slider__content(style="width:400px;")
                                             .slider__title Двери и&nbsp;комплектующие
                                             p.slider__offer с&nbsp;доставкой до двери квартиры 
                                             p.mb-0
-                                                a.btn.btn_cta(href="#") ПЕРЕЙТИ В КАТАЛОГ
+                                                a.btn.btn_cta(href="#") Перейти в каталог
                                         .slider__bg(style="background-image: url('../img/slider.jpg');")
-                                .advantage.mt-40
+                            .col-3.col-xl-4.col-lg-12
+                                .advantage
                                     .advantage__item
                                         .advantage__title Экономия до&nbsp;15%
                                         .advantage__content собственное производство, без&nbsp;посредников

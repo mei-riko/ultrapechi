@@ -189,13 +189,12 @@ $(document).ready(() =>{
 	}
 
 	// Slider Index
-	if( $('.catalog-nav-show .slider#slider-index').length > 0 ) {
-		var $slickIndex = $('.slider#slider-index');
-		var $navHeight = $('.catalog-nav-show .navbar_catalog').height();
-		var $advantage = $('.catalog-nav-show .content-slider__col .advantage').outerHeight();
+	if( $('.slider#slider-index').length > 0 ) {
+		var $slickIndex = $('.inside_index .slider#slider-index');
+		let $advantage = $('.inside_index .advantage').outerHeight();
 
-		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
-			$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80 );
+		if ( $(window).width() > 992 || !window.matchMedia('screen and (max-width: 992px)').matches ){
+			$slickIndex.find('.slider__item').css('min-height', $advantage );
 		}
 
 		$slickIndex.slick({
@@ -251,66 +250,62 @@ $(document).ready(() =>{
 		$(".filters").slideToggle();
 	});
 
-
-	// Navbar Mobile
-	$(".navbar .navbar__item.navbar__item_has-child > .navbar__link").on("click", function(e){
+	// Navbar Open
+	$(".navbar_header .navbar_header__link.navbar_header__link_catalog").on("click", function(e){
 		e.preventDefault();
-
-		let inside = $(this).parent().find(".navbar__inside");
-		inside.slideToggle();
-	});
-	$("#navMobile").on("click", function(e){
+		let navbar = $(".nav-menu");
 		e.preventDefault();
-		if( !$(this).hasClass("btn-mobile--active")){
-			$(this).addClass("btn-mobile--active");
-			$(".header__mobile-nav").addClass("header__mobile-nav--active");
-			$("body").attr("style", "overflow: hidden; overscroll-behavior: none;");
+		if( !navbar.hasClass("nav-menu--active")){
+			navbar.addClass("nav-menu--active");
+			$(".nav-overlay").addClass("nav-overlay--active");
 		}else{
-			$(this).removeClass("btn-mobile--active");
-			$(".header__mobile-nav").removeClass("header__mobile-nav--active");
-			$("body").attr("style", "");
+			navbar.removeClass("nav-menu--active");
+			$(".nav-overlay").removeClass("nav-overlay--active");
 		}
 	});
-
-	// Navbar Desktop
-	$(".navbar .navbar__link.navbar__link_catalog").on("click", function(e){
+	$(".header .header__link.header__link_menu").on("click", function(e){
 		e.preventDefault();
-		let catalogNav = $(".catalog-nav-hidden .navbar.navbar_catalog");
-		catalogNav.slideToggle();
+		let navbar = $(".nav-menu");
+		if( !navbar.hasClass("nav-menu--active")){
+			navbar.addClass("nav-menu--active");
+			$(".nav-overlay").addClass("nav-overlay--active");
+		}else{
+			navbar.removeClass("nav-menu--active");
+			$(".nav-overlay").removeClass("nav-overlay--active");
+		}
+	});
+	$(".nav-menu .nav-menu__close").on("click", function(e){
+		let navbar = $(".nav-menu");
+		navbar.removeClass("nav-menu--active");
+		$(".nav-overlay").removeClass("nav-overlay--active");
 	});
 
 	// Hide on Desktop & Resize
 	$(window).resize(function(){
 		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
 
-			$(".btn-mobile#navMobile").removeClass("btn-mobile--active");
-			$(".header__mobile-nav.header__mobile-nav--active").removeClass("header__mobile-nav--active");
-			$("body").attr("style", "");
-		
 			$(".header__mobile-search.header__mobile-search--active").removeClass("header__mobile-search--active");
 			$(".header__mobile-search").hide();
 
 			$(".filters").removeClass("filters--active");
 			$(".filters").show();
-
-			if( $('.catalog-nav-show .slider#slider-index').length > 0 ) {
-				$slickIndex.find('.slider__item').css('min-height', $navHeight - $advantage - 80 );
+		}
+		if ( $(window).width() > 992 || !window.matchMedia('screen and (max-width: 992px)').matches ){
+			// Index Slider
+			if( $('.slider#slider-index').length > 0 ) {
+				let $advantage = $('.inside_index .advantage').outerHeight();				
+				$slickIndex.find('.slider__item').css('min-height', $advantage );
+			}
+		} else{
+			// Index Slider
+			if( $('.slider#slider-index').length > 0 ) {
+				let $advantage = $('.inside_index .advantage').outerHeight();
+				$slickIndex.find('.slider__item').css('min-height', '' );
 			}
 		}
-		$(".catalog-nav-hidden .navbar.navbar_catalog").slideUp();
 	});
 
 	$(document).mouseup(function (e){ // событие клика по веб-документу
-		let dropdownActive = $(".header__mobile-nav.header__mobile-nav--active"); // элемент меню
-		  
-		if (!dropdownActive.is(e.target) // клик был не по блоку
-			  && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
-			  && !$(".btn-mobile#navMobile").is(e.target) ) { 
-				  $(".btn-mobile#navMobile").removeClass("btn-mobile--active");
-				  dropdownActive.removeClass("header__mobile-nav--active");
-				  $("body").attr("style", "");
-		}
-
 		let searchActive = $(".header__mobile-search.header__mobile-search--active"); // элемент поиск
 		if (!searchActive.is(e.target) // клик был не по блоку
 			&& searchActive.has(e.target).length === 0 // и не по его дочерним элементам
@@ -319,12 +314,12 @@ $(document).ready(() =>{
 				searchActive.removeClass("header__mobile-search--active");
 		}
 
-		let navCatalog = $(".catalog-nav-hidden .navbar.navbar_catalog");
-		if (!navCatalog.is(e.target) // клик был не по блоку
-			&& navCatalog.has(e.target).length === 0 // и не по его дочерним элементам
-			&& !$(".navbar .navbar__link.navbar__link_catalog").is(e.target) ) { 
-				navCatalog.slideUp();
-				navCatalog.removeClass("header__mobile-search--active");
+		let navbar = $(".nav-menu");
+		if (!navbar.is(e.target) // клик был не по блоку
+			&& navbar.has(e.target).length === 0 // и не по его дочерним элементам
+			) { 
+				navbar.removeClass("nav-menu--active");
+				$(".nav-overlay").removeClass("nav-overlay--active");
 		}
 	});
 });

@@ -83,12 +83,13 @@ html(lang="ru")
                                     a.filters-reset(href="#") Сбросить фильтр
                             .col-8.col-md-12.bg-white
                                 #mse2_sort.sort-container
+                                    span.text-grey Сортировка по: 
                                     a(href="#" data-sort="tv|availible" data-dir="asc" data-default="desc" class="sort sort_availible active")
-                                        | Наличие <span class="sort__status"></span>
+                                        | По наличию <span class="sort__status"></span>
                                     a(href="#" data-sort="resource|pagetitle" data-dir="asc" data-default="asc" class="sort sort_pagetitle active")
-                                        | Название <span class="sort__status"></span>
+                                        | По названию <span class="sort__status"></span>
                                     a(href="#" data-sort="ms|price" data-dir="asc" data-default="asc" class="sort sort_price active")
-                                        | Цена <span class="sort__status"></span>
+                                        | По цене <span class="sort__status"></span>
                                 .catalog__item.catalog__item_row
                                     img.img-fluid(src="../img/pic-1.png")
                                     .catalog__item__col.catalog__item__col_content
@@ -116,9 +117,9 @@ html(lang="ru")
                                                 | 4000123342
                                     .catalog__item__col.catalog__item__col_sidebar
                                         .catalog__item__price
-                                            span.old-price 65 899 руб.
-                                            span.new-price 43 451 руб.
-                                        a.btn.btn_buy.btn_with-text(href="#") Купить
+                                            span.old-price 65 899 р.
+                                            span.new-price 43 451 р.
+                                        a.btn.btn_buy-full(href="#") В корзину
                                         .availible в наличии
                                 .catalog__item.catalog__item_row
                                     img.img-fluid(src="../img/pic-1.png")
@@ -147,9 +148,9 @@ html(lang="ru")
                                                 | 4000123342
                                     .catalog__item__col.catalog__item__col_sidebar
                                         .catalog__item__price
-                                            span.old-price 65 899 руб.
-                                            span.new-price 43 451 руб.
-                                        a.btn.btn_buy.btn_no-availible.btn_with-text(href="#") Купить
+                                            span.old-price 65 899 р.
+                                            span.new-price 43 451 р.
+                                        a.btn.btn_buy-full.btn_buy-full--no-availible(href="#") В корзину
                                         .no-availible нет в наличии
                                 .catalog__item.catalog__item_row
                                     img.img-fluid(src="../img/pic-1.png")
@@ -178,9 +179,9 @@ html(lang="ru")
                                                 | 4000123342
                                     .catalog__item__col.catalog__item__col_sidebar
                                         .catalog__item__price
-                                            span.old-price 65 899 руб.
-                                            span.new-price 43 451 руб.
-                                        a.btn.btn_buy.btn_with-text(href="#") Купить
+                                            span.old-price 65 899 р.
+                                            span.new-price 43 451 р.
+                                        a.btn.btn_buy-full(href="#") В корзину
                                         .availible в наличии
                             .col-8.col-md-12.mt-40
                                 ul.pagination

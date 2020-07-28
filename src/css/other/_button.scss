@@ -1,12 +1,12 @@
 .btn{
     border: none;
     outline: none;
-    border-radius: 12px;
+    border-radius: 6px;
     
     font-size: 14px;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    // text-transform: uppercase;
+    // letter-spacing: 1px;
 
     text-align: center;
 
@@ -19,11 +19,23 @@
     &:focus{
         outline: none;
     }
-
+    &_small{
+        font-size: 12px;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
     &_fullwidth{
         width: 100%;
     }
 
+    &_default{
+        background: $border-color;
+        color: $brown;
+        &:hover{
+            color: $brown;
+            background: darken($color: $border-color, $amount: 3);
+        }
+    }
     &_cta{
         background: $orange;
         color: $white;
@@ -33,7 +45,7 @@
         }
     }
     &_buy{
-        background: $yellow url(../img/cart.svg) no-repeat 11px 8px/24px;
+        background: $yellow url(../img/cart.svg) no-repeat 14px 10px/18px;
         min-width: 44px;
         height: 40px;
         line-height: 16px;
@@ -43,31 +55,40 @@
             color: $black;
         }
 
-        &.btn_with-text{
-            background-position: 18px 12px;
-            background-size: 18px;
-            padding: 14px 24px 14px 46px;
-            height: auto;
+        // &.btn_with-text{
+        //     background-position: 18px 12px;
+        //     background-size: 18px;
+        //     padding: 14px 24px 14px 46px;
+        //     height: auto;
+        // }
+        // &.btn_no-availible{
+        //     background-color: $border-color;
+        //     &:hover{
+        //         background-color: darken($color: $border-color, $amount: 8);
+        //     }
+        // }
+
+    }
+    &_buy-full{
+        background: $yellow;
+        min-width: 44px;
+        height: 40px;
+        line-height: 16px;
+        
+        &:hover{
+            background-color: lighten($color: $yellow, $amount: 10);
+            color: $black;
         }
-        &.btn_no-availible{
+
+        &--no-availible{
             background-color: $border-color;
             &:hover{
                 background-color: darken($color: $border-color, $amount: 8);
             }
         }
-
     }
-    &_default{
-        background: $border-color;
-        color: $brown;
-        &:hover{
-            color: $brown;
-            background: darken($color: $border-color, $amount: 3);
-        }
-    }
-
     &_search{
-        background: url("../img/search-orange.svg") no-repeat center / 18px;
+        background: url("../img/search.svg") no-repeat center / 18px;
         border: none;
         outline: none;
         margin: 0!important;
@@ -79,12 +100,6 @@
         top: 0;
         right: 0;
 
-    }
-
-    &_small{
-        font-size: 12px;
-        padding: 8px 12px;
-        border-radius: 6px;
     }
 
     &.btn-more{

@@ -80,19 +80,10 @@
         }
         &_error{
             background: $white;
-            margin-top: 40px;
+            // margin-top: 40px;
             .content__title {
                 font-size: 60px;
             }
-        }
-    }
-    .content-slider{
-        margin-top: 40px;
-        .content-slider__col{
-            padding-left: 20px;
-    
-            flex: 0 0 100%;
-            width: 100%;
         }
     }
 }
@@ -117,15 +108,6 @@
         &_error{
             .content__title {
                 font-size: 42px;
-            }
-        }
-    }
-    .content-slider{
-        margin-top: 0;
-        .content-slider__col{
-            .slider_with-content{
-                margin-left: -20px;
-                margin-right: -20px;
             }
         }
     }

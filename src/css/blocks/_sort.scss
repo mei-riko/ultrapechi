@@ -1,6 +1,5 @@
 #mse2_sort .sort,
 .sort{
-    font-size: 14px;
     line-height: 16px;
     padding: 4px 8px;
 
@@ -11,13 +10,12 @@
 
     &.active{
         color: $black;
-        // font-weight: 800;
         cursor: pointer;
 
         .sort__status{
-            background-color: $border-color;
-            padding: 2px 4px;
-            border-radius: 3px;
+            background-color: $label-light;
+            padding: 2px 8px 3px;
+            border-radius: 12px;
         }
     }
 
@@ -74,13 +72,14 @@
     }
 
     &__status{
-        font-size: 12px;
         font-weight: 400;
         transition: .2s;
     }
 }
 
 .sort-container{
+    font-size: 12px;
+
     padding: 10px 20px;
     border-bottom: 1px solid #e0dcd6;
 }

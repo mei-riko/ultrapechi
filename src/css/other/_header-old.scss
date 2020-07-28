@@ -1,0 +1,211 @@
+.header{
+    margin-bottom: 40px;
+    .header__logo{
+        width: 100%;
+        height: 110px;
+        padding: 20px 0;
+
+        background: url("../img/logo-png.png") no-repeat left center / contain;
+    }
+    .header__nav{
+        padding: 12px 0;
+        background: $brown;
+    }
+    .header__line{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .header__phone{
+        font-size: 20px;
+        line-height: 1;
+        font-weight: bold;
+        color: $white;
+
+        padding-left: 26px;
+        background: url("../img/phone-white.svg") no-repeat left center / 16px;
+
+        &:hover{
+            color: $link-hover-color;
+            text-decoration: none;
+        }
+    }
+    .header__info{
+        .text-small{
+            line-height: 18px;
+        }
+    }
+    .header__cart{
+        @extend .text-small;
+        line-height: 18px;
+        padding-left: 40px;
+        background: url("../img/cart-orange.svg") no-repeat left center / 30px;
+
+        width: 120px;
+        max-width: 100%;
+    }
+    .form{
+        max-width: 100%;
+        .form__input_search{
+            width: 560px;
+            max-width: 100%;
+            height: 46px;
+        }
+    }
+
+    .header__mobile-line,
+    .header__mobile-nav,
+    .header__mobile-search{
+        display: none;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .header{
+        .header__line{
+            .form{
+                .form__input_search{
+                    width: 300px;
+                }
+            }
+        }
+        .header__phone{
+            display: inline-block;
+            font-size: 0;
+            
+            flex: 0 0 40px;
+            max-width: 40px;
+
+            height: 40px;
+            padding: 0;
+            background-position: center;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .header{
+        .header__line{
+            .form{
+                .form__input_search{
+                    width: unset;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .header{
+        max-width: 100%;
+        margin-bottom: 0;
+
+        .header__logo {
+            width: 110px;
+            height: 70px;
+            padding: 10px 0;
+            background: url("../img/logo-inverse-png.png") no-repeat center / contain;
+        }
+        .header__mobile-line{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+
+            background: $brown;
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 0 8px;
+
+            &__left{
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &__right{
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .btn-mobile{
+                &_nav{
+                    margin-right: 8px;
+                }
+                &_search{
+                    margin-right: 8px;
+                }
+                &_phone{
+                    margin-left: 8px;
+                }
+                &_cart{
+                    margin-left: 8px;
+                }
+            }
+        }
+        .header__mobile-search{
+            background: #4c453d;
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 10px 20px;
+
+            display: none;
+        }
+        .header__mobile-nav{
+            display: block;
+
+            position: fixed;
+            z-index: 101;
+            background: $white;
+            box-shadow: 5px 0 20px -5px #222;
+            
+            top: 0;
+            left: 0;
+            padding: 20px;
+
+            width: 380px;
+            max-width: calc(100% - 40px);
+            height: 100vh;
+
+            overflow-y: auto;
+
+            transform: translateX(-110%);
+            transition: .5s;
+            &--active{
+                transform: translateX(0);
+            }
+        }
+
+        .btn-mobile{
+            width: 40px;
+            height: 40px;
+            display: block;
+            cursor: pointer;
+    
+            &_nav{
+                background: url("../img/menu-white.svg") no-repeat center / 30px;
+            }
+            &_phone{
+                background: url("../img/phone-white.svg") no-repeat center / 20px;
+            }
+            &_search{
+                background: url("../img/search-white.svg") no-repeat center / 18px;
+            }
+            &_cart{
+                background: url("../img/cart-white.svg") no-repeat center / 20px;
+            }
+        }
+        .container{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        .header__mobile-nav{
+            width: 280px;
+        }
+    }
+}
