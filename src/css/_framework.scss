@@ -241,12 +241,13 @@ a{
 
     .breadcrumbs{
         .breadcrumbs__item{
-            padding: 6px 20px;
-            padding-right: 8px;
+            padding: 6px 16px;
+            &:not(.breadcrumbs__item--active){
+                padding-right: 4px;
+            }
         }
         .breadcrumbs__link{
-            padding-right: 14px;
-            background-position-x: calc( 100% + 6px );
+            padding-right: 20px;
         }
     }
 }

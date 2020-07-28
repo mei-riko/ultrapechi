@@ -348,7 +348,7 @@
                             flex: 0 0 calc(30% + 40px);
                             max-width: calc(30% + 40px);
                         }
-                        .btn.btn_buy{
+                        .btn.btn_buy-full{
                             flex: 0 0 30%;
                             max-width: 30%;
 
@@ -408,7 +408,7 @@
                             flex: 0 0 calc(35% + 40px);
                             max-width: calc(35% + 40px);
                         }
-                        .btn.btn_buy{
+                        .btn.btn_buy-full{
                             flex: 0 0 30%;
                             max-width: 30%;
 
@@ -471,12 +471,12 @@
                     }
                     &_sidebar{
                         .catalog__item__price{
-                            flex: 0 0 50%;
-                            max-width: 50%;
+                            flex: 0 0 35%;
+                            max-width: 35%;
                         }
-                        .btn.btn_buy{
-                            flex: 0 0 140px;
-                            max-width: 50%;
+                        .btn.btn_buy-full{
+                            flex: 0 0 calc(65% - 20px);
+                            max-width: calc(65% - 20px);
                         }
                         .availible,
                         .no-availible{

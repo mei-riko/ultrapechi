@@ -211,15 +211,44 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
+        margin-bottom: 0;
+        &__line{
+            &:not(.header__line_main){
+                display: none;
+            }
+            &_main{
+                padding-top: 10px;
+            }
+        }
         &__link{
             margin-left: 10px;
+            line-height: 1;
+            font-size: 10px;
+            text-transform: uppercase;
+            padding-top: 26px;
+            width: 54px;
+
             &_menu{
+                width: 44px;
+                font-size: 0;
                 margin-left: 10px;
             }
         }
         &__logo{
             flex: 0 0 calc(100% - 180px - 70px - 44px);
             max-width: calc(100% - 180px - 70px - 44px);
+        }
+    }
+}
+@media all and (max-width: 464px){
+    .header{
+        &__logo{
+            background-image: url("../img/logo-small.png");
+            margin-right: 0;
+            flex: 0 0 calc(100% - 162px - 50px - 44px);
+            max-width: calc(100% - 162px - 50px - 44px);
+
+            height: 60px;
         }
     }
 }
