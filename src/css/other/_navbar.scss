@@ -21,10 +21,10 @@
             }
 
             &_catalog{
-                padding: 12px 20px 12px 36px;
-                border-radius: 6px;
+                padding: 8px 20px 8px 36px;
+                border-radius: 4px;
                 color: $white;
-                background: $orange url("../img/menu-white.svg") no-repeat 8px center / 20px;
+                background: $orange url("../img/menu-white.svg") no-repeat 14px center / 14px;
                 &:hover, &:focus{
                     background-color: lighten($color: $orange, $amount: 5);
                     color: $white;

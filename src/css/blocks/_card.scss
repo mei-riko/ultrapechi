@@ -124,6 +124,7 @@
 }
 
 .old-price{
+    white-space: nowrap;
     color: $orange;
     font-size: 13px;
     line-height: 18px;
@@ -132,10 +133,12 @@
     margin-right: 10px;
 }
 .new-price{
+    white-space: nowrap;
     font-size: 1.5rem;
     display: block;
 }
 .adv-price{
+    white-space: nowrap;
     display: inline-block;
     border:1px solid $orange;
     border-radius: 6px;

@@ -369,7 +369,11 @@
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .catalog{
         .catalog__title{
+            font-size: 1.25rem;
             padding: 20px;
+            &_slider{
+                padding-right: 80px;
+            }
         }
         .catalog__row{
             &.slider{
@@ -423,11 +427,11 @@
                     }
                 }
             }
-            &_column{
-                .new-price {
-                    font-size: 2rem;
-                }
-            }
+            // &_column{
+            //     .new-price {
+            //         font-size: 2rem;
+            //     }
+            // }
         }
     }
     .filters{

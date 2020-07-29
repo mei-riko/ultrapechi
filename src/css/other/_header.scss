@@ -7,17 +7,17 @@
         justify-content: flex-end;
 
         &_main{
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
 
             justify-content: space-between;
         }
     }
     &__item{
         font-size: 12px;
-        @extend .text-grey;
-        padding: 6px 12px;
-        border-right: 1px solid $border-color;
+        color: $light-grey;
+        padding: 4px 18px;
+        border-right: 1px solid $body-bg;
 
         &:last-of-type{
             border-right: none;
