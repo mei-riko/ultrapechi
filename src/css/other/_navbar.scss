@@ -1,49 +1,109 @@
 .navbar{
+    &__item{
+        margin-right: 10px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &_has-child{
+            position: relative;
+            cursor: pointer;
+        }
+    }
+    &__link{
+        padding: 8px 16px;
+        border-radius: 4px;
+        color: $white;
+        background-color: $brown;
+
+        &:hover{
+            text-decoration: none;
+            color: $white;
+            background-color: lighten($color: $brown, $amount: 6);
+        }
+
+        &_parent{
+            position: relative;
+            padding-right: 26px;
+
+            &:after{
+                position: absolute;
+                right: 4px; 
+                top: calc(50% - 10px);
+
+                content: '';
+                display: inline-block;
+
+                width: 20px;
+                height: 20px;
+
+                background: url('../img/chevron-down-white.svg') no-repeat center / contain;
+            }
+        }
+        &_main{
+            background-color: $red;
+            &:hover{
+                background-color: lighten($color: $red, $amount: 6);
+            }
+        }
+        &_secondary{
+            background-color: $orange;
+            &:hover{
+                background-color: lighten($color: $orange, $amount: 6);
+            }
+        }
+    }
+    &__children{
+        display: none;
+
+        &--active{
+            display: block;
+            background: $white;
+            border: 1px solid $border-color;
+            padding: 10px 20px;
+            min-width: 300px;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateY(100%);
+        }
+
+        &-item{
+            display: block;
+            font-weight: $font-weight-base;
+            padding: 5px 0;
+            margin-bottom: 5px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    // Header Navbar
     &_header{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
 
-        font-size: 14px;
+        font-size: 13px;
         font-weight: bold;
-
-        padding: 0 40px;
-
-        &__link{
-            padding: 12px;
-            margin-right: 12px;
-            
-            &:last-of-type{
-                margin-right: 0;
-            }
-            &:hover, &:focus{
-                text-decoration: none;
-            }
-
-            &_catalog{
-                padding: 8px 20px 8px 36px;
-                border-radius: 4px;
-                color: $white;
-                background: $orange url("../img/menu-white.svg") no-repeat 14px center / 14px;
-                &:hover, &:focus{
-                    background-color: lighten($color: $orange, $amount: 5);
-                    color: $white;
-                    text-decoration: none;
-                }
-            }
-        }
     }
+    // Footer Navbar
     &_footer{
-        .navbar__item{
+        &__item{
             margin-bottom: 12px;
-            &--last{
+
+            &:last-child{
                 margin-bottom: 0px;
             }
         }
-        .navbar__link{
+        &__link{
             @extend .text-small;
             line-height: 16px;
             color: $light-brown;
+
             &:hover{
                 color: $link-hover-color;
             }
@@ -81,24 +141,6 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xl')){
-    .navbar{
-        &_header{
-            padding: 0 20px;
-            // font-size: 13px;
-            &__link{
-                &:not(.navbar_header__link_catalog){padding: 12px 8px;}
-            }
-        }
-    }
-}
-@media all and (max-width: map-get($grid-breakpoints, 'lg')){
-    .navbar{
-        &_header{
-            display: none;
-        }
-    }
-}
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .sub-nav{
         position: fixed;

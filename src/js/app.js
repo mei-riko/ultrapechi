@@ -1,4 +1,6 @@
-import $ from 'jquery'
+import $ from 'jquery';
+import './nav';
+
 $(document).ready(() =>{
     $("a.scroll").click(function() {
         $("html, body").animate({
@@ -24,7 +26,7 @@ $(document).ready(() =>{
 	// Input mask
 	if( $('.phone').length > 0 ) {
 	$(".phone").inputmask({
-	  mask: "8 999 999 99 99",
+	  mask: "+7 999 999 99 99",
 	  placeholder: " ",
 	  showMaskOnHover: true,
 	  onincomplete: function(){ 
@@ -250,39 +252,9 @@ $(document).ready(() =>{
 		$(".filters").slideToggle();
 	});
 
-	// Navbar Open
-	$(".navbar_header .navbar_header__link.navbar_header__link_catalog").on("click", function(e){
-		e.preventDefault();
-		let navbar = $(".nav-menu");
-		e.preventDefault();
-		if( !navbar.hasClass("nav-menu--active")){
-			navbar.addClass("nav-menu--active");
-			$(".nav-overlay").addClass("nav-overlay--active");
-		}else{
-			navbar.removeClass("nav-menu--active");
-			$(".nav-overlay").removeClass("nav-overlay--active");
-		}
-	});
-	$(".header .header__link.header__link_menu").on("click", function(e){
-		e.preventDefault();
-		let navbar = $(".nav-menu");
-		if( !navbar.hasClass("nav-menu--active")){
-			navbar.addClass("nav-menu--active");
-			$(".nav-overlay").addClass("nav-overlay--active");
-		}else{
-			navbar.removeClass("nav-menu--active");
-			$(".nav-overlay").removeClass("nav-overlay--active");
-		}
-	});
-	$(".nav-menu .nav-menu__close").on("click", function(e){
-		let navbar = $(".nav-menu");
-		navbar.removeClass("nav-menu--active");
-		$(".nav-overlay").removeClass("nav-overlay--active");
-	});
-
-	// Hide on Desktop & Resize
-	$(window).resize(function(){
-		if ( $(window).width() > 768 || !window.matchMedia('screen and (max-width: 768px)').matches ){
+	// On Resize
+	$(window).on('resize', function(){
+		if ( $(window).width() > 767 || !window.matchMedia('screen and (max-width: 768px)').matches ){
 
 			$(".header__mobile-search.header__mobile-search--active").removeClass("header__mobile-search--active");
 			$(".header__mobile-search").hide();
@@ -290,7 +262,7 @@ $(document).ready(() =>{
 			$(".filters").removeClass("filters--active");
 			$(".filters").show();
 		}
-		if ( $(window).width() > 992 || !window.matchMedia('screen and (max-width: 992px)').matches ){
+		if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
 			// Index Slider
 			if( $('.slider#slider-index').length > 0 ) {
 				let $advantage = $('.inside_index .advantage').outerHeight();				

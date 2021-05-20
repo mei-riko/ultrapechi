@@ -1,25 +1,43 @@
 header.header
-    .bg-white
-        .header__line.container
-            .header__item.d-md-none Санкт-Петербург и ЛО
-            .header__item.d-md-none с 10.00 до 19.00 (ПН-ПТ)
-            .header__item.header__item_contact
-                a.header__phone(href="tel:8 800 000 00 00") 8 800 000 00 00
-                a.header__label(href="") заказать звонок
-    .header__line.header__line_main.container
+    .header__line.container
         a.header__link.header__link_menu(href="#") Меню
-        a.header__logo(href="/" )
-        nav.header__navbar.navbar.navbar_header
-            a.navbar__link.navbar_header__link.navbar_header__link_catalog(href="#") Каталог
-            a.navbar__link.navbar_header__link(href="#") Услуги
-            a.navbar__link.navbar_header__link(href="#") О компании
-            a.navbar__link.navbar_header__link(href="#") Контакты
-        form.form.form_search.header__search(action="")
-            input.form__input.form__input_search(type="text" placeholder="Поиск")
-            button.btn.btn_search(type="submit")
+        a.header__logo(href="/" )        
+    
+        .header__search
+            form.form.form_search(action="")
+                input.form__input.form__input_search(type="text" placeholder="Поиск")
+                button.btn.btn_search(type="submit")
+            
+        .header__contact 
+            a.header__phone(href="tel:8 800 000 00 00") 8 800 000 00 00
+            a.header__label(href="") заказать звонок
+        
         a.header__link.header__link_pay(href="#") Оплата
         a.header__link.header__link_delivery(href="#") Доставка
         a.header__link.header__link_cart(href="/cart.html") Корзина
+    .header__navbar.container
+        .navbar.navbar_header 
+            .navbar__item
+                a.navbar__link.navbar__link_main(href="#") Печи отопительные
+            .navbar__item
+                a.navbar__link.navbar__link_main(href="#") Печи для бани
+            .navbar__item
+                a.navbar__link.navbar__link_main(href="#") Печи-камины
+            .navbar__item.navbar__item_has-child
+                .navbar__link.navbar__link_parent.navbar__link_secondary(data-nav="#kaminy") Камины
+                .navbar__children#kaminy(href="#") 
+                    a.navbar__children-item(href="#") Каминные топки
+                    a.navbar__children-item(href="#") Каминные облицовки
+            .navbar__item
+                a.navbar__link.navbar__link_secondary(href="#") Котлы отопления
+            .navbar__item.navbar__item_has-child
+                .navbar__link.navbar__link_parent(data-nav="#additional" ) Аксессуары
+                .navbar__children#additional(href="#") 
+                    a.navbar__children-item(href="#") Аксессуары для камина
+                    a.navbar__children-item(href="#") Баки для воды в баню
+                    a.navbar__children-item(href="#") Товары для монтажа
+                    a.navbar__children-item(href="#") Товары для бани
+                    a.navbar__children-item(href="#") Товары для дачи и пикника
     .nav-menu
         span.nav-menu__close
         a.nav-menu__logo(href="/" )

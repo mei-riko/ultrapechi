@@ -4,28 +4,44 @@
     &__line{
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
 
-        &_main{
-            padding-top: 15px;
-            padding-bottom: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    &__navbar{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
-            justify-content: space-between;
+    // Logo
+    &__logo{
+        flex: 0 0 150px;
+        max-width: 150px;
+        height: 60px;
+        background: url("../img/logo-png.png") no-repeat left center / contain;
+    }
+
+    // Search
+    &__search{
+        padding: 0 30px;
+
+        flex: 0 0 calc(100% - 300px - 270px);
+        max-width: calc(100% - 300px - 270px);
+        
+        .form__input{
+            @extend .text-small;
         }
     }
-    &__item{
-        font-size: 12px;
-        color: $light-grey;
-        padding: 4px 18px;
-        border-right: 1px solid $body-bg;
 
-        &:last-of-type{
-            border-right: none;
-            padding-right: 0;
-        }
+    // Contact block
+    &__contact{
+        flex: 0 0 150px;
+        max-width: 150px;
     }
+
     &__phone{
-        font-size: 14px;
+        font-size: 17px;
         line-height: 20px;
         font-weight: bold;
         color: $black;
@@ -37,35 +53,17 @@
     }
     &__label{
         color: $orange;
-        background-color: lighten($color: $orange, $amount: 45);
+        border-bottom: 1px dotted $orange;
+        
+        font-size: 12px;        
+        line-height: 14px;
 
-        padding: 0 10px;
-        border-radius: 12px;
-
-        height: 20px;
-        line-height: 18px;
-        margin-left: 15px;
+        margin-top: 4px;
 
         &:hover, &:focus{
             text-decoration: none;
-            background-color: lighten($color: $orange, $amount: 42);
-        }
-    }
-    &__logo{
-        flex: 0 0 150px;
-        max-width: 150px;
-        height: 60px;
-        background: url("../img/logo-png.png") no-repeat left center / contain;
-    }
-    &__navbar{
-        flex: 0 0 520px;
-        max-width: 520px;
-    }
-    &__search{
-        flex: 0 0 calc(100% - 150px - 520px - 210px - 60px);
-        max-width: calc(100% - 150px - 520px - 210px - 60px);
-        .form__input{
-            @extend .text-small;
+            color: $grey;
+            border-color: $grey;
         }
     }
 
@@ -75,8 +73,10 @@
         text-align: center;
         padding-top: 24px;
 
+        flex: 0 0 70px;
         width: 70px;
         max-width: 100%;
+
         margin-left: 20px;
         transition: none;
 
@@ -101,21 +101,15 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xl')){
     .header{
-        &__logo{
-            flex: 0 0 100px;
-            max-width: 100px;
-            height: 48px;
-        }
-        &__navbar{
-            flex: 0 0 460px;
-            max-width: 460px;
-        }
+        // Search
         &__search{
-            flex: 0 0 calc(100% - 100px - 460px - 180px - 30px);
-            max-width: calc(100% - 100px - 460px - 180px - 30px);
+            flex: 0 0 calc(100% - 300px - 210px);
+            max-width: calc(100% - 300px - 210px);
         }
+        // Icon Link
         &__link{
             font-size: 12px;
+            flex: 0 0 60px;
             width: 60px;
             margin-left: 10px;
         }
@@ -123,25 +117,47 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .header{
+        &__navbar{
+            display: none;
+        }
+        // Logo
         &__logo{
-            margin-right: 40px;
+            flex: 0 0 100px;
+            max-width: 100px;
         }
+        // Search
         &__search{
-            flex: 0 0 calc(100% - 140px - 64px - 180px - 60px);
-            max-width: calc(100% - 140px - 64px - 180px - 60px);
+            padding: 0 20px;
+            flex: 0 0 calc(100% - 220px - 195px - 60px);
+            max-width: calc(100% - 220px - 195px  - 60px);
         }
+        // Contact
+        &__contact{
+            flex: 0 0 120px;
+            max-width: 120px;
+        }
+        &__phone{
+            font-size: 15px;
+        }
+        // Icon Link
         &__link{
-            margin-left: 20px;
+            margin-left: 5px;
+
             &_menu{
                 display: block;
+
                 font-size: 0px;
-                background: $white url("../img/menu.svg") no-repeat center / 24px;
+                background: $white url("../img/menu.svg") no-repeat center / 16px;
+                padding: 0;
                 margin-left: 0;
                 margin-right: 20px;
 
-                width: 44px;
-                height: 44px;
-                border-radius: 22px;
+                flex: 0 0 40px;
+                max-width: 40px;
+
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
 
                 &:hover, &:focus{
                     text-decoration: none;
@@ -154,101 +170,47 @@
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .header{
         &__line{
-            justify-content: flex-start;
-            &_main{
-                justify-content: space-between;
-            }
+            flex-wrap: wrap;
         }
-        &__item{
-            &_contact{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                flex: 0 0 100%;
-                max-width: 100%;
-                padding: 6px 0;
-            }
-        }
-    }
-}
-@media all and (max-width: 710px){
-    .header{
-        &__line{
-            &_main{
-                flex-wrap: wrap;
-            }
-        }
-        &__link{
-            &_menu{
-                order: 5;
-                margin-right: 0;
-                margin-left: 20px;
-            }
-            &_pay{
-                order: 2;
-            }
-            &_delivery{
-                order: 3;
-            }
-            &_cart{
-                order: 4;
-            }
-        }
+        // Logo
         &__logo{
-            order: 1;
-            flex: 0 0 calc(100% - 180px - 100px - 44px);
-            max-width: calc(100% - 180px - 100px - 44px);
-            margin-right: 20px;
+            height: 50px;
+
+            flex: 0 0 calc(100% - 60px - 120px - 195px);
+            max-width: calc(100% - 60px - 120px - 195px);
         }
+        &__contact{
+            padding-left: 10px;
+        }
+        // Search
         &__search{
-            order: 6;
             flex: 0 0 100%;
             max-width: 100%;
-            margin-top: 20px;
+            order: 1;
+
+            padding: 20px 0 0;
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
-        margin-bottom: 0;
-        &__line{
-            &:not(.header__line_main){
-                display: none;
-            }
-            &_main{
-                padding-top: 10px;
-            }
+        // Contact
+        &__contact{
+            display: none;
         }
-        &__link{
-            margin-left: 10px;
-            line-height: 1;
-            font-size: 10px;
-            text-transform: uppercase;
-            padding-top: 26px;
-            width: 54px;
-
-            &_menu{
-                width: 44px;
-                font-size: 0;
-                margin-left: 10px;
-            }
-        }
+        // Logo
         &__logo{
-            flex: 0 0 calc(100% - 180px - 70px - 44px);
-            max-width: calc(100% - 180px - 70px - 44px);
+            flex: 0 0 calc(100% - 60px  - 195px);
+            max-width: calc(100% - 60px - 195px);   
         }
     }
 }
-@media all and (max-width: 464px){
-    .header{
-        &__logo{
-            background-image: url("../img/logo-small.png");
-            margin-right: 0;
-            flex: 0 0 calc(100% - 162px - 50px - 44px);
-            max-width: calc(100% - 162px - 50px - 44px);
 
-            height: 60px;
+@media all and (max-width: 420px){
+    .header{
+        // Logo
+        &__logo{
+            background-image: url('../img/logo-small.png');
         }
     }
 }
