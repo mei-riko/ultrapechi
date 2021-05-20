@@ -6,7 +6,7 @@ function navbarHover( itemNav ){
     let item = itemNav.find(".navbar__link");
     let nav = item.data("nav");
 
-    console.log( nav );
+    // console.log( nav );
 
     if( parentHeader.find(".navbar__link.navbar__link--active").length > 0 && !item.hasClass("navbar__link--active") ){
         let navActive = $(".navbar__link.navbar__link--active");
@@ -69,12 +69,11 @@ $(function(){
     // Check Windows Size
     if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
         $('.navbar').removeClass("navbar--mobile").addClass("navbar--desktop");
+        // Desktop Navbar
+        navbarDesktopInitialize( $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child') );
     }else{
         $('.navbar').removeClass("navbar--desktop").addClass("navbar--mobile");
     }
-
-    // Desktop Navbar
-    navbarDesktopInitialize( $('.navbar.navbar--desktop .navbar__item.navbar__item_has-child') );
 });
 
 

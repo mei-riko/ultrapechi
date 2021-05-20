@@ -56,23 +56,28 @@
     }
     &__children{
         display: none;
+        
+        background: $white;
+        border: 1px solid $border-color;
+        padding: 10px 20px;
+        // min-width: 300px;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 99;
+        transform: translateY(100%);
 
         &--active{
             display: block;
-            background: $white;
-            border: 1px solid $border-color;
-            padding: 10px 20px;
-            min-width: 300px;
-
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            transform: translateY(100%);
         }
 
         &-item{
             display: block;
             font-weight: $font-weight-base;
+
+            white-space: nowrap;
+
             padding: 5px 0;
             margin-bottom: 5px;
 
@@ -141,6 +146,16 @@
     }
 }
 
+@media all and (max-width: map-get($grid-breakpoints, 'xl')){
+    .navbar{
+        &__children{
+            &_last{
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .sub-nav{
         position: fixed;

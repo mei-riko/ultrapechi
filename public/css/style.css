@@ -2096,25 +2096,26 @@ a.link-phone:hover {
 
 .navbar__children {
   display: none;
-}
-
-.navbar__children--active {
-  display: block;
   background: #ffffff;
   border: 1px solid #e0dcd6;
   padding: 10px 20px;
-  min-width: 300px;
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 99;
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
   transform: translateY(100%);
 }
 
+.navbar__children--active {
+  display: block;
+}
+
 .navbar__children-item {
   display: block;
   font-weight: 400;
+  white-space: nowrap;
   padding: 5px 0;
   margin-bottom: 5px;
 }
@@ -2183,6 +2184,13 @@ a.link-phone:hover {
 .sub-nav__wa {
   bottom: 20px;
   background: #25D366 url("../img/whatsapp-white.svg") no-repeat 12px 13px/24px;
+}
+
+@media all and (max-width: 1200px) {
+  .navbar__children_last {
+    left: auto;
+    right: 0;
+  }
 }
 
 @media all and (max-width: 768px) {
